@@ -106,11 +106,11 @@ TBD
 #### Compiler options
 
 TBD
-#### Namespaces
+#### C++ Namespaces
 
 TBD
 
-#### Classes
+#### C++ Classes
 
 TBD
 
