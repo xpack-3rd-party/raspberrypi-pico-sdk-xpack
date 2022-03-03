@@ -1,4 +1,4 @@
-# A source xPack with the Raspberry Pi Pico SDK
+# A source library xPack with the Raspberry Pi Pico SDK
 
 The project is hosted on GitHub as
 [xpack-3rd-party/raspberrypi-pico-sdk-xpack](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack).
@@ -13,8 +13,8 @@ For maintainer infos, please see the
 
 ## Install
 
-As a source xPacks, the easiest way to add it to a project is via **xpm**,
-but it can also be used as any Git project, for example as a submodule.
+As a source library xPacks, the easiest way to add it to a project is via
+**xpm**, but it can also be used as any Git project, for example as a submodule.
 
 ### Prerequisites
 
