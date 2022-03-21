@@ -46,6 +46,8 @@ $ cd <project>
 $ xpm init # Unless a package.json is already present
 
 $ xpm install @xpack-raspberrypi/pico-sdk@latest
+
+ls -l xpacks/xpack-raspberrypi-pico-sdk
 ```
 
 ### Git submodule
