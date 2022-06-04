@@ -93,13 +93,17 @@ TBD
 
 To include this package in a project, consider the following details.
 
-#### Source folders
-
-TBD
-
 #### Include folders
 
+The following folders should be passed to the compiler during the build:
+
 TODO: list all header files.
+
+#### Source files
+
+The source files to be added to the build are:
+
+TODO
 
 #### Preprocessor definitions
 
