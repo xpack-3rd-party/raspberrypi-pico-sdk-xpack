@@ -10,10 +10,10 @@
     "type": "git",
     "url": "https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git"
   },
+  "homepage": "https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack",
   "bugs": {
     "url": "https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/issues"
   },
-  "homepage": "https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack",
   "keywords": [
     "xpack"
   ],
@@ -33,5 +33,12 @@
   "config": {},
   "dependencies": {},
   "devDependencies": {},
-  "xpack": {}
+  "xpack": {
+    "minimumXpmRequired": "0.14.0",
+    "dependencies": {},
+    "devDependencies": {},
+    "properties": {},
+    "actions": {},
+    "buildConfigurations": {}
+  }
 }
