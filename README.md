@@ -67,7 +67,7 @@ $ git init # Unless already a Git project
 $ mkdir -p xpacks
 
 $ git submodule add https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git \
-  xpacks/xpack-3rd-party-raspberrypi-pico-sdk
+  xpacks/@xpack-3rd-party/raspberrypi-pico-sdk
 ```
 
 ## Branches
