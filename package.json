@@ -4,7 +4,12 @@
   "description": "A source code library with the Raspberry Pi Pico SDK",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "npm-install": "npm install",
+    "pack": "npm pack",
+    "version-patch": "npm version patch",
+    "version-minor": "npm version minor",
+    "postversion": "git push origin --all && git push origin --tags",
+    "git-log": "git log --pretty='%cd * %h %s' --date=short"
   },
   "repository": {
     "type": "git",
@@ -15,7 +20,10 @@
     "url": "https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/issues"
   },
   "keywords": [
-    "xpack"
+    "xpack",
+    "raspberry",
+    "pico",
+    "sdk"
   ],
   "author": {
     "$comment": "The xPack creator and maintainer; for content author, see contributors.",
