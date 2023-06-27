@@ -1,6 +1,15 @@
-# A source library xPack with the Raspberry Pi Pico SDK
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack-3rd-party/raspberrypi-pico-sdk-xpack)](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/blob/xpack/package.json)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/xpack-3rd-party/raspberrypi-pico-sdk-xpack)](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/tags/)
+[![npm (scoped)](https://img.shields.io/npm/v/@xpack-3rd-party/raspberrypi-pico-sdk.svg?color=blue)](https://www.npmjs.com/package/@xpack-3rd-party/raspberrypi-pico-sdk/)
+[![license](https://img.shields.io/github/license/xpack-3rd-party/raspberrypi-pico-sdk-xpack)](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/blob/xpack/LICENSE)
 
-The project is hosted on GitHub as
+# An xpm/npm package with the Raspberry Pi Pico SDK
+
+This project provides a convenient way to integrate the
+[pico-sdk](https://github.com/raspberrypi/pico-sdk) library
+into the xpm/npm ecosystem, by allowing to install it as a package dependency.
+
+The open-source project is hosted on GitHub as
 [xpack-3rd-party/raspberrypi-pico-sdk-xpack](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack).
 
 ## Maintainer info
@@ -9,12 +18,14 @@ This page is addressed to developers who plan to include this source
 library into their own projects.
 
 For maintainer info, please see the
-[README-MAINTAINER](README-MAINTAINER.md) file.
+[README-MAINTAINER-XPACK](README-MAINTAINER-XPACK.md) file.
 
 ## Install
 
-As a source library xPack, the easiest way to add it to a project is via
-**xpm**, but it can also be used as any Git project, for example as a submodule.
+As a source code library xpm/npm package,
+the easiest way to add it to a project is via
+**xpm** or **npm**, but it can also be used as any Git project,
+for example as a submodule.
 
 ### Prerequisites
 
@@ -34,26 +45,29 @@ For details please follow the instructions in the
 
 Note: the package will be available from npmjs.com at a later date.
 
-For now, it can be installed from GitHub:
+To install this project as a dependency in xPack projects,
+use **xpm**:
 
-```console
-$ cd <project>
-$ xpm init # Unless a package.json is already present
+```sh
+cd my-project
+xpm init # Unless a package.json is already present
 
-$ xpm install github:xpack-3rd-party/raspberrypi-pico-sdk-xpack
+xpm install github:xpack-3rd-party/raspberrypi-pico-sdk-xpack
+
+ls -l xpacks/@xpack-3rd-party/raspberrypi-pico-sdk
 ```
 
-When ready, this package will be available as
-[`@xpack-raspberrypi/pico-sdk`](https://www.npmjs.com/package/@xpack-raspberrypi/pico-sdk)
-from the `npmjs.com` registry:
+### npm
 
-```console
-$ cd <project>
-$ xpm init # Unless a package.json is already present
+To install the project as a dependency in **npm** projects:
 
-$ xpm install @xpack-raspberrypi/pico-sdk@latest
+```sh
+cd my-project
+npm init # Unless a package.json is already present
 
-ls -l xpacks/xpack-raspberrypi-pico-sdk
+npm install github:xpack-3rd-party/raspberrypi-pico-sdk-xpack --save-dev
+
+ls -l node_module/@xpack-3rd-party/raspberrypi-pico-sdk
 ```
 
 ### Git submodule
@@ -72,9 +86,10 @@ $ git submodule add https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpac
 
 ## Branches
 
-Apart from the unused `master` branch, there are two active branches:
+In addition to the original `main` branch, there are two
+xPack specific branches:
 
-- `xpack`, with the latest stable version
+- `xpack`, with the latest stable version (default)
 - `xpack-develop`, with the current development version
 
 All development is done in the `xpack-develop` branch, and contributions via
@@ -83,64 +98,18 @@ Pull Requests should be directed to this branch.
 When new releases are published, the `xpack-develop` branch is merged
 into `xpack`.
 
-## User info
+When there are new upstream releases:
 
-TBD
+- upstream `master` is merged into the local `master`
+- the local `master` is merged into `xpack-develop`
+- the project is tested
+- `xpack-develop` is merged into `xpack`
 
-### Status
-
-The ... are fully functional.
-
-### Limitations
-
-TBD
-
-### Build & integration info
-
-To include this package in a project, consider the following details.
-
-#### Include folders
-
-The following folders should be passed to the compiler during the build:
-
-TODO: list all header files.
-
-#### Source files
-
-The source files to be added to the build are:
-
-TODO
-
-#### Preprocessor definitions
-
-TBD
-
-#### Compiler options
-
-TBD
-#### C++ Namespaces
-
-TBD
-
-#### C++ Classes
-
-TBD
-
-### Examples
-
-TBD
-
-### Known problems
-
-- none
-
-### Tests
-
-TBD
+The original README follows.
 
 ---
 
-# Original Raspberry Pi README
+# Raspberry Pi Pico SDK
 
 The Raspberry Pi Pico SDK (henceforth the SDK) provides the headers, libraries and build system
 necessary to write programs for the RP2040-based devices such as the Raspberry Pi Pico
@@ -178,7 +147,7 @@ See [pico-examples](https://github.com/raspberrypi/pico-examples) for example co
 
 # Getting the latest SDK code
 
-The [master](https://github.com/raspberrypi/pico-sdk/tree/master/) branch of `pico-sdk` on GitHub contains the 
+The [master](https://github.com/raspberrypi/pico-sdk/tree/master/) branch of `pico-sdk` on GitHub contains the
 _latest stable release_ of the SDK. If you need or want to test upcoming features, you can try the
 [develop](https://github.com/raspberrypi/pico-sdk/tree/develop/) branch instead.
 
@@ -267,17 +236,17 @@ instructions for other platforms, and just in general, we recommend you see [Ras
 
            ```cmake
            cmake_minimum_required(VERSION 3.13)
- 
+
            # initialize the SDK directly
            include(/path/to/pico-sdk/pico_sdk_init.cmake)
- 
+
            project(my_project)
- 
+
            # initialize the Raspberry Pi Pico SDK
            pico_sdk_init()
- 
+
            # rest of your project
- 
+
            ```
 1. Write your code (see [pico-examples](https://github.com/raspberrypi/pico-examples) or the [Raspberry Pi Pico C/C++ SDK](https://rptl.io/pico-c-sdk) documentation for more information)
 
@@ -316,16 +285,16 @@ instructions for other platforms, and just in general, we recommend you see [Ras
       $ mkdir build
       $ cd build
       $ cmake ..
-      ```   
-   
+      ```
+
    When building for a board other than the Raspberry Pi Pico, you should pass `-DPICO_BOARD=board_name` to the `cmake` command above, e.g. `cmake -DPICO_BOARD=pico_w ..`
    to configure the SDK and build options accordingly for that particular board.
 
-   Doing so sets up various compiler defines (e.g. default pin numbers for UART and other hardware) and in certain 
+   Doing so sets up various compiler defines (e.g. default pin numbers for UART and other hardware) and in certain
    cases also enables the use of additional libraries (e.g. wireless support when building for `PICO_BOARD=pico_w`) which cannot
    be built without a board which provides the requisite functionality.
 
-   For a list of boards defined in the SDK itself, look in [this directory](src/boards/include/boards) which has a 
+   For a list of boards defined in the SDK itself, look in [this directory](src/boards/include/boards) which has a
    header for each named board.
 
 1. Make your target from the build directory you created.

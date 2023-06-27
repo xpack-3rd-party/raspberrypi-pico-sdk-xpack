@@ -1,7 +1,7 @@
 {
-  "name": "@xpack-raspberrypi/pico-sdk",
-  "version": "0.1.0",
-  "description": "A source library xPack with the Raspberry Pi Pico SDK",
+  "name": "@xpack-3rd-party/raspberrypi-pico-sdk",
+  "version": "1.5.1-1.pre.1",
+  "description": "A source code library with the Raspberry Pi Pico SDK",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
