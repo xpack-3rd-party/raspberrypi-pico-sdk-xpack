@@ -21,12 +21,12 @@
     "$comment": "The xPack creator and maintainer; for content author, see contributors.",
     "name": "Liviu Ionescu",
     "email": "ilg@livius.net",
-    "url": "https://github.com/ilg-ul/"
+    "url": "https://github.com/ilg-ul"
   },
   "contributors": [
     {
       "name": "The Raspberry Pi Foundation",
-      "url": "https://www.raspberrypi.org/"
+      "url": "https://www.raspberrypi.org"
     }
   ],
   "license": "MIT",
