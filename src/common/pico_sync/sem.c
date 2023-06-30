@@ -16,6 +16,7 @@ void sem_init(semaphore_t *sem, int16_t initial_permits, int16_t max_permits) {
 
 int __time_critical_func(sem_available)(semaphore_t *sem) {
 // [ILG]
+// https://github.com/raspberrypi/pico-sdk/issues/1441
 // #ifdef __GNUC__
 #if defined(__GNUC__) && !defined(__STRICT_ANSI__)
     return *(volatile typeof(sem->permits) *) &sem->permits;
