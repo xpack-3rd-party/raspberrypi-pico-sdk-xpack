@@ -71,10 +71,13 @@ Check GitHub issues and pull requests:
 
 and fix them; assign them to a milestone (like `1.5.1-1`).
 
-### Update `README-MAINTAINER-XPACK.md`
+### Update `README-MAINTAINER.md`
 
-Update the `README-MAINTAINER-XPACK.md` file to reflect the changes
-related to the new version.
+Update the following files to reflect the changes
+related to the new version:
+
+- `README-MAINTAINER.md`
+- `README.md`
 
 ### Update `CHANGELOG-XPACK.md`
 

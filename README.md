@@ -22,17 +22,29 @@ For maintainer info, please see the
 
 ## Install
 
-As a source code library xpm/npm package,
-the easiest way to add it to a project is via
-**xpm** or **npm**, but it can also be used as any Git project,
-for example as a submodule.
+As a source code library, this project can be integrated into another project
+in the traditional way,
+by either copying the relevant files into the target project, or by linking
+the entire project as a Git submodule.
 
-### Prerequisites
+However, things can be further automated and the most convenient way is
+to **add it as a dependency** to the project via **xpm**.
+
+### Install with xpm/npm
+
+Along with the source files, this project also includes a
+`package.json` file with the metadata that allows it to be identified as an
+**xpm/npm** package so that it can be directly installed from GitHub.
+
+#### Prerequisites
 
 A recent [xpm](https://xpack.github.io/xpm/),
-which is a portable [Node.js](https://nodejs.org/) command line application.
+which is a portable [Node.js](https://nodejs.org/) command line application
+that complements [npm](https://docs.npmjs.com)
+with several extra features specific to
+**C/C++ projects**.
 
-It is recommended to update to the latest version with:
+It is recommended to install/update to the latest version with:
 
 ```sh
 npm install --global xpm@latest
@@ -41,46 +53,43 @@ npm install --global xpm@latest
 For details please follow the instructions in the
 [xPack install](https://xpack.github.io/install/) page.
 
-### xpm
+Warning: Be sure **xpm** is not installed with administrative rights.
 
-Note: the package will be available from npmjs.com at a later date.
+#### xpm
 
-To install this project as a dependency in xPack projects,
-use **xpm**:
+This project can be installed as a package from GitHub with:
 
 ```sh
 cd my-project
 xpm init # Unless a package.json is already present
 
-xpm install github:xpack-3rd-party/raspberrypi-pico-sdk-xpack
+xpm install github:xpack-3rd-party/raspberrypi-pico-sdk-xpack#v1.5.1-1 --save-dev --copy
 
 ls -l xpacks/@xpack-3rd-party/raspberrypi-pico-sdk
 ```
 
-### npm
+#### npm
 
-To install the project as a dependency in **npm** projects:
+The package can also be installed with [npm](https://docs.npmjs.com)
+or related, but
+the features specific to C/C++ projects will not be available;
+therefore, at least for consistency reasons, it is recommended
+to use **xpm**.
+
+### Add as Git submodule
+
+Besides manually copying the relevant files to the target
+project, which will later require extra maintenance efforts to keep the
+project up to date, a more convenient
+solution is to link the entire project as a **Git submodule**,
+for example below an `xpacks` folder:
 
 ```sh
 cd my-project
-npm init # Unless a package.json is already present
+git init # Unless already a Git project
+mkdir -p xpacks
 
-npm install github:xpack-3rd-party/raspberrypi-pico-sdk-xpack --save-dev
-
-ls -l node_module/@xpack-3rd-party/raspberrypi-pico-sdk
-```
-
-### Git submodule
-
-If, for any reason, **xpm** is not available, the next recommended
-solution is to link it as a Git submodule below an `xpacks` folder.
-
-```console
-$ cd <project>
-$ git init # Unless already a Git project
-$ mkdir -p xpacks
-
-$ git submodule add https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git \
+git submodule add https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git \
   xpacks/@xpack-3rd-party/raspberrypi-pico-sdk
 ```
 
@@ -104,6 +113,10 @@ When there are new upstream releases:
 - the local `master` is merged into `xpack-develop`
 - the project is tested
 - `xpack-develop` is merged into `xpack`
+
+### Status
+
+The **xpack-3rd-party/raspberrypi-pico-sdk** source library is fully functional.
 
 The original README follows.
 
