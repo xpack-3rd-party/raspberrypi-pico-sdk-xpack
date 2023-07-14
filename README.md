@@ -116,7 +116,7 @@ When there are new upstream releases:
 
 ### Status
 
-The **xpack-3rd-party/raspberrypi-pico-sdk** source library is fully functional.
+The **xpack-3rd-party/raspberrypi-pico-sdk** package is fully functional.
 
 The original README follows.
 
