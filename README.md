@@ -95,7 +95,7 @@ git submodule add https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack.
 
 ## Branches
 
-In addition to the original `main` branch, there are two
+In addition to the original `master` branch, there are two
 xPack specific branches:
 
 - `xpack`, with the latest stable version (default)
@@ -114,9 +114,89 @@ When there are new upstream releases:
 - the project is tested
 - `xpack-develop` is merged into `xpack`
 
+## Developer info
+
+### Overview
+
+The current content is from upstream, with the xPack metadata added.
+
 ### Status
 
 The **xpack-3rd-party/raspberrypi-pico-sdk** package is fully functional.
+
+### Build & integration info
+
+To ease the integration of this package into user projects, there
+are already made CMake configuration files (see below).
+
+For other build systems, consider the following details:
+
+#### Include folders
+
+The monolithic project is complex with multiple include folders;
+see the CMake files for details.
+
+#### Source files
+
+The monolithic project is complex with multiple source folders;
+see the CMake files for details.
+
+#### Preprocessor definitions
+
+- none
+
+#### Compiler options
+
+- none
+
+#### Dependencies
+
+- none
+
+#### CMake
+
+To integrate the **Pico SDK**
+into a CMake application,
+add this folder to the build:
+
+```cmake
+add_subdirectory("xpacks/@xpack-3rd-party/raspberrypi-pico-sdk")`
+```
+
+The result are multiple interface libraries that can be added as application
+dependencies.
+
+For example to include the CMSIS Core library, use:
+
+```cmake
+target_link_libraries(your-target PRIVATE
+
+  cmsis_core
+)
+```
+
+### Examples
+
+- none
+
+### Known problems
+
+- none
+
+### Limitations
+
+- none
+
+### Tests
+
+- none
+
+## License
+
+The xPack specific content is released under the
+[MIT License](https://opensource.org/licenses/mit/),
+with all rights reserved to
+[Liviu Ionescu](https://github.com/ilg-ul).
 
 The original README follows.
 
