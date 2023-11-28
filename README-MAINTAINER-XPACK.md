@@ -22,7 +22,7 @@ git clone \
   ~/Work/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git
 ```
 
-For development purposes, clone the `xpack-develop` branch:
+For development purposes, clone the development branch (`xpack-develop`):
 
 ```sh
 rm -rf ~/Work/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git && \
