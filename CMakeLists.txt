@@ -1,5 +1,19 @@
 cmake_minimum_required(VERSION 3.13)
 
+# -----------------------------------------------------------------------------
+
+if (COMMAND xpack_get_package_name_and_version)
+  xpack_get_package_name_and_version (
+    "${CMAKE_CURRENT_SOURCE_DIR}/package.json"
+  )
+  message (
+    VERBOSE
+    "Processing xpm package ${PACKAGE_JSON_NAME}@${PACKAGE_JSON_VERSION}..."
+  )
+endif ()
+
+# -----------------------------------------------------------------------------
+
 # Note: this CMakeLists.txt can be used as a top-level CMakeLists.txt for the SDK itself. For all other uses
 # it is included as a subdirectory via the pico_sdk_init() method provided by pico_sdk_init.cmake
 if (NOT TARGET _pico_sdk_inclusion_marker)
@@ -62,3 +76,14 @@ if (NOT TARGET _pico_sdk_inclusion_marker)
     endif()
 endif()
 
+# -----------------------------------------------------------------------------
+
+if (COMMAND xpack_display_target_lists)
+  xpack_display_target_lists (cmsis_core)
+  xpack_display_target_lists (cmsis_core_headers)
+  xpack_display_target_lists (hardware_clocks)
+  xpack_display_target_lists (pico_platform_headers)
+  xpack_display_target_lists (pico_platform)
+endif ()
+
+# -----------------------------------------------------------------------------
