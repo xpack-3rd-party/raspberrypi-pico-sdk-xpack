@@ -1,5 +1,7 @@
+// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
 /**
- * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
+ * Copyright (c) 2021 Raspberry Pi Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -7,10 +9,9 @@
 // Register block : IO_QSPI
 // Version        : 1
 // Bus type       : apb
-// Description    : None
 // =============================================================================
-#ifndef HARDWARE_REGS_IO_QSPI_DEFINED
-#define HARDWARE_REGS_IO_QSPI_DEFINED
+#ifndef _HARDWARE_REGS_IO_QSPI_H
+#define _HARDWARE_REGS_IO_QSPI_H
 // =============================================================================
 // Register    : IO_QSPI_GPIO_QSPI_SCLK_STATUS
 // Description : GPIO status
@@ -91,67 +92,66 @@
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_MSB          _u(29)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_LSB          _u(28)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_MSB    _u(29)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_LSB    _u(28)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_MSB          _u(17)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_LSB          _u(16)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_MSB    _u(17)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_LSB    _u(16)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_MSB           _u(13)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_LSB           _u(12)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_ACCESS        "RW"
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_MSB    _u(13)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_LSB    _u(12)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_ACCESS "RW"
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_MSB          _u(9)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_LSB          _u(8)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_MSB    _u(9)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_LSB    _u(8)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -159,14 +159,14 @@
 //               0x00 -> xip_sclk
 //               0x05 -> sio_30
 //               0x1f -> null
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_RESET          _u(0x1f)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_BITS           _u(0x0000001f)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_MSB            _u(4)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_LSB            _u(0)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_ACCESS         "RW"
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_VALUE_XIP_SCLK _u(0x00)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_VALUE_SIO_30   _u(0x05)
-#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_VALUE_NULL     _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_VALUE_SIO_30 _u(0x05)
+#define IO_QSPI_GPIO_QSPI_SCLK_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_QSPI_GPIO_QSPI_SS_STATUS
 // Description : GPIO status
@@ -247,67 +247,66 @@
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_MSB          _u(29)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_LSB          _u(28)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_MSB    _u(29)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_LSB    _u(28)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_MSB          _u(17)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_LSB          _u(16)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_MSB    _u(17)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_LSB    _u(16)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_MSB           _u(13)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_LSB           _u(12)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_ACCESS        "RW"
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_MSB    _u(13)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_LSB    _u(12)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_ACCESS "RW"
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_MSB          _u(9)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_LSB          _u(8)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_MSB    _u(9)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_LSB    _u(8)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -315,14 +314,14 @@
 //               0x00 -> xip_ss_n
 //               0x05 -> sio_31
 //               0x1f -> null
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_RESET          _u(0x1f)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_BITS           _u(0x0000001f)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_MSB            _u(4)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_LSB            _u(0)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_ACCESS         "RW"
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_VALUE_XIP_SS_N _u(0x00)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_VALUE_SIO_31   _u(0x05)
-#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_VALUE_NULL     _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_VALUE_SIO_31 _u(0x05)
+#define IO_QSPI_GPIO_QSPI_SS_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_QSPI_GPIO_QSPI_SD0_STATUS
 // Description : GPIO status
@@ -403,67 +402,66 @@
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_MSB          _u(29)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_LSB          _u(28)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_MSB    _u(29)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_LSB    _u(28)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_MSB          _u(17)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_LSB          _u(16)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_MSB    _u(17)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_LSB    _u(16)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_MSB           _u(13)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_LSB           _u(12)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_ACCESS        "RW"
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_MSB    _u(13)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_LSB    _u(12)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_ACCESS "RW"
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_MSB          _u(9)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_LSB          _u(8)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_MSB    _u(9)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_LSB    _u(8)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -471,14 +469,14 @@
 //               0x00 -> xip_sd0
 //               0x05 -> sio_32
 //               0x1f -> null
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_RESET         _u(0x1f)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_BITS          _u(0x0000001f)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_MSB           _u(4)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_LSB           _u(0)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_ACCESS        "RW"
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_VALUE_XIP_SD0 _u(0x00)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_VALUE_SIO_32  _u(0x05)
-#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_VALUE_NULL    _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_VALUE_SIO_32 _u(0x05)
+#define IO_QSPI_GPIO_QSPI_SD0_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_QSPI_GPIO_QSPI_SD1_STATUS
 // Description : GPIO status
@@ -559,67 +557,66 @@
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_MSB          _u(29)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_LSB          _u(28)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_MSB    _u(29)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_LSB    _u(28)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_MSB          _u(17)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_LSB          _u(16)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_MSB    _u(17)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_LSB    _u(16)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_MSB           _u(13)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_LSB           _u(12)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_ACCESS        "RW"
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_MSB    _u(13)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_LSB    _u(12)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_ACCESS "RW"
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_MSB          _u(9)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_LSB          _u(8)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_MSB    _u(9)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_LSB    _u(8)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -627,14 +624,14 @@
 //               0x00 -> xip_sd1
 //               0x05 -> sio_33
 //               0x1f -> null
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_RESET         _u(0x1f)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_BITS          _u(0x0000001f)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_MSB           _u(4)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_LSB           _u(0)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_ACCESS        "RW"
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_VALUE_XIP_SD1 _u(0x00)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_VALUE_SIO_33  _u(0x05)
-#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_VALUE_NULL    _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_VALUE_SIO_33 _u(0x05)
+#define IO_QSPI_GPIO_QSPI_SD1_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_QSPI_GPIO_QSPI_SD2_STATUS
 // Description : GPIO status
@@ -715,67 +712,66 @@
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_MSB          _u(29)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_LSB          _u(28)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_MSB    _u(29)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_LSB    _u(28)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_MSB          _u(17)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_LSB          _u(16)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_MSB    _u(17)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_LSB    _u(16)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_MSB           _u(13)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_LSB           _u(12)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_ACCESS        "RW"
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_MSB    _u(13)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_LSB    _u(12)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_ACCESS "RW"
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_MSB          _u(9)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_LSB          _u(8)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_MSB    _u(9)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_LSB    _u(8)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -783,14 +779,14 @@
 //               0x00 -> xip_sd2
 //               0x05 -> sio_34
 //               0x1f -> null
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_RESET         _u(0x1f)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_BITS          _u(0x0000001f)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_MSB           _u(4)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_LSB           _u(0)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_ACCESS        "RW"
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_VALUE_XIP_SD2 _u(0x00)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_VALUE_SIO_34  _u(0x05)
-#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_VALUE_NULL    _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_VALUE_SIO_34 _u(0x05)
+#define IO_QSPI_GPIO_QSPI_SD2_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_QSPI_GPIO_QSPI_SD3_STATUS
 // Description : GPIO status
@@ -871,67 +867,66 @@
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_MSB          _u(29)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_LSB          _u(28)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_MSB    _u(29)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_LSB    _u(28)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_MSB          _u(17)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_LSB          _u(16)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_MSB    _u(17)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_LSB    _u(16)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_MSB           _u(13)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_LSB           _u(12)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_ACCESS        "RW"
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_MSB    _u(13)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_LSB    _u(12)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_ACCESS "RW"
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_MSB          _u(9)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_LSB          _u(8)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_MSB    _u(9)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_LSB    _u(8)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -939,14 +934,14 @@
 //               0x00 -> xip_sd3
 //               0x05 -> sio_35
 //               0x1f -> null
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_RESET         _u(0x1f)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_BITS          _u(0x0000001f)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_MSB           _u(4)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_LSB           _u(0)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_ACCESS        "RW"
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_ACCESS "RW"
 #define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_VALUE_XIP_SD3 _u(0x00)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_VALUE_SIO_35  _u(0x05)
-#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_VALUE_NULL    _u(0x1f)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_VALUE_SIO_35 _u(0x05)
+#define IO_QSPI_GPIO_QSPI_SD3_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_QSPI_INTR
 // Description : Raw Interrupts
@@ -955,7 +950,6 @@
 #define IO_QSPI_INTR_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -963,7 +957,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -971,7 +964,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -979,7 +971,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -987,7 +978,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -995,7 +985,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -1003,7 +992,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -1011,7 +999,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -1019,7 +1006,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -1027,7 +1013,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -1035,7 +1020,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -1043,7 +1027,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -1051,7 +1034,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -1059,7 +1041,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -1067,7 +1048,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -1075,7 +1055,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -1083,7 +1062,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -1091,7 +1069,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -1099,7 +1076,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SS_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -1107,7 +1083,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -1115,7 +1090,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -1123,7 +1097,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -1131,7 +1104,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -1139,7 +1111,6 @@
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_INTR_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -1153,7 +1124,6 @@
 #define IO_QSPI_PROC0_INTE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -1161,7 +1131,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -1169,7 +1138,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -1177,7 +1145,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -1185,7 +1152,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -1193,7 +1159,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -1201,7 +1166,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -1209,7 +1173,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -1217,7 +1180,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -1225,7 +1187,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -1233,7 +1194,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -1241,7 +1201,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -1249,7 +1208,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -1257,7 +1215,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -1265,7 +1222,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -1273,7 +1229,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -1281,7 +1236,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -1289,7 +1243,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -1297,7 +1250,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -1305,7 +1257,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -1313,7 +1264,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -1321,7 +1271,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -1329,7 +1278,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -1337,7 +1285,6 @@
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_PROC0_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -1351,7 +1298,6 @@
 #define IO_QSPI_PROC0_INTF_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -1359,7 +1305,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -1367,7 +1312,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -1375,7 +1319,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -1383,7 +1326,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -1391,7 +1333,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -1399,7 +1340,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -1407,7 +1347,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -1415,7 +1354,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -1423,7 +1361,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -1431,7 +1368,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -1439,7 +1375,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -1447,7 +1382,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -1455,7 +1389,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -1463,7 +1396,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -1471,7 +1403,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -1479,7 +1410,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -1487,7 +1417,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -1495,7 +1424,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -1503,7 +1431,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -1511,7 +1438,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -1519,7 +1445,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -1527,7 +1452,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -1535,7 +1459,6 @@
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_PROC0_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -1549,7 +1472,6 @@
 #define IO_QSPI_PROC0_INTS_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -1557,7 +1479,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -1565,7 +1486,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -1573,7 +1493,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -1581,7 +1500,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -1589,7 +1507,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -1597,7 +1514,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -1605,7 +1521,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -1613,7 +1528,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -1621,7 +1535,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -1629,7 +1542,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -1637,7 +1549,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -1645,7 +1556,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -1653,7 +1563,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -1661,7 +1570,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -1669,7 +1577,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -1677,7 +1584,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -1685,7 +1591,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -1693,7 +1598,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -1701,7 +1605,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -1709,7 +1612,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -1717,7 +1619,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -1725,7 +1626,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -1733,7 +1633,6 @@
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_PROC0_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -1747,7 +1646,6 @@
 #define IO_QSPI_PROC1_INTE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -1755,7 +1653,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -1763,7 +1660,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -1771,7 +1667,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -1779,7 +1674,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -1787,7 +1681,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -1795,7 +1688,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -1803,7 +1695,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -1811,7 +1702,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -1819,7 +1709,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -1827,7 +1716,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -1835,7 +1723,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -1843,7 +1730,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -1851,7 +1737,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -1859,7 +1744,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -1867,7 +1751,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -1875,7 +1758,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -1883,7 +1765,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -1891,7 +1772,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -1899,7 +1779,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -1907,7 +1786,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -1915,7 +1793,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -1923,7 +1800,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -1931,7 +1807,6 @@
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_PROC1_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -1945,7 +1820,6 @@
 #define IO_QSPI_PROC1_INTF_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -1953,7 +1827,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -1961,7 +1834,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -1969,7 +1841,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -1977,7 +1848,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -1985,7 +1855,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -1993,7 +1862,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -2001,7 +1869,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -2009,7 +1876,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -2017,7 +1883,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -2025,7 +1890,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -2033,7 +1897,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -2041,7 +1904,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -2049,7 +1911,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -2057,7 +1918,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -2065,7 +1925,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -2073,7 +1932,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -2081,7 +1939,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -2089,7 +1946,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -2097,7 +1953,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -2105,7 +1960,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -2113,7 +1967,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -2121,7 +1974,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -2129,7 +1981,6 @@
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_PROC1_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -2143,7 +1994,6 @@
 #define IO_QSPI_PROC1_INTS_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -2151,7 +2001,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -2159,7 +2008,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -2167,7 +2015,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -2175,7 +2022,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -2183,7 +2029,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -2191,7 +2036,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -2199,7 +2043,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -2207,7 +2050,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -2215,7 +2057,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -2223,7 +2064,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -2231,7 +2071,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -2239,7 +2078,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -2247,7 +2085,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -2255,7 +2092,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -2263,7 +2099,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -2271,7 +2106,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -2279,7 +2113,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -2287,7 +2120,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -2295,7 +2127,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -2303,7 +2134,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -2311,7 +2141,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -2319,7 +2148,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -2327,7 +2155,6 @@
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_PROC1_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -2341,7 +2168,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -2349,7 +2175,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -2357,7 +2182,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -2365,7 +2189,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -2373,7 +2196,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -2381,7 +2203,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -2389,7 +2210,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -2397,7 +2217,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -2405,7 +2224,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -2413,7 +2231,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -2421,7 +2238,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -2429,7 +2245,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -2437,7 +2252,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -2445,7 +2259,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -2453,7 +2266,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -2461,7 +2273,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -2469,7 +2280,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -2477,7 +2287,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -2485,7 +2294,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -2493,7 +2301,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -2501,7 +2308,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -2509,7 +2315,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -2517,7 +2322,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -2525,7 +2329,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_DORMANT_WAKE_INTE_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -2539,7 +2342,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -2547,7 +2349,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -2555,7 +2356,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -2563,7 +2363,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -2571,7 +2370,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -2579,7 +2377,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -2587,7 +2384,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -2595,7 +2391,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -2603,7 +2398,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -2611,7 +2405,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -2619,7 +2412,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -2627,7 +2419,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -2635,7 +2426,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -2643,7 +2433,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -2651,7 +2440,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -2659,7 +2447,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -2667,7 +2454,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -2675,7 +2461,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -2683,7 +2468,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -2691,7 +2475,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -2699,7 +2482,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -2707,7 +2489,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -2715,7 +2496,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -2723,7 +2503,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_DORMANT_WAKE_INTF_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
@@ -2737,7 +2516,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_HIGH_MSB    _u(23)
@@ -2745,7 +2523,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_LOW_MSB    _u(22)
@@ -2753,7 +2530,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_MSB    _u(21)
@@ -2761,7 +2537,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_LOW_MSB    _u(20)
@@ -2769,7 +2544,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_HIGH_MSB    _u(19)
@@ -2777,7 +2551,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_LOW_MSB    _u(18)
@@ -2785,7 +2558,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_MSB    _u(17)
@@ -2793,7 +2565,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_LOW_MSB    _u(16)
@@ -2801,7 +2572,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_HIGH_MSB    _u(15)
@@ -2809,7 +2579,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_LOW_MSB    _u(14)
@@ -2817,7 +2586,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_MSB    _u(13)
@@ -2825,7 +2593,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_LOW_MSB    _u(12)
@@ -2833,7 +2600,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_HIGH_MSB    _u(11)
@@ -2841,7 +2607,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_LOW_MSB    _u(10)
@@ -2849,7 +2614,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_MSB    _u(9)
@@ -2857,7 +2621,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_LOW_MSB    _u(8)
@@ -2865,7 +2628,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SD0_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_HIGH_MSB    _u(7)
@@ -2873,7 +2635,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_LOW_MSB    _u(6)
@@ -2881,7 +2642,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_HIGH_MSB    _u(5)
@@ -2889,7 +2649,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_LOW_MSB    _u(4)
@@ -2897,7 +2656,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SS_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_MSB    _u(3)
@@ -2905,7 +2663,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_LOW_MSB    _u(2)
@@ -2913,7 +2670,6 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_MSB    _u(1)
@@ -2921,11 +2677,10 @@
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_LOW
-// Description : None
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_RESET  _u(0x0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_MSB    _u(0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_LSB    _u(0)
 #define IO_QSPI_DORMANT_WAKE_INTS_GPIO_QSPI_SCLK_LEVEL_LOW_ACCESS "RO"
 // =============================================================================
-#endif // HARDWARE_REGS_IO_QSPI_DEFINED
+#endif // _HARDWARE_REGS_IO_QSPI_H

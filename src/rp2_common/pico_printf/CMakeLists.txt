@@ -5,14 +5,14 @@ if (NOT TARGET pico_printf)
     # no custom implementation; falls thru to compiler
     pico_add_library(pico_printf_compiler)
 
-    target_include_directories(pico_printf_headers INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+    target_include_directories(pico_printf_headers SYSTEM INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
     # add alias "default" which is just pico.
     add_library(pico_printf_default INTERFACE)
     target_link_libraries(pico_printf_default INTERFACE pico_printf_pico)
 
-    set(PICO_DEFAULT_PRINTF_IMPL pico_printf_default)
-
+    # PICO_CMAKE_CONFIG: PICO_DEFAULT_PRINTF_IMPL, The default implementation for pico_printf to link; 'compiler' lets the C compiler/library control printf behavior while 'pico' provides a compact pico-specific implementation, type=string, default=pico, group=pico_printf
+    pico_fixup_default_impl(PICO_DEFAULT_PRINTF_IMPL pico_printf default)
     target_link_libraries(pico_printf INTERFACE
             $<IF:$<BOOL:$<TARGET_PROPERTY:PICO_TARGET_PRINTF_IMPL>>,$<TARGET_PROPERTY:PICO_TARGET_PRINTF_IMPL>,${PICO_DEFAULT_PRINTF_IMPL}>)
 
@@ -37,6 +37,10 @@ if (NOT TARGET pico_printf)
 
     wrap_printf_functions(pico_printf_pico)
     wrap_printf_functions(pico_printf_none)
+
+    # always hook printf for printf_none with out weak impl, as it is handled by pico_stdio
+    # but that library may not be included
+    pico_wrap_function(pico_printf_none printf)
 
     macro(pico_set_printf_implementation TARGET IMPL)
         get_target_property(target_type ${TARGET} TYPE)

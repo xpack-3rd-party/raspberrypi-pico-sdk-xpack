@@ -8,13 +8,14 @@
 #include <string.h>
 #include "pico/util/queue.h"
 
-void queue_init_with_spinlock(queue_t *q, uint element_size, uint element_count, uint spinlock_num) {
+bool queue_init_with_spinlock(queue_t *q, uint element_size, uint element_count, uint spinlock_num) {
     lock_init(&q->core, spinlock_num);
-    q->data = (uint8_t *)calloc(element_count + 1, element_size);
     q->element_count = (uint16_t)element_count;
     q->element_size = (uint16_t)element_size;
     q->wptr = 0;
     q->rptr = 0;
+    q->data = (uint8_t *)calloc(element_count + 1, element_size);
+    return q->data != NULL;
 }
 
 void queue_free(queue_t *q) {
@@ -63,7 +64,9 @@ static bool queue_remove_internal(queue_t *q, void *data, bool block) {
     do {
         uint32_t save = spin_lock_blocking(q->core.spin_lock);
         if (queue_get_level_unsafe(q) != 0) {
-            memcpy(data, element_ptr(q, q->rptr), q->element_size);
+            if (data) {
+                memcpy(data, element_ptr(q, q->rptr), q->element_size);
+            }
             q->rptr = inc_index(q, q->rptr);
             lock_internal_spin_unlock_with_notify(&q->core, save);
             return true;
@@ -81,7 +84,9 @@ static bool queue_peek_internal(queue_t *q, void *data, bool block) {
     do {
         uint32_t save = spin_lock_blocking(q->core.spin_lock);
         if (queue_get_level_unsafe(q) != 0) {
-            memcpy(data, element_ptr(q, q->rptr), q->element_size);
+            if (data) {
+                memcpy(data, element_ptr(q, q->rptr), q->element_size);
+            }
             lock_internal_spin_unlock_with_notify(&q->core, save);
             return true;
         }

@@ -10,4 +10,9 @@ pico_mirrored_target_link_libraries(hardware_clocks INTERFACE
         hardware_vreg
         hardware_watchdog
         hardware_xosc
+        pico_util
 )
+
+if (PICO_USE_FASTEST_SUPPORTED_CLOCK)
+    target_compile_definitions(hardware_clocks INTERFACE PICO_USE_FASTEST_SUPPORTED_CLOCK=1)
+endif()

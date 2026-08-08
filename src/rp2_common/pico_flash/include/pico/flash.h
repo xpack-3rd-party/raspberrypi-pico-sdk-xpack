@@ -9,13 +9,10 @@
 
 #include "pico.h"
 
-#include "hardware/flash.h"
-#include "pico/time.h"
-
 /** \file pico/flash.h
  *  \defgroup pico_flash pico_flash
  *
- * High level flash API
+ * \brief High level flash API
  *
  * Flash cannot be erased or written to when in XIP mode. However the system cannot directly access memory in the flash
  * address space when not in XIP mode.
@@ -26,7 +23,7 @@
  * the other core, then it has to be asked, nicely, to avoid flash for a bit. This is hard to do if you don't have
  * complete control of the code running on that core at all times.
  *
- * This library provides a \ref flash_safe_execute method which calls a function back having sucessfully gotten
+ * This library provides a \ref flash_safe_execute method which calls a function back having successfully gotten
  * into a state where interrupts are disabled, and the other core is not executing or reading from flash.
  *
  * How it does this is dependent on the supported environment (Free RTOS SMP or pico_multicore). Additionally
@@ -57,7 +54,7 @@ extern "C" {
 #endif
 
 /**
- * Initialize a core such that the other core can lock it out during \ref flash_safe_execute.
+ * \brief Initialize a core such that the other core can lock it out during \ref flash_safe_execute.
  * \ingroup pico_flash
  *
  * \note This is not necessary for FreeRTOS SMP, but should be used when launching via \ref multicore_launch_core1
@@ -66,14 +63,14 @@ extern "C" {
 bool flash_safe_execute_core_init(void);
 
 /**
- * De-initialize work done by \ref flash_safe_execute_core_init
+ * \brief De-initialize work done by \ref flash_safe_execute_core_init
  * \ingroup pico_flash
  * \return true on success
  */
 bool flash_safe_execute_core_deinit(void);
 
 /**
- * Execute a function with IRQs disabled and with the other core also not executing/reading flash
+ * \brief Execute a function with IRQs disabled and with the other core also not executing/reading flash
  * \ingroup pico_flash
  *
  * \param func the function to call
@@ -81,10 +78,10 @@ bool flash_safe_execute_core_deinit(void);
  * \param enter_exit_timeout_ms the timeout for each of the enter/exit phases when coordinating with the other core
  *
  * \return PICO_OK on success (the function will have been called).
- *         PICO_TIMEOUT on timeout (the function may have been called).
+ *         PICO_ERROR_TIMEOUT on timeout (the function may have been called).
  *         PICO_ERROR_NOT_PERMITTED if safe execution is not possible (the function will not have been called).
  *         PICO_ERROR_INSUFFICIENT_RESOURCES if the method fails due to dynamic resource exhaustion (the function will not have been called)
- * \note if \ref PICO_FLASH_ASSERT_ON_UNSAFE is 1, this function will assert in debug mode vs returning
+ * \note If \ref PICO_FLASH_ASSERT_ON_UNSAFE is 1, this function will assert in debug mode vs returning
  *       PICO_ERROR_NOT_PERMITTED
  */
 int flash_safe_execute(void (*func)(void *), void *param, uint32_t enter_exit_timeout_ms);
@@ -111,21 +108,30 @@ int flash_safe_execute(void (*func)(void *), void *param, uint32_t enter_exit_ti
 #endif
 #endif
 
-// PICO_CONFIG: PICO_FLASH_SAFE_EXECUTE_PICO_SUPPORT_MULTICORE_LOCKOUT, Support using multicore_lockout functions to make the other core safe during flash_safe_execute, type=bool, default=1 when using pico_multicore, group=pico_flash
-#ifndef PICO_FLASH_SAFE_EXECUTE_PICO_SUPPORT_MULTICORE_LOCKOUT
-#if LIB_PICO_MULTICORE
-#define PICO_FLASH_SAFE_EXECUTE_PICO_SUPPORT_MULTICORE_LOCKOUT 1
+// PICO_CONFIG: PICO_FLASH_SAFE_EXECUTE_SUPPORT_MULTICORE_LOCKOUT, Support using multicore_lockout functions to make the other core safe during flash_safe_execute, type=bool, default=1 when using pico_multicore, group=pico_flash
+#ifndef PICO_FLASH_SAFE_EXECUTE_SUPPORT_MULTICORE_LOCKOUT
+#ifdef PICO_FLASH_SAFE_EXECUTE_PICO_SUPPORT_MULTICORE_LOCKOUT
+// support old misspelling
+#define PICO_FLASH_SAFE_EXECUTE_SUPPORT_MULTICORE_LOCKOUT PICO_FLASH_SAFE_EXECUTE_PICO_SUPPORT_MULTICORE_LOCKOUT
+#elif LIB_PICO_MULTICORE
+#define PICO_FLASH_SAFE_EXECUTE_SUPPORT_MULTICORE_LOCKOUT 1
 #endif
 #endif
 
+/*! \brief Helper interface for coordinating safe flash access across cores
+ *  \ingroup pico_flash
+ *
+ * Provides the callbacks used by \ref flash_safe_execute to initialize per-core
+ * state and to enter/exit the safe zone in which flash may be written or erased.
+ */
 typedef struct {
-    bool (*core_init_deinit)(bool init);
-    int (*enter_safe_zone_timeout_ms)(uint32_t timeout_ms);
-    int (*exit_safe_zone_timeout_ms)(uint32_t timeout_ms);
+    bool (*core_init_deinit)(bool init); ///< Initialize (init=true) or de-initialise (init=false) this core's participation in flash safety
+    int (*enter_safe_zone_timeout_ms)(uint32_t timeout_ms); ///< Enter the safe zone, blocking until safe or until timeout_ms milliseconds elapse
+    int (*exit_safe_zone_timeout_ms)(uint32_t timeout_ms); ///< Exit the safe zone, unblocking the other core, waiting up to timeout_ms milliseconds
 } flash_safety_helper_t;
 
 /**
- * Internal method to return the flash safety helper implementation.
+ * \brief Internal method to return the flash safety helper implementation.
  * \ingroup pico_flash
  *
  * Advanced users can provide their own implementation of this function to perform

@@ -5,6 +5,7 @@
  */
 
 #include "pico/asm_helper.S"
+#include "pico/double.h"
 #include "pico/bootrom/sf_table.h"
 
 pico_default_asm_setup
@@ -72,9 +73,14 @@ pico_default_asm_setup
     wrapper_func log1p
     wrapper_func fma
 
+#ifdef __riscv
+    la a0, str
+    j  panic
+#else
     push {lr}       // keep stack trace sane
     ldr r0, =str
     bl panic
+#endif
 
 str:
     .asciz "double support is disabled"

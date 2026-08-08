@@ -1,5 +1,7 @@
+// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
 /**
- * Copyright (c) 2022 Raspberry Pi (Trading) Ltd.
+ * Copyright (c) 2021 Raspberry Pi Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -9,8 +11,8 @@
 // Bus type       : apb
 // Description    : DMA with separate read and write masters
 // =============================================================================
-#ifndef HARDWARE_REGS_DMA_DEFINED
-#define HARDWARE_REGS_DMA_DEFINED
+#ifndef _HARDWARE_REGS_DMA_H
+#define _HARDWARE_REGS_DMA_H
 // =============================================================================
 // Register    : DMA_CH0_READ_ADDR
 // Description : DMA Channel 0 Read Address pointer
@@ -124,8 +126,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH0_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH0_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH0_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -163,20 +165,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH0_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH0_CTRL_TRIG_CHAIN_TO
@@ -209,11 +291,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH0_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH0_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH0_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH0_CTRL_TRIG_INCR_WRITE
@@ -247,14 +329,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH0_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH0_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -512,8 +594,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH1_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH1_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH1_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -551,20 +633,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH1_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH1_CTRL_TRIG_CHAIN_TO
@@ -597,11 +759,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH1_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH1_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH1_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH1_CTRL_TRIG_INCR_WRITE
@@ -635,14 +797,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH1_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH1_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -900,8 +1062,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH2_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH2_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH2_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -939,20 +1101,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH2_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH2_CTRL_TRIG_CHAIN_TO
@@ -985,11 +1227,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH2_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH2_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH2_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH2_CTRL_TRIG_INCR_WRITE
@@ -1023,14 +1265,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH2_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH2_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -1288,8 +1530,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH3_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH3_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH3_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -1327,20 +1569,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH3_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH3_CTRL_TRIG_CHAIN_TO
@@ -1373,11 +1695,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH3_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH3_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH3_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH3_CTRL_TRIG_INCR_WRITE
@@ -1411,14 +1733,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH3_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH3_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -1676,8 +1998,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH4_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH4_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH4_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -1715,20 +2037,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH4_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH4_CTRL_TRIG_CHAIN_TO
@@ -1761,11 +2163,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH4_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH4_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH4_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH4_CTRL_TRIG_INCR_WRITE
@@ -1799,14 +2201,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH4_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH4_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -2064,8 +2466,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH5_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH5_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH5_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -2103,20 +2505,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH5_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH5_CTRL_TRIG_CHAIN_TO
@@ -2149,11 +2631,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH5_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH5_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH5_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH5_CTRL_TRIG_INCR_WRITE
@@ -2187,14 +2669,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH5_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH5_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -2452,8 +2934,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH6_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH6_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH6_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -2491,20 +2973,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH6_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH6_CTRL_TRIG_CHAIN_TO
@@ -2537,11 +3099,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH6_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH6_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH6_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH6_CTRL_TRIG_INCR_WRITE
@@ -2575,14 +3137,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH6_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH6_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -2840,8 +3402,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH7_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH7_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH7_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -2879,20 +3441,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH7_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH7_CTRL_TRIG_CHAIN_TO
@@ -2925,11 +3567,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH7_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH7_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH7_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH7_CTRL_TRIG_INCR_WRITE
@@ -2963,14 +3605,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH7_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH7_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -3228,8 +3870,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH8_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH8_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH8_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -3267,20 +3909,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH8_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH8_CTRL_TRIG_CHAIN_TO
@@ -3313,11 +4035,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH8_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH8_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH8_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH8_CTRL_TRIG_INCR_WRITE
@@ -3351,14 +4073,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH8_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH8_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -3616,8 +4338,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH9_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH9_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH9_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -3655,20 +4377,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH9_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH9_CTRL_TRIG_CHAIN_TO
@@ -3701,11 +4503,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH9_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH9_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH9_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH9_CTRL_TRIG_INCR_WRITE
@@ -3739,14 +4541,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH9_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH9_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -4004,8 +4806,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH10_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH10_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH10_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -4043,20 +4845,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH10_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH10_CTRL_TRIG_CHAIN_TO
@@ -4089,11 +4971,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH10_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH10_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH10_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH10_CTRL_TRIG_INCR_WRITE
@@ -4127,14 +5009,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH10_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH10_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -4392,8 +5274,8 @@
 //               checksum. This only applies if the sniff hardware is enabled,
 //               and has this channel selected.
 //
-//               This allows checksum to be enabled or disabled on a
-//               per-control- block basis.
+//               This allows checksum to be enabled or disabled on a per-
+//               control- block basis.
 #define DMA_CH11_CTRL_TRIG_SNIFF_EN_RESET  _u(0x0)
 #define DMA_CH11_CTRL_TRIG_SNIFF_EN_BITS   _u(0x00800000)
 #define DMA_CH11_CTRL_TRIG_SNIFF_EN_MSB    _u(23)
@@ -4431,20 +5313,100 @@
 //               transfer rate. Sources for TREQ signals are internal (TIMERS)
 //               or external (DREQ, a Data Request from the system).
 //               0x0 to 0x3a -> select DREQ n as TREQ
+//               0x00 -> Select PIO0's TX FIFO 0 as TREQ
+//               0x01 -> Select PIO0's TX FIFO 1 as TREQ
+//               0x02 -> Select PIO0's TX FIFO 2 as TREQ
+//               0x03 -> Select PIO0's TX FIFO 3 as TREQ
+//               0x04 -> Select PIO0's RX FIFO 0 as TREQ
+//               0x05 -> Select PIO0's RX FIFO 1 as TREQ
+//               0x06 -> Select PIO0's RX FIFO 2 as TREQ
+//               0x07 -> Select PIO0's RX FIFO 3 as TREQ
+//               0x08 -> Select PIO1's TX FIFO 0 as TREQ
+//               0x09 -> Select PIO1's TX FIFO 1 as TREQ
+//               0x0a -> Select PIO1's TX FIFO 2 as TREQ
+//               0x0b -> Select PIO1's TX FIFO 3 as TREQ
+//               0x0c -> Select PIO1's RX FIFO 0 as TREQ
+//               0x0d -> Select PIO1's RX FIFO 1 as TREQ
+//               0x0e -> Select PIO1's RX FIFO 2 as TREQ
+//               0x0f -> Select PIO1's RX FIFO 3 as TREQ
+//               0x10 -> Select SPI0's TX FIFO as TREQ
+//               0x11 -> Select SPI0's RX FIFO as TREQ
+//               0x12 -> Select SPI1's TX FIFO as TREQ
+//               0x13 -> Select SPI1's RX FIFO as TREQ
+//               0x14 -> Select UART0's TX FIFO as TREQ
+//               0x15 -> Select UART0's RX FIFO as TREQ
+//               0x16 -> Select UART1's TX FIFO as TREQ
+//               0x17 -> Select UART1's RX FIFO as TREQ
+//               0x18 -> Select PWM Counter 0's Wrap Value as TREQ
+//               0x19 -> Select PWM Counter 1's Wrap Value as TREQ
+//               0x1a -> Select PWM Counter 2's Wrap Value as TREQ
+//               0x1b -> Select PWM Counter 3's Wrap Value as TREQ
+//               0x1c -> Select PWM Counter 4's Wrap Value as TREQ
+//               0x1d -> Select PWM Counter 5's Wrap Value as TREQ
+//               0x1e -> Select PWM Counter 6's Wrap Value as TREQ
+//               0x1f -> Select PWM Counter 7's Wrap Value as TREQ
+//               0x20 -> Select I2C0's TX FIFO as TREQ
+//               0x21 -> Select I2C0's RX FIFO as TREQ
+//               0x22 -> Select I2C1's TX FIFO as TREQ
+//               0x23 -> Select I2C1's RX FIFO as TREQ
+//               0x24 -> Select the ADC as TREQ
+//               0x25 -> Select the XIP Streaming FIFO as TREQ
+//               0x26 -> Select the XIP SSI TX FIFO as TREQ
+//               0x27 -> Select the XIP SSI RX FIFO as TREQ
 //               0x3b -> Select Timer 0 as TREQ
 //               0x3c -> Select Timer 1 as TREQ
 //               0x3d -> Select Timer 2 as TREQ (Optional)
 //               0x3e -> Select Timer 3 as TREQ (Optional)
 //               0x3f -> Permanent request, for unpaced transfers.
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_RESET           _u(0x00)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_BITS            _u(0x001f8000)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_MSB             _u(20)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_LSB             _u(15)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_ACCESS          "RW"
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0    _u(0x3b)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1    _u(0x3c)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2    _u(0x3d)
-#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3    _u(0x3e)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_RESET  _u(0x00)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_BITS   _u(0x001f8000)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_MSB    _u(20)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_LSB    _u(15)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_ACCESS "RW"
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX0 _u(0x00)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX1 _u(0x01)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX2 _u(0x02)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_TX3 _u(0x03)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX0 _u(0x04)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX1 _u(0x05)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX2 _u(0x06)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO0_RX3 _u(0x07)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX0 _u(0x08)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX1 _u(0x09)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX2 _u(0x0a)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_TX3 _u(0x0b)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX0 _u(0x0c)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX1 _u(0x0d)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX2 _u(0x0e)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PIO1_RX3 _u(0x0f)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_TX _u(0x10)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_SPI0_RX _u(0x11)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_TX _u(0x12)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_SPI1_RX _u(0x13)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_UART0_TX _u(0x14)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_UART0_RX _u(0x15)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_UART1_TX _u(0x16)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_UART1_RX _u(0x17)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP0 _u(0x18)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP1 _u(0x19)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP2 _u(0x1a)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP3 _u(0x1b)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP4 _u(0x1c)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP5 _u(0x1d)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP6 _u(0x1e)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PWM_WRAP7 _u(0x1f)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_TX _u(0x20)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_I2C0_RX _u(0x21)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_TX _u(0x22)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_I2C1_RX _u(0x23)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_ADC _u(0x24)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_XIP_STREAM _u(0x25)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSITX _u(0x26)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_XIP_SSIRX _u(0x27)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER0 _u(0x3b)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER1 _u(0x3c)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER2 _u(0x3d)
+#define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_TIMER3 _u(0x3e)
 #define DMA_CH11_CTRL_TRIG_TREQ_SEL_VALUE_PERMANENT _u(0x3f)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH11_CTRL_TRIG_CHAIN_TO
@@ -4477,11 +5439,11 @@
 //               apply to either read or write addresses, based on value of
 //               RING_SEL.
 //               0x0 -> RING_NONE
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_RESET           _u(0x0)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_BITS            _u(0x000003c0)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_MSB             _u(9)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_LSB             _u(6)
-#define DMA_CH11_CTRL_TRIG_RING_SIZE_ACCESS          "RW"
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_RESET  _u(0x0)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_BITS   _u(0x000003c0)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_MSB    _u(9)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_LSB    _u(6)
+#define DMA_CH11_CTRL_TRIG_RING_SIZE_ACCESS "RW"
 #define DMA_CH11_CTRL_TRIG_RING_SIZE_VALUE_RING_NONE _u(0x0)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH11_CTRL_TRIG_INCR_WRITE
@@ -4515,14 +5477,14 @@
 //               0x0 -> SIZE_BYTE
 //               0x1 -> SIZE_HALFWORD
 //               0x2 -> SIZE_WORD
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_RESET               _u(0x0)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_BITS                _u(0x0000000c)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_MSB                 _u(3)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_LSB                 _u(2)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_ACCESS              "RW"
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE     _u(0x0)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_RESET  _u(0x0)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_BITS   _u(0x0000000c)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_MSB    _u(3)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_LSB    _u(2)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_ACCESS "RW"
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_BYTE _u(0x0)
 #define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_HALFWORD _u(0x1)
-#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD     _u(0x2)
+#define DMA_CH11_CTRL_TRIG_DATA_SIZE_VALUE_SIZE_WORD _u(0x2)
 // -----------------------------------------------------------------------------
 // Field       : DMA_CH11_CTRL_TRIG_HIGH_PRIORITY
 // Description : HIGH_PRIORITY gives a channel preferential treatment in issue
@@ -4925,26 +5887,26 @@
 #define DMA_SNIFF_CTRL_BSWAP_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : DMA_SNIFF_CTRL_CALC
-// Description : 0x0 -> Calculate a CRC-32 (IEEE802.3 polynomial)
-//               0x1 -> Calculate a CRC-32 (IEEE802.3 polynomial) with bit
-//               reversed data
+//               0x0 -> Calculate a CRC-32 (IEEE802.3 polynomial)
+//               0x1 -> Calculate a CRC-32 (IEEE802.3 polynomial) with bit reversed
+//               data
 //               0x2 -> Calculate a CRC-16-CCITT
 //               0x3 -> Calculate a CRC-16-CCITT with bit reversed data
-//               0xe -> XOR reduction over all data. == 1 if the total 1
-//               population count is odd.
-//               0xf -> Calculate a simple 32-bit checksum (addition with a 32
-//               bit accumulator)
-#define DMA_SNIFF_CTRL_CALC_RESET        _u(0x0)
-#define DMA_SNIFF_CTRL_CALC_BITS         _u(0x000001e0)
-#define DMA_SNIFF_CTRL_CALC_MSB          _u(8)
-#define DMA_SNIFF_CTRL_CALC_LSB          _u(5)
-#define DMA_SNIFF_CTRL_CALC_ACCESS       "RW"
-#define DMA_SNIFF_CTRL_CALC_VALUE_CRC32  _u(0x0)
+//               0xe -> XOR reduction over all data. == 1 if the total 1 population
+//               count is odd.
+//               0xf -> Calculate a simple 32-bit checksum (addition with a 32 bit
+//               accumulator)
+#define DMA_SNIFF_CTRL_CALC_RESET  _u(0x0)
+#define DMA_SNIFF_CTRL_CALC_BITS   _u(0x000001e0)
+#define DMA_SNIFF_CTRL_CALC_MSB    _u(8)
+#define DMA_SNIFF_CTRL_CALC_LSB    _u(5)
+#define DMA_SNIFF_CTRL_CALC_ACCESS "RW"
+#define DMA_SNIFF_CTRL_CALC_VALUE_CRC32 _u(0x0)
 #define DMA_SNIFF_CTRL_CALC_VALUE_CRC32R _u(0x1)
-#define DMA_SNIFF_CTRL_CALC_VALUE_CRC16  _u(0x2)
+#define DMA_SNIFF_CTRL_CALC_VALUE_CRC16 _u(0x2)
 #define DMA_SNIFF_CTRL_CALC_VALUE_CRC16R _u(0x3)
-#define DMA_SNIFF_CTRL_CALC_VALUE_EVEN   _u(0xe)
-#define DMA_SNIFF_CTRL_CALC_VALUE_SUM    _u(0xf)
+#define DMA_SNIFF_CTRL_CALC_VALUE_EVEN _u(0xe)
+#define DMA_SNIFF_CTRL_CALC_VALUE_SUM _u(0xf)
 // -----------------------------------------------------------------------------
 // Field       : DMA_SNIFF_CTRL_DMACH
 // Description : DMA channel for Sniffer to observe
@@ -5298,4 +6260,4 @@
 #define DMA_CH11_DBG_TCR_LSB    _u(0)
 #define DMA_CH11_DBG_TCR_ACCESS "RO"
 // =============================================================================
-#endif // HARDWARE_REGS_DMA_DEFINED
+#endif // _HARDWARE_REGS_DMA_H

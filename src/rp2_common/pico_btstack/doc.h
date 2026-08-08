@@ -11,7 +11,7 @@
  * To use BTstack you need to provide a \c btstack_config.h file in your source tree and add its location to your include path.
  * The BTstack configuration macros \c ENABLE_CLASSIC and \c ENABLE_BLE are defined for you when you link the \c pico_btstack_classic and \c pico_btstack_ble libraries respectively, so you should not define them yourself.
  *
- * For more details, see <a href="https://bluekitchen-gmbh.com/btstack/develop/#how_to/">How to configure BTstack</a> and the relevant <a href="https://github.com/raspberrypi/pico-examples#pico-w-bluetooth">pico-examples</a>.
+ * For more details, see <a href="https://bluekitchen-gmbh.com/btstack/develop/#how_to/">How to configure BTstack</a> and the relevant <a href="https://github.com/raspberrypi/pico-examples#pico-bluetooth">pico-examples</a>.
  *
  * The follow libraries are provided for you to link.
  * * \c \b pico_btstack_ble - Adds Bluetooth Low Energy (LE) support.
@@ -20,6 +20,7 @@
  * * \c \b pico_btstack_sbc_decoder - Adds Bluetooth Sub Band Coding (SBC) decoder support.
  * * \c \b pico_btstack_bnep_lwip - Adds Bluetooth Network Encapsulation Protocol (BNEP) support using LwIP.
  * * \c \b pico_btstack_bnep_lwip_sys_freertos - Adds Bluetooth Network Encapsulation Protocol (BNEP) support using LwIP with FreeRTOS for NO_SYS=0.
+ * * \c \b pico_btstack_mesh - Adds Bluetooth mesh support from BTstack.
  *
  * \note The CMake function pico_btstack_make_gatt_header can be used to run the BTstack compile_gatt tool to make a GATT header file from a BTstack GATT file.
  *

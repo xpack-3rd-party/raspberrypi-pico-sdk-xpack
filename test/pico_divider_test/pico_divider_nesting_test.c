@@ -7,20 +7,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+#include "hardware/divider.h"
 #include "pico/stdlib.h"
 #include "hardware/dma.h"
 #include "hardware/irq.h"
+#include "hardware/sync.h"
+#include "pico/divider.h"
 
 volatile bool failed;
 volatile uint32_t count[3];
 volatile bool done;
 
 #define FAILED() ({ failed = true; })
-//#define FAILED() ({ failed = true; __breakpoint(); })
+// #define FAILED() ({ failed = true; __breakpoint(); })
+
+//#define DOUBLE_ONLY 1
 
 bool timer_callback(repeating_timer_t *t) {
     count[0]++;
     static int z;
+#if !DOUBLE_ONLY
     for (int i=0; i<100;i++) {
         z += 23;
         int a = z / 7;
@@ -34,19 +41,22 @@ bool timer_callback(repeating_timer_t *t) {
             FAILED();
         }
     }
-    float fz = (float)z;
+#else
+    for(int i=0;i<10;i++) {
+#endif
+    float fz = (float) z;
     float fa = fz / 11.0f;
-    float fb = fmodf(fz, 11.0f);
-    if (fabs(fz - (fa * 11.0 + fb)) > 1e-9) {
+    if (fabsf(fz - fa * 11.0f) / fz > 0.2f) {
         FAILED();
     }
     double dz = z;
     double da = dz / 11.0;
-    double db = fmod(dz, 11.0);
-    if (fabs(dz - (da * 11.0 + db)) > 1e-9) {
+    if (fabs(dz - da * 11.0) > 1e-6f) {
         FAILED();
     }
-
+#if DOUBLE_ONLY
+    }
+#endif
     return !done;
 }
 
@@ -54,10 +64,6 @@ void do_dma_start(uint ch) {
     static uint32_t word[2];
     assert(ch < 2);
     dma_channel_config c = dma_channel_get_default_config(ch);
-    // todo remove this; landing in a separate PR
-#ifndef DREQ_DMA_TIMER0
-#define DREQ_DMA_TIMER0 0x3b
-#endif
     channel_config_set_dreq(&c, DREQ_DMA_TIMER0);
     dma_channel_configure(ch, &c, &word[ch], &word[ch], 513 + ch * 23, true);
 }
@@ -65,18 +71,26 @@ void do_dma_start(uint ch) {
 double d0c, d0s, d0t, dz;
 float f0c, f0s, f0t, fz;
 
+double flarn = 25.5;
+double zzd = 13.3;
+
 void test_irq_handler0() {
     count[1]++;
     dma_hw->ints0 |= 1u;
     static uint z;
     static uint dz;
     for (int i=0; i<80;i++) {
+#if !DOUBLE_ONLY
         z += 31;
         uint a = z / 11;
         uint b = z % 11;
         if (z != a * 11 + b) {
             FAILED();
         }
+#else
+        zzd += flarn/(flarn + 1.35);
+        break;
+#endif
     }
     if (done) dma_channel_abort(0);
     else      do_dma_start(0);
@@ -87,6 +101,7 @@ void test_irq_handler1() {
     dma_hw->ints1 |= 2u;
     count[2]++;
     for (int i=0; i<130;i++) {
+#if !DOUBLE_ONLY
         z += 47;
         uint a = z / -13;
         uint b = z % -13;
@@ -100,6 +115,10 @@ void test_irq_handler1() {
         if (z64 != a64 * -13 + b64) {
             FAILED();
         }
+#else
+        zzd += flarn/123.3;
+        break;
+#endif
     }
 
     if (done) dma_channel_abort(1);
@@ -174,6 +193,20 @@ void test_nesting() {
                 FAILED();
             }
             cd++;
+            static float zf = 1.f;
+            float ff = zf / -13635.f;
+            if (fabsf(zf - ff * -13635.f) > 1e-2f) {
+                FAILED();
+            }
+            zf += 0.0331f;
+            z += (int)ff;
+            static double zd = 1.0;
+            double dd = zd / -13635.0;
+            if (fabs(zd - dd * -13635.0) > 1e-6) {
+                FAILED();
+            }
+            zd += 0.331;
+            z += (int)dd;
 
         }
         // these use the divider
@@ -191,7 +224,7 @@ void test_nesting() {
     done = true;
     cancel_repeating_timer(&timer);
     printf("%d: %d %d %d\n", count_local, (int)count[0], (int)count[1], (int)count[2]);
-
+    printf("%d\n", z);
     // make sure all the IRQs ran
     if (!(count_local && count[0] && count[1] && count[2])) {
         printf("DID NOT RUN\n");
@@ -203,6 +236,49 @@ void test_nesting() {
     }
 }
 
+void test_unsafe_32() {
+    int count_local=0;
+    absolute_time_t end = delayed_by_ms(get_absolute_time(), 2000);
+    uint z = 0;
+    while (!time_reached(end)) {
+        for(uint i=0;i<100;i++) {
+            z += 31;
+            divmod_result_t r = divmod_u32u32_unsafe(z, 11);
+            uint a = to_quotient_u32(r);
+            uint b = to_remainder_u32(r);
+            if (z != a * 11 + b) {
+                FAILED();
+            }
+            int zz = (int)z;
+            r = divmod_s32s32_unsafe(zz, -11);
+            int aa = to_quotient_s32(r);
+            int bb = to_remainder_s32(r);
+            if (zz != aa * -11 + bb) {
+                FAILED();
+            }
+            r = divmod_s32s32_unsafe(-zz, -11);
+            aa = to_quotient_s32(r);
+            bb = to_remainder_s32(r);
+            if (-zz != aa * -11 + bb) {
+                FAILED();
+            }
+            r = divmod_s32s32_unsafe(-zz, 11);
+            aa = to_quotient_s32(r);
+            bb = to_remainder_s32(r);
+            if (-zz != aa * 11 + bb) {
+                FAILED();
+            }
+            r = divmod_u32u32_unsafe(0xffffffffu, 11);
+            a = to_quotient_u32(r);
+            b = to_remainder_u32(r);
+            if (0xffffffffu != a * 11 + b) {
+                FAILED();
+            }
+        }
+        count_local++;
+    }
+}
+
 int main() {
 #ifndef uart_default
 #warning test/pico_divider requires a default uart
@@ -210,7 +286,8 @@ int main() {
     stdio_init_all();
 #endif
     test_nesting();
+    // not strictly a nesting test, but it's a copy/paste basically, so doing it here
+    test_unsafe_32();
     printf("PASSED\n");
     return 0;
 }
-

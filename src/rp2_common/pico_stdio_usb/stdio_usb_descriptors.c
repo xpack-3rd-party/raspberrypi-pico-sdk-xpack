@@ -26,18 +26,23 @@
  * THE SOFTWARE.
  */
 
-#if !defined(LIB_TINYUSB_HOST) && !defined(LIB_TINYUSB_DEVICE)
-
-#include "tusb.h"
-#include "pico/stdio_usb/reset_interface.h"
+#include "pico/stdio_usb.h"
+#include "pico/usb_reset.h"
 #include "pico/unique_id.h"
+#include "tusb.h"
+
+#if PICO_STDIO_USB_USE_DEFAULT_DESCRIPTORS
 
 #ifndef USBD_VID
 #define USBD_VID (0x2E8A) // Raspberry Pi
 #endif
 
 #ifndef USBD_PID
-#define USBD_PID (0x000a) // Raspberry Pi Pico SDK CDC
+#if PICO_RP2040
+#define USBD_PID (0x000a) // Raspberry Pi Pico SDK CDC for RP2040
+#else
+#define USBD_PID (0x0009) // Raspberry Pi Pico SDK CDC
+#endif
 #endif
 
 #ifndef USBD_MANUFACTURER
@@ -48,8 +53,7 @@
 #define USBD_PRODUCT "Pico"
 #endif
 
-#define TUD_RPI_RESET_DESC_LEN  9
-#if !PICO_STDIO_USB_ENABLE_RESET_VIA_VENDOR_INTERFACE
+#if !PICO_ENABLE_USB_RESET_VIA_VENDOR_INTERFACE
 #define USBD_DESC_LEN (TUD_CONFIG_DESC_LEN + TUD_CDC_DESC_LEN)
 #else
 #define USBD_DESC_LEN (TUD_CONFIG_DESC_LEN + TUD_CDC_DESC_LEN + TUD_RPI_RESET_DESC_LEN)
@@ -63,10 +67,11 @@
 #endif
 
 #define USBD_ITF_CDC       (0) // needs 2 interfaces
-#if !PICO_STDIO_USB_ENABLE_RESET_VIA_VENDOR_INTERFACE
+#if !PICO_ENABLE_USB_RESET_VIA_VENDOR_INTERFACE
 #define USBD_ITF_MAX       (2)
 #else
 #define USBD_ITF_RPI_RESET (2)
+static_assert(USBD_ITF_RPI_RESET == PICO_USB_RESET_MS_OS_20_DESCRIPTOR_ITF, "USBD_ITF_RPI_RESET must be equal to PICO_USB_RESET_MS_OS_20_DESCRIPTOR_ITF");
 #define USBD_ITF_MAX       (3)
 #endif
 
@@ -88,7 +93,15 @@
 static const tusb_desc_device_t usbd_desc_device = {
     .bLength = sizeof(tusb_desc_device_t),
     .bDescriptorType = TUSB_DESC_DEVICE,
+// On Windows, if bcdUSB = 0x210 then a Microsoft OS 2.0 descriptor is required, else the device won't be detected
+// This is only needed for driverless access to the reset interface - the CDC interface doesn't require these descriptors
+// for driverless access, but will still not work if bcdUSB = 0x210 and no descriptor is provided. Therefore always
+// use bcdUSB = 0x200 if the Microsoft OS 2.0 descriptor isn't enabled
+#if PICO_ENABLE_USB_RESET_VIA_VENDOR_INTERFACE && PICO_USB_RESET_SUPPORT_MS_OS_20_DESCRIPTOR
+    .bcdUSB = 0x0210,
+#else
     .bcdUSB = 0x0200,
+#endif
     .bDeviceClass = TUSB_CLASS_MISC,
     .bDeviceSubClass = MISC_SUBCLASS_COMMON,
     .bDeviceProtocol = MISC_PROTOCOL_IAD,
@@ -102,10 +115,6 @@ static const tusb_desc_device_t usbd_desc_device = {
     .bNumConfigurations = 1,
 };
 
-#define TUD_RPI_RESET_DESCRIPTOR(_itfnum, _stridx) \
-  /* Interface */\
-  9, TUSB_DESC_INTERFACE, _itfnum, 0, 0, TUSB_CLASS_VENDOR_SPECIFIC, RESET_INTERFACE_SUBCLASS, RESET_INTERFACE_PROTOCOL, _stridx,
-
 static const uint8_t usbd_desc_cfg[USBD_DESC_LEN] = {
     TUD_CONFIG_DESCRIPTOR(1, USBD_ITF_MAX, USBD_STR_0, USBD_DESC_LEN,
         USBD_CONFIGURATION_DESCRIPTOR_ATTRIBUTE, USBD_MAX_POWER_MA),
@@ -113,8 +122,8 @@ static const uint8_t usbd_desc_cfg[USBD_DESC_LEN] = {
     TUD_CDC_DESCRIPTOR(USBD_ITF_CDC, USBD_STR_CDC, USBD_CDC_EP_CMD,
         USBD_CDC_CMD_MAX_SIZE, USBD_CDC_EP_OUT, USBD_CDC_EP_IN, USBD_CDC_IN_OUT_MAX_SIZE),
 
-#if PICO_STDIO_USB_ENABLE_RESET_VIA_VENDOR_INTERFACE
-    TUD_RPI_RESET_DESCRIPTOR(USBD_ITF_RPI_RESET, USBD_STR_RPI_RESET)
+#if PICO_ENABLE_USB_RESET_VIA_VENDOR_INTERFACE
+    TUD_RPI_RESET_DESCRIPTOR(USBD_ITF_RPI_RESET, USBD_STR_RPI_RESET),
 #endif
 };
 
@@ -125,7 +134,7 @@ static const char *const usbd_desc_str[] = {
     [USBD_STR_PRODUCT] = USBD_PRODUCT,
     [USBD_STR_SERIAL] = usbd_serial_str,
     [USBD_STR_CDC] = "Board CDC",
-#if PICO_STDIO_USB_ENABLE_RESET_VIA_VENDOR_INTERFACE
+#if PICO_ENABLE_USB_RESET_VIA_VENDOR_INTERFACE
     [USBD_STR_RPI_RESET] = "Reset",
 #endif
 };

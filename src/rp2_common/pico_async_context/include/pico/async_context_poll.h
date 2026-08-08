@@ -11,7 +11,7 @@
  *  \defgroup async_context_poll async_context_poll
  *  \ingroup pico_async_context
  *
- * async_context_poll provides an implementation of \ref async_context that is intended for use with a simple
+ * \brief async_context_poll provides an implementation of \ref async_context that is intended for use with a simple
  * polling loop on one core. It is not thread safe.
  *
  * The \ref async_context_poll() method must be called periodically to handle asynchronous work that may now be
@@ -25,9 +25,15 @@
 extern "C" {
 #endif
 
+/*! \brief Async context type for a simple single-core polling loop
+ *  \ingroup async_context_poll
+ *
+ * Holds the state for an async_context_poll instance, which processes
+ * asynchronous work by polling rather than using interrupts or threads.
+ */
 typedef struct async_context_poll {
-    async_context_t core;
-    semaphore_t sem;
+    async_context_t core; ///< Core async context state shared by all implementations
+    semaphore_t sem; ///< Semaphore used to signal that work is pending
 } async_context_poll_t;
 
 /*!

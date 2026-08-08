@@ -1,5 +1,7 @@
+// THIS HEADER FILE IS AUTOMATICALLY GENERATED -- DO NOT EDIT
+
 /**
- * Copyright (c) 2021 Raspberry Pi (Trading) Ltd.
+ * Copyright (c) 2021 Raspberry Pi Ltd.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
@@ -7,10 +9,9 @@
 // Register block : IO_BANK0
 // Version        : 1
 // Bus type       : apb
-// Description    : None
 // =============================================================================
-#ifndef HARDWARE_REGS_IO_BANK0_DEFINED
-#define HARDWARE_REGS_IO_BANK0_DEFINED
+#ifndef _HARDWARE_REGS_IO_BANK0_H
+#define _HARDWARE_REGS_IO_BANK0_H
 // =============================================================================
 // Register    : IO_BANK0_GPIO0_STATUS
 // Description : GPIO status
@@ -91,67 +92,66 @@
 #define IO_BANK0_GPIO0_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO0_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO0_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO0_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO0_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO0_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO0_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO0_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO0_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO0_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO0_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO0_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO0_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO0_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO0_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO0_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO0_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO0_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO0_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO0_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO0_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO0_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO0_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO0_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO0_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO0_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO0_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO0_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO0_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO0_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO0_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO0_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO0_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO0_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO0_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO0_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO0_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO0_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO0_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO0_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO0_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO0_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO0_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO0_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO0_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO0_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO0_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO0_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO0_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO0_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO0_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO0_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO0_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO0_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO0_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO0_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO0_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO0_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO0_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO0_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO0_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO0_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO0_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO0_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO0_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -166,21 +166,21 @@
 //               0x07 -> pio1_0
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_JTAG_TCK                   _u(0x00)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_SPI0_RX                    _u(0x01)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_UART0_TX                   _u(0x02)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_I2C0_SDA                   _u(0x03)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_PWM_A_0                    _u(0x04)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_SIO_0                      _u(0x05)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_PIO0_0                     _u(0x06)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_PIO1_0                     _u(0x07)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_JTAG_TCK _u(0x00)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_SPI0_RX _u(0x01)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_UART0_TX _u(0x02)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_PWM_A_0 _u(0x04)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_SIO_0 _u(0x05)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_PIO0_0 _u(0x06)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_PIO1_0 _u(0x07)
 #define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO0_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO1_STATUS
 // Description : GPIO status
@@ -261,67 +261,66 @@
 #define IO_BANK0_GPIO1_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO1_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO1_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO1_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO1_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO1_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO1_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO1_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO1_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO1_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO1_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO1_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO1_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO1_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO1_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO1_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO1_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO1_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO1_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO1_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO1_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO1_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO1_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO1_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO1_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO1_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO1_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO1_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO1_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO1_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO1_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO1_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO1_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO1_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO1_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO1_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO1_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO1_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO1_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO1_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO1_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO1_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO1_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO1_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO1_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO1_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO1_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO1_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO1_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO1_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO1_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO1_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO1_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO1_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO1_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO1_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO1_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO1_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO1_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO1_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO1_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO1_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO1_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO1_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO1_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO1_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO1_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO1_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO1_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO1_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO1_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -336,21 +335,21 @@
 //               0x07 -> pio1_1
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_JTAG_TMS               _u(0x00)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_SPI0_SS_N              _u(0x01)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_UART0_RX               _u(0x02)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_I2C0_SCL               _u(0x03)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_PWM_B_0                _u(0x04)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_SIO_1                  _u(0x05)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_PIO0_1                 _u(0x06)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_PIO1_1                 _u(0x07)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_JTAG_TMS _u(0x00)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_SPI0_SS_N _u(0x01)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_UART0_RX _u(0x02)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_PWM_B_0 _u(0x04)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_SIO_1 _u(0x05)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_PIO0_1 _u(0x06)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_PIO1_1 _u(0x07)
 #define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO1_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO2_STATUS
 // Description : GPIO status
@@ -431,67 +430,66 @@
 #define IO_BANK0_GPIO2_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO2_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO2_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO2_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO2_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO2_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO2_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO2_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO2_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO2_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO2_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO2_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO2_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO2_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO2_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO2_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO2_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO2_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO2_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO2_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO2_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO2_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO2_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO2_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO2_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO2_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO2_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO2_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO2_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO2_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO2_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO2_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO2_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO2_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO2_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO2_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO2_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO2_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO2_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO2_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO2_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO2_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO2_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO2_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO2_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO2_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO2_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO2_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO2_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO2_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO2_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO2_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO2_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO2_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO2_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO2_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO2_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO2_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO2_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO2_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO2_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO2_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO2_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO2_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO2_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO2_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO2_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO2_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO2_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO2_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO2_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -506,21 +504,21 @@
 //               0x07 -> pio1_2
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_RESET                    _u(0x1f)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_BITS                     _u(0x0000001f)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_MSB                      _u(4)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_LSB                      _u(0)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_ACCESS                   "RW"
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_JTAG_TDI           _u(0x00)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_SPI0_SCLK          _u(0x01)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_UART0_CTS          _u(0x02)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_I2C1_SDA           _u(0x03)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_PWM_A_1            _u(0x04)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_SIO_2              _u(0x05)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_PIO0_2             _u(0x06)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_PIO1_2             _u(0x07)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_JTAG_TDI _u(0x00)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_SPI0_SCLK _u(0x01)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_UART0_CTS _u(0x02)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_I2C1_SDA _u(0x03)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_PWM_A_1 _u(0x04)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_SIO_2 _u(0x05)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_PIO0_2 _u(0x06)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_PIO1_2 _u(0x07)
 #define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
-#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_NULL               _u(0x1f)
+#define IO_BANK0_GPIO2_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO3_STATUS
 // Description : GPIO status
@@ -601,67 +599,66 @@
 #define IO_BANK0_GPIO3_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO3_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO3_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO3_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO3_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO3_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO3_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO3_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO3_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO3_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO3_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO3_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO3_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO3_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO3_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO3_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO3_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO3_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO3_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO3_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO3_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO3_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO3_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO3_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO3_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO3_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO3_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO3_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO3_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO3_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO3_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO3_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO3_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO3_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO3_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO3_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO3_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO3_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO3_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO3_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO3_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO3_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO3_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO3_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO3_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO3_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO3_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO3_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO3_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO3_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO3_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO3_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO3_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO3_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO3_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO3_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO3_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO3_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO3_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO3_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO3_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO3_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO3_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO3_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO3_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO3_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO3_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO3_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO3_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO3_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO3_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -676,21 +673,21 @@
 //               0x07 -> pio1_3
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_JTAG_TDO                   _u(0x00)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_SPI0_TX                    _u(0x01)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_UART0_RTS                  _u(0x02)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_I2C1_SCL                   _u(0x03)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_PWM_B_1                    _u(0x04)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_SIO_3                      _u(0x05)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_PIO0_3                     _u(0x06)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_PIO1_3                     _u(0x07)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_JTAG_TDO _u(0x00)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_SPI0_TX _u(0x01)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_UART0_RTS _u(0x02)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_I2C1_SCL _u(0x03)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_PWM_B_1 _u(0x04)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_SIO_3 _u(0x05)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_PIO0_3 _u(0x06)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_PIO1_3 _u(0x07)
 #define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO3_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO4_STATUS
 // Description : GPIO status
@@ -771,67 +768,66 @@
 #define IO_BANK0_GPIO4_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO4_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO4_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO4_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO4_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO4_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO4_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO4_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO4_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO4_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO4_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO4_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO4_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO4_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO4_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO4_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO4_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO4_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO4_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO4_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO4_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO4_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO4_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO4_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO4_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO4_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO4_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO4_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO4_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO4_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO4_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO4_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO4_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO4_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO4_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO4_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO4_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO4_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO4_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO4_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO4_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO4_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO4_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO4_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO4_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO4_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO4_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO4_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO4_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO4_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO4_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO4_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO4_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO4_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO4_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO4_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO4_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO4_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO4_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO4_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO4_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO4_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO4_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO4_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO4_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO4_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO4_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO4_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO4_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO4_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO4_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -845,20 +841,20 @@
 //               0x07 -> pio1_4
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_SPI0_RX                _u(0x01)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_UART1_TX               _u(0x02)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_I2C0_SDA               _u(0x03)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_PWM_A_2                _u(0x04)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_SIO_4                  _u(0x05)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_PIO0_4                 _u(0x06)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_PIO1_4                 _u(0x07)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_SPI0_RX _u(0x01)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_UART1_TX _u(0x02)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_PWM_A_2 _u(0x04)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_SIO_4 _u(0x05)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_PIO0_4 _u(0x06)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_PIO1_4 _u(0x07)
 #define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO4_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO5_STATUS
 // Description : GPIO status
@@ -939,67 +935,66 @@
 #define IO_BANK0_GPIO5_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO5_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO5_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO5_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO5_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO5_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO5_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO5_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO5_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO5_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO5_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO5_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO5_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO5_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO5_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO5_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO5_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO5_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO5_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO5_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO5_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO5_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO5_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO5_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO5_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO5_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO5_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO5_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO5_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO5_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO5_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO5_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO5_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO5_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO5_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO5_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO5_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO5_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO5_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO5_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO5_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO5_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO5_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO5_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO5_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO5_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO5_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO5_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO5_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO5_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO5_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO5_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO5_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO5_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO5_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO5_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO5_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO5_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO5_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO5_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO5_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO5_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO5_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO5_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO5_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO5_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO5_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO5_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO5_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO5_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO5_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -1013,20 +1008,20 @@
 //               0x07 -> pio1_5
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_RESET                    _u(0x1f)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_BITS                     _u(0x0000001f)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_MSB                      _u(4)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_LSB                      _u(0)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_ACCESS                   "RW"
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_SPI0_SS_N          _u(0x01)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_UART1_RX           _u(0x02)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_I2C0_SCL           _u(0x03)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_PWM_B_2            _u(0x04)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_SIO_5              _u(0x05)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_PIO0_5             _u(0x06)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_PIO1_5             _u(0x07)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_SPI0_SS_N _u(0x01)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_UART1_RX _u(0x02)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_PWM_B_2 _u(0x04)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_SIO_5 _u(0x05)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_PIO0_5 _u(0x06)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_PIO1_5 _u(0x07)
 #define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
-#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_NULL               _u(0x1f)
+#define IO_BANK0_GPIO5_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO6_STATUS
 // Description : GPIO status
@@ -1107,67 +1102,66 @@
 #define IO_BANK0_GPIO6_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO6_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO6_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO6_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO6_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO6_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO6_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO6_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO6_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO6_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO6_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO6_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO6_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO6_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO6_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO6_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO6_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO6_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO6_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO6_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO6_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO6_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO6_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO6_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO6_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO6_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO6_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO6_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO6_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO6_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO6_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO6_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO6_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO6_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO6_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO6_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO6_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO6_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO6_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO6_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO6_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO6_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO6_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO6_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO6_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO6_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO6_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO6_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO6_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO6_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO6_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO6_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO6_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO6_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO6_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO6_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO6_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO6_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO6_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO6_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO6_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO6_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO6_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO6_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO6_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO6_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO6_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO6_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO6_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO6_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO6_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -1182,21 +1176,21 @@
 //               0x08 -> usb_muxing_extphy_softcon
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_SPI0_SCLK                  _u(0x01)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_UART1_CTS                  _u(0x02)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_I2C1_SDA                   _u(0x03)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_PWM_A_3                    _u(0x04)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_SIO_6                      _u(0x05)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_PIO0_6                     _u(0x06)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_PIO1_6                     _u(0x07)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_SOFTCON  _u(0x08)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_SPI0_SCLK _u(0x01)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_UART1_CTS _u(0x02)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_I2C1_SDA _u(0x03)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_PWM_A_3 _u(0x04)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_SIO_6 _u(0x05)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_PIO0_6 _u(0x06)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_PIO1_6 _u(0x07)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_SOFTCON _u(0x08)
 #define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO6_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO7_STATUS
 // Description : GPIO status
@@ -1277,67 +1271,66 @@
 #define IO_BANK0_GPIO7_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO7_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO7_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO7_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO7_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO7_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO7_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO7_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO7_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO7_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO7_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO7_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO7_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO7_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO7_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO7_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO7_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO7_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO7_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO7_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO7_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO7_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO7_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO7_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO7_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO7_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO7_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO7_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO7_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO7_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO7_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO7_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO7_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO7_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO7_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO7_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO7_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO7_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO7_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO7_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO7_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO7_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO7_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO7_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO7_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO7_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO7_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO7_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO7_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO7_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO7_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO7_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO7_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO7_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO7_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO7_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO7_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO7_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO7_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO7_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO7_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO7_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO7_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO7_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO7_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO7_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO7_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO7_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO7_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO7_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO7_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -1352,21 +1345,21 @@
 //               0x08 -> usb_muxing_extphy_oe_n
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_SPI0_TX                _u(0x01)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_UART1_RTS              _u(0x02)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_I2C1_SCL               _u(0x03)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_PWM_B_3                _u(0x04)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_SIO_7                  _u(0x05)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_PIO0_7                 _u(0x06)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_PIO1_7                 _u(0x07)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_SPI0_TX _u(0x01)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_UART1_RTS _u(0x02)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_I2C1_SCL _u(0x03)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_PWM_B_3 _u(0x04)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_SIO_7 _u(0x05)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_PIO0_7 _u(0x06)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_PIO1_7 _u(0x07)
 #define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_OE_N _u(0x08)
 #define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO7_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO8_STATUS
 // Description : GPIO status
@@ -1447,67 +1440,66 @@
 #define IO_BANK0_GPIO8_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO8_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO8_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO8_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO8_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO8_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO8_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO8_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO8_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO8_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO8_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO8_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO8_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO8_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO8_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO8_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO8_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO8_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO8_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO8_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO8_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO8_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO8_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO8_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO8_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO8_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO8_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO8_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO8_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO8_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO8_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO8_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO8_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO8_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO8_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO8_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO8_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO8_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO8_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO8_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO8_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO8_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO8_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO8_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO8_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO8_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO8_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO8_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO8_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO8_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO8_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO8_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO8_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO8_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO8_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO8_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO8_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO8_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO8_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO8_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO8_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO8_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO8_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO8_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO8_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO8_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO8_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO8_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO8_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO8_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO8_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -1522,21 +1514,21 @@
 //               0x08 -> usb_muxing_extphy_rcv
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_RESET                       _u(0x1f)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_BITS                        _u(0x0000001f)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_MSB                         _u(4)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_LSB                         _u(0)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_ACCESS                      "RW"
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_SPI1_RX               _u(0x01)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_UART1_TX              _u(0x02)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_I2C0_SDA              _u(0x03)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_PWM_A_4               _u(0x04)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_SIO_8                 _u(0x05)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_PIO0_8                _u(0x06)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_PIO1_8                _u(0x07)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_SPI1_RX _u(0x01)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_UART1_TX _u(0x02)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_PWM_A_4 _u(0x04)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_SIO_8 _u(0x05)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_PIO0_8 _u(0x06)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_PIO1_8 _u(0x07)
 #define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_RCV _u(0x08)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN    _u(0x09)
-#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_NULL                  _u(0x1f)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
+#define IO_BANK0_GPIO8_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO9_STATUS
 // Description : GPIO status
@@ -1617,67 +1609,66 @@
 #define IO_BANK0_GPIO9_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO9_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO9_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO9_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO9_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO9_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO9_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO9_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO9_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO9_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO9_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO9_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO9_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO9_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO9_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO9_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO9_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO9_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO9_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO9_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO9_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO9_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO9_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO9_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO9_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO9_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO9_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO9_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO9_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO9_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO9_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO9_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO9_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO9_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO9_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO9_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO9_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO9_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO9_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO9_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO9_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO9_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO9_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO9_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO9_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO9_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO9_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO9_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO9_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO9_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO9_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO9_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO9_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO9_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO9_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO9_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO9_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO9_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO9_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO9_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO9_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO9_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO9_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO9_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO9_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO9_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO9_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO9_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO9_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO9_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO9_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -1692,21 +1683,21 @@
 //               0x08 -> usb_muxing_extphy_vp
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_SPI1_SS_N                  _u(0x01)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_UART1_RX                   _u(0x02)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_I2C0_SCL                   _u(0x03)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_PWM_B_4                    _u(0x04)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_SIO_9                      _u(0x05)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_PIO0_9                     _u(0x06)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_PIO1_9                     _u(0x07)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_VP       _u(0x08)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_SPI1_SS_N _u(0x01)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_UART1_RX _u(0x02)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_PWM_B_4 _u(0x04)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_SIO_9 _u(0x05)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_PIO0_9 _u(0x06)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_PIO1_9 _u(0x07)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_VP _u(0x08)
 #define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO9_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO10_STATUS
 // Description : GPIO status
@@ -1787,67 +1778,66 @@
 #define IO_BANK0_GPIO10_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO10_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO10_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO10_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO10_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO10_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO10_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO10_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO10_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO10_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO10_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO10_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO10_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO10_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO10_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO10_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO10_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO10_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO10_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO10_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO10_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO10_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO10_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO10_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO10_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO10_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO10_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO10_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO10_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO10_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO10_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO10_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO10_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO10_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO10_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO10_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO10_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO10_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO10_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO10_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO10_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO10_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO10_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO10_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO10_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO10_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO10_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO10_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO10_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO10_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO10_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO10_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO10_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO10_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO10_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO10_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO10_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO10_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO10_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO10_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO10_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO10_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO10_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO10_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO10_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO10_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO10_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO10_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO10_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO10_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO10_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -1862,21 +1852,21 @@
 //               0x08 -> usb_muxing_extphy_vm
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_SPI1_SCLK              _u(0x01)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_UART1_CTS              _u(0x02)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_I2C1_SDA               _u(0x03)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_PWM_A_5                _u(0x04)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_SIO_10                 _u(0x05)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_PIO0_10                _u(0x06)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_PIO1_10                _u(0x07)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_VM   _u(0x08)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_SPI1_SCLK _u(0x01)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_UART1_CTS _u(0x02)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_I2C1_SDA _u(0x03)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_PWM_A_5 _u(0x04)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_SIO_10 _u(0x05)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_PIO0_10 _u(0x06)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_PIO1_10 _u(0x07)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_VM _u(0x08)
 #define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO10_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO11_STATUS
 // Description : GPIO status
@@ -1957,67 +1947,66 @@
 #define IO_BANK0_GPIO11_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO11_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO11_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO11_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO11_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO11_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO11_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO11_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO11_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO11_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO11_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO11_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO11_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO11_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO11_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO11_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO11_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO11_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO11_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO11_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO11_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO11_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO11_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO11_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO11_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO11_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO11_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO11_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO11_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO11_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO11_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO11_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO11_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO11_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO11_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO11_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO11_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO11_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO11_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO11_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO11_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO11_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO11_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO11_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO11_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO11_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO11_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO11_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO11_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO11_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO11_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO11_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO11_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO11_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO11_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO11_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO11_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO11_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO11_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO11_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO11_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO11_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO11_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO11_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO11_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO11_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO11_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO11_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO11_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO11_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO11_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -2032,21 +2021,21 @@
 //               0x08 -> usb_muxing_extphy_suspnd
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_RESET                          _u(0x1f)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_BITS                           _u(0x0000001f)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_MSB                            _u(4)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_LSB                            _u(0)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_ACCESS                         "RW"
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_SPI1_TX                  _u(0x01)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_UART1_RTS                _u(0x02)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_I2C1_SCL                 _u(0x03)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_PWM_B_5                  _u(0x04)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_SIO_11                   _u(0x05)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_PIO0_11                  _u(0x06)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_PIO1_11                  _u(0x07)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_SPI1_TX _u(0x01)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_UART1_RTS _u(0x02)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_I2C1_SCL _u(0x03)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_PWM_B_5 _u(0x04)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_SIO_11 _u(0x05)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_PIO0_11 _u(0x06)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_PIO1_11 _u(0x07)
 #define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_SUSPND _u(0x08)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN       _u(0x09)
-#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_NULL                     _u(0x1f)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
+#define IO_BANK0_GPIO11_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO12_STATUS
 // Description : GPIO status
@@ -2127,67 +2116,66 @@
 #define IO_BANK0_GPIO12_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO12_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO12_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO12_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO12_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO12_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO12_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO12_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO12_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO12_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO12_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO12_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO12_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO12_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO12_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO12_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO12_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO12_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO12_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO12_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO12_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO12_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO12_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO12_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO12_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO12_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO12_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO12_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO12_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO12_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO12_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO12_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO12_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO12_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO12_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO12_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO12_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO12_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO12_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO12_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO12_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO12_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO12_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO12_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO12_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO12_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO12_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO12_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO12_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO12_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO12_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO12_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO12_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO12_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO12_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO12_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO12_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO12_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO12_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO12_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO12_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO12_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO12_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO12_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO12_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO12_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO12_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO12_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO12_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO12_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO12_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -2202,21 +2190,21 @@
 //               0x08 -> usb_muxing_extphy_speed
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_SPI1_RX                    _u(0x01)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_UART0_TX                   _u(0x02)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_I2C0_SDA                   _u(0x03)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_PWM_A_6                    _u(0x04)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_SIO_12                     _u(0x05)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_PIO0_12                    _u(0x06)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_PIO1_12                    _u(0x07)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_SPEED    _u(0x08)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_SPI1_RX _u(0x01)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_UART0_TX _u(0x02)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_PWM_A_6 _u(0x04)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_SIO_12 _u(0x05)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_PIO0_12 _u(0x06)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_PIO1_12 _u(0x07)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_SPEED _u(0x08)
 #define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO12_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO13_STATUS
 // Description : GPIO status
@@ -2297,67 +2285,66 @@
 #define IO_BANK0_GPIO13_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO13_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO13_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO13_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO13_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO13_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO13_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO13_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO13_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO13_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO13_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO13_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO13_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO13_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO13_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO13_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO13_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO13_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO13_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO13_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO13_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO13_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO13_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO13_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO13_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO13_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO13_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO13_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO13_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO13_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO13_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO13_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO13_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO13_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO13_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO13_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO13_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO13_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO13_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO13_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO13_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO13_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO13_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO13_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO13_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO13_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO13_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO13_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO13_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO13_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO13_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO13_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO13_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO13_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO13_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO13_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO13_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO13_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO13_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO13_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO13_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO13_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO13_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO13_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO13_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO13_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO13_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO13_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO13_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO13_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO13_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -2372,21 +2359,21 @@
 //               0x08 -> usb_muxing_extphy_vpo
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_SPI1_SS_N              _u(0x01)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_UART0_RX               _u(0x02)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_I2C0_SCL               _u(0x03)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_PWM_B_6                _u(0x04)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_SIO_13                 _u(0x05)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_PIO0_13                _u(0x06)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_PIO1_13                _u(0x07)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_VPO  _u(0x08)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_SPI1_SS_N _u(0x01)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_UART0_RX _u(0x02)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_PWM_B_6 _u(0x04)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_SIO_13 _u(0x05)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_PIO0_13 _u(0x06)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_PIO1_13 _u(0x07)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_VPO _u(0x08)
 #define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO13_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO14_STATUS
 // Description : GPIO status
@@ -2467,67 +2454,66 @@
 #define IO_BANK0_GPIO14_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO14_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO14_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO14_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO14_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO14_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO14_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO14_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO14_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO14_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO14_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO14_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO14_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO14_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO14_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO14_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO14_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO14_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO14_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO14_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO14_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO14_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO14_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO14_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO14_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO14_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO14_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO14_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO14_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO14_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO14_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO14_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO14_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO14_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO14_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO14_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO14_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO14_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO14_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO14_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO14_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO14_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO14_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO14_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO14_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO14_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO14_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO14_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO14_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO14_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO14_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO14_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO14_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO14_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO14_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO14_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO14_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO14_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO14_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO14_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO14_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO14_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO14_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO14_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO14_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO14_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO14_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO14_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO14_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO14_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO14_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -2542,21 +2528,21 @@
 //               0x08 -> usb_muxing_extphy_vmo
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_RESET                       _u(0x1f)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_BITS                        _u(0x0000001f)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_MSB                         _u(4)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_LSB                         _u(0)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_ACCESS                      "RW"
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_SPI1_SCLK             _u(0x01)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_UART0_CTS             _u(0x02)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_I2C1_SDA              _u(0x03)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_PWM_A_7               _u(0x04)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_SIO_14                _u(0x05)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_PIO0_14               _u(0x06)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_PIO1_14               _u(0x07)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_SPI1_SCLK _u(0x01)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_UART0_CTS _u(0x02)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_I2C1_SDA _u(0x03)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_PWM_A_7 _u(0x04)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_SIO_14 _u(0x05)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_PIO0_14 _u(0x06)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_PIO1_14 _u(0x07)
 #define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_USB_MUXING_EXTPHY_VMO _u(0x08)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN    _u(0x09)
-#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_NULL                  _u(0x1f)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
+#define IO_BANK0_GPIO14_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO15_STATUS
 // Description : GPIO status
@@ -2637,67 +2623,66 @@
 #define IO_BANK0_GPIO15_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO15_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO15_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO15_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO15_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO15_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO15_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO15_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO15_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO15_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO15_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO15_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO15_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO15_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO15_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO15_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO15_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO15_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO15_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO15_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO15_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO15_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO15_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO15_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO15_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO15_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO15_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO15_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO15_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO15_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO15_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO15_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO15_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO15_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO15_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO15_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO15_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO15_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO15_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO15_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO15_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO15_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO15_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO15_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO15_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO15_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO15_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO15_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO15_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO15_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO15_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO15_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO15_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO15_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO15_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO15_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO15_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO15_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO15_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO15_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO15_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO15_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO15_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO15_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO15_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO15_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO15_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO15_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO15_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO15_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO15_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -2712,21 +2697,21 @@
 //               0x08 -> usb_muxing_digital_dp
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_SPI1_TX                    _u(0x01)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_UART0_RTS                  _u(0x02)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_I2C1_SCL                   _u(0x03)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_PWM_B_7                    _u(0x04)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_SIO_15                     _u(0x05)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_PIO0_15                    _u(0x06)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_PIO1_15                    _u(0x07)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_USB_MUXING_DIGITAL_DP      _u(0x08)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_SPI1_TX _u(0x01)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_UART0_RTS _u(0x02)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_I2C1_SCL _u(0x03)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_PWM_B_7 _u(0x04)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_SIO_15 _u(0x05)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_PIO0_15 _u(0x06)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_PIO1_15 _u(0x07)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_USB_MUXING_DIGITAL_DP _u(0x08)
 #define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO15_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO16_STATUS
 // Description : GPIO status
@@ -2807,67 +2792,66 @@
 #define IO_BANK0_GPIO16_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO16_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO16_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO16_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO16_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO16_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO16_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO16_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO16_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO16_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO16_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO16_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO16_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO16_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO16_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO16_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO16_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO16_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO16_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO16_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO16_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO16_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO16_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO16_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO16_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO16_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO16_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO16_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO16_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO16_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO16_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO16_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO16_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO16_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO16_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO16_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO16_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO16_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO16_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO16_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO16_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO16_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO16_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO16_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO16_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO16_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO16_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO16_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO16_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO16_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO16_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO16_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO16_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO16_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO16_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO16_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO16_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO16_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO16_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO16_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO16_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO16_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO16_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO16_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO16_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO16_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO16_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO16_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO16_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO16_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO16_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -2882,21 +2866,21 @@
 //               0x08 -> usb_muxing_digital_dm
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_SPI0_RX                _u(0x01)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_UART0_TX               _u(0x02)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_I2C0_SDA               _u(0x03)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_PWM_A_0                _u(0x04)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_SIO_16                 _u(0x05)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_PIO0_16                _u(0x06)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_PIO1_16                _u(0x07)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_USB_MUXING_DIGITAL_DM  _u(0x08)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_SPI0_RX _u(0x01)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_UART0_TX _u(0x02)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_PWM_A_0 _u(0x04)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_SIO_16 _u(0x05)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_PIO0_16 _u(0x06)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_PIO1_16 _u(0x07)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_USB_MUXING_DIGITAL_DM _u(0x08)
 #define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO16_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO17_STATUS
 // Description : GPIO status
@@ -2977,67 +2961,66 @@
 #define IO_BANK0_GPIO17_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO17_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO17_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO17_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO17_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO17_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO17_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO17_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO17_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO17_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO17_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO17_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO17_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO17_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO17_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO17_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO17_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO17_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO17_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO17_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO17_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO17_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO17_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO17_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO17_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO17_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO17_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO17_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO17_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO17_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO17_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO17_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO17_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO17_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO17_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO17_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO17_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO17_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO17_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO17_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO17_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO17_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO17_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO17_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO17_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO17_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO17_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO17_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO17_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO17_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO17_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO17_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO17_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO17_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO17_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO17_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO17_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO17_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO17_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO17_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO17_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO17_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO17_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO17_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO17_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO17_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO17_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO17_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO17_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO17_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO17_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -3051,20 +3034,20 @@
 //               0x07 -> pio1_17
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_RESET                    _u(0x1f)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_BITS                     _u(0x0000001f)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_MSB                      _u(4)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_LSB                      _u(0)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_ACCESS                   "RW"
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_SPI0_SS_N          _u(0x01)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_UART0_RX           _u(0x02)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_I2C0_SCL           _u(0x03)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_PWM_B_0            _u(0x04)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_SIO_17             _u(0x05)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_PIO0_17            _u(0x06)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_PIO1_17            _u(0x07)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_SPI0_SS_N _u(0x01)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_UART0_RX _u(0x02)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_PWM_B_0 _u(0x04)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_SIO_17 _u(0x05)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_PIO0_17 _u(0x06)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_PIO1_17 _u(0x07)
 #define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
-#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_NULL               _u(0x1f)
+#define IO_BANK0_GPIO17_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO18_STATUS
 // Description : GPIO status
@@ -3145,67 +3128,66 @@
 #define IO_BANK0_GPIO18_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO18_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO18_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO18_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO18_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO18_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO18_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO18_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO18_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO18_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO18_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO18_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO18_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO18_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO18_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO18_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO18_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO18_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO18_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO18_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO18_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO18_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO18_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO18_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO18_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO18_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO18_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO18_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO18_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO18_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO18_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO18_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO18_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO18_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO18_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO18_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO18_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO18_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO18_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO18_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO18_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO18_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO18_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO18_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO18_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO18_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO18_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO18_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO18_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO18_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO18_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO18_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO18_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO18_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO18_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO18_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO18_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO18_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO18_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO18_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO18_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO18_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO18_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO18_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO18_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO18_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO18_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO18_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO18_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO18_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO18_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -3219,20 +3201,20 @@
 //               0x07 -> pio1_18
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_SPI0_SCLK                  _u(0x01)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_UART0_CTS                  _u(0x02)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_I2C1_SDA                   _u(0x03)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_PWM_A_1                    _u(0x04)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_SIO_18                     _u(0x05)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_PIO0_18                    _u(0x06)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_PIO1_18                    _u(0x07)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_SPI0_SCLK _u(0x01)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_UART0_CTS _u(0x02)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_I2C1_SDA _u(0x03)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_PWM_A_1 _u(0x04)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_SIO_18 _u(0x05)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_PIO0_18 _u(0x06)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_PIO1_18 _u(0x07)
 #define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO18_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO19_STATUS
 // Description : GPIO status
@@ -3313,67 +3295,66 @@
 #define IO_BANK0_GPIO19_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO19_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO19_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO19_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO19_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO19_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO19_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO19_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO19_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO19_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO19_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO19_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO19_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO19_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO19_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO19_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO19_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO19_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO19_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO19_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO19_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO19_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO19_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO19_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO19_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO19_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO19_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO19_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO19_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO19_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO19_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO19_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO19_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO19_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO19_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO19_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO19_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO19_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO19_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO19_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO19_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO19_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO19_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO19_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO19_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO19_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO19_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO19_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO19_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO19_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO19_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO19_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO19_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO19_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO19_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO19_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO19_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO19_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO19_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO19_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO19_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO19_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO19_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO19_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO19_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO19_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO19_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO19_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO19_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO19_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO19_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -3387,20 +3368,20 @@
 //               0x07 -> pio1_19
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_SPI0_TX                _u(0x01)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_UART0_RTS              _u(0x02)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_I2C1_SCL               _u(0x03)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_PWM_B_1                _u(0x04)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_SIO_19                 _u(0x05)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_PIO0_19                _u(0x06)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_PIO1_19                _u(0x07)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_SPI0_TX _u(0x01)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_UART0_RTS _u(0x02)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_I2C1_SCL _u(0x03)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_PWM_B_1 _u(0x04)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_SIO_19 _u(0x05)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_PIO0_19 _u(0x06)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_PIO1_19 _u(0x07)
 #define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO19_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO20_STATUS
 // Description : GPIO status
@@ -3481,67 +3462,66 @@
 #define IO_BANK0_GPIO20_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO20_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO20_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO20_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO20_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO20_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO20_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO20_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO20_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO20_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO20_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO20_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO20_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO20_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO20_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO20_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO20_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO20_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO20_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO20_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO20_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO20_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO20_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO20_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO20_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO20_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO20_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO20_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO20_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO20_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO20_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO20_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO20_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO20_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO20_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO20_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO20_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO20_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO20_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO20_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO20_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO20_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO20_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO20_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO20_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO20_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO20_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO20_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO20_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO20_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO20_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO20_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO20_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO20_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO20_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO20_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO20_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO20_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO20_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO20_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO20_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO20_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO20_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO20_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO20_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO20_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO20_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO20_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO20_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO20_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO20_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -3556,21 +3536,21 @@
 //               0x08 -> clocks_gpin_0
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_RESET                    _u(0x1f)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_BITS                     _u(0x0000001f)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_MSB                      _u(4)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_LSB                      _u(0)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_ACCESS                   "RW"
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_SPI0_RX            _u(0x01)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_UART1_TX           _u(0x02)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_I2C0_SDA           _u(0x03)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_PWM_A_2            _u(0x04)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_SIO_20             _u(0x05)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_PIO0_20            _u(0x06)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_PIO1_20            _u(0x07)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_CLOCKS_GPIN_0      _u(0x08)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_SPI0_RX _u(0x01)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_UART1_TX _u(0x02)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_PWM_A_2 _u(0x04)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_SIO_20 _u(0x05)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_PIO0_20 _u(0x06)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_PIO1_20 _u(0x07)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_CLOCKS_GPIN_0 _u(0x08)
 #define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
-#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_NULL               _u(0x1f)
+#define IO_BANK0_GPIO20_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO21_STATUS
 // Description : GPIO status
@@ -3651,67 +3631,66 @@
 #define IO_BANK0_GPIO21_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO21_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO21_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO21_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO21_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO21_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO21_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO21_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO21_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO21_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO21_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO21_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO21_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO21_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO21_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO21_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO21_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO21_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO21_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO21_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO21_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO21_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO21_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO21_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO21_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO21_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO21_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO21_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO21_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO21_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO21_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO21_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO21_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO21_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO21_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO21_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO21_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO21_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO21_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO21_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO21_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO21_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO21_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO21_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO21_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO21_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO21_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO21_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO21_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO21_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO21_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO21_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO21_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO21_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO21_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO21_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO21_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO21_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO21_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO21_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO21_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO21_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO21_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO21_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO21_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO21_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO21_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO21_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO21_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO21_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO21_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -3726,21 +3705,21 @@
 //               0x08 -> clocks_gpout_0
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_SPI0_SS_N                  _u(0x01)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_UART1_RX                   _u(0x02)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_I2C0_SCL                   _u(0x03)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_PWM_B_2                    _u(0x04)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_SIO_21                     _u(0x05)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_PIO0_21                    _u(0x06)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_PIO1_21                    _u(0x07)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_0             _u(0x08)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_SPI0_SS_N _u(0x01)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_UART1_RX _u(0x02)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_PWM_B_2 _u(0x04)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_SIO_21 _u(0x05)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_PIO0_21 _u(0x06)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_PIO1_21 _u(0x07)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_0 _u(0x08)
 #define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO21_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO22_STATUS
 // Description : GPIO status
@@ -3821,67 +3800,66 @@
 #define IO_BANK0_GPIO22_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO22_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO22_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO22_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO22_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO22_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO22_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO22_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO22_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO22_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO22_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO22_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO22_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO22_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO22_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO22_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO22_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO22_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO22_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO22_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO22_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO22_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO22_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO22_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO22_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO22_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO22_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO22_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO22_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO22_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO22_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO22_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO22_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO22_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO22_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO22_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO22_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO22_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO22_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO22_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO22_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO22_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO22_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO22_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO22_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO22_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO22_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO22_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO22_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO22_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO22_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO22_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO22_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO22_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO22_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO22_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO22_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO22_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO22_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO22_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO22_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO22_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO22_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO22_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO22_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO22_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO22_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO22_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO22_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO22_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO22_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -3896,21 +3874,21 @@
 //               0x08 -> clocks_gpin_1
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_SPI0_SCLK              _u(0x01)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_UART1_CTS              _u(0x02)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_I2C1_SDA               _u(0x03)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_PWM_A_3                _u(0x04)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_SIO_22                 _u(0x05)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_PIO0_22                _u(0x06)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_PIO1_22                _u(0x07)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_CLOCKS_GPIN_1          _u(0x08)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_SPI0_SCLK _u(0x01)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_UART1_CTS _u(0x02)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_I2C1_SDA _u(0x03)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_PWM_A_3 _u(0x04)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_SIO_22 _u(0x05)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_PIO0_22 _u(0x06)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_PIO1_22 _u(0x07)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_CLOCKS_GPIN_1 _u(0x08)
 #define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO22_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO23_STATUS
 // Description : GPIO status
@@ -3991,67 +3969,66 @@
 #define IO_BANK0_GPIO23_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO23_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO23_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO23_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO23_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO23_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO23_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO23_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO23_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO23_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO23_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO23_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO23_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO23_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO23_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO23_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO23_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO23_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO23_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO23_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO23_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO23_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO23_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO23_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO23_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO23_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO23_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO23_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO23_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO23_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO23_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO23_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO23_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO23_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO23_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO23_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO23_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO23_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO23_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO23_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO23_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO23_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO23_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO23_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO23_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO23_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO23_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO23_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO23_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO23_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO23_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO23_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO23_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO23_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO23_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO23_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO23_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO23_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO23_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO23_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO23_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO23_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO23_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO23_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO23_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO23_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO23_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO23_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO23_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO23_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO23_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -4066,21 +4043,21 @@
 //               0x08 -> clocks_gpout_1
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_RESET                    _u(0x1f)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_BITS                     _u(0x0000001f)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_MSB                      _u(4)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_LSB                      _u(0)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_ACCESS                   "RW"
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_SPI0_TX            _u(0x01)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_UART1_RTS          _u(0x02)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_I2C1_SCL           _u(0x03)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_PWM_B_3            _u(0x04)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_SIO_23             _u(0x05)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_PIO0_23            _u(0x06)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_PIO1_23            _u(0x07)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_1     _u(0x08)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_SPI0_TX _u(0x01)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_UART1_RTS _u(0x02)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_I2C1_SCL _u(0x03)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_PWM_B_3 _u(0x04)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_SIO_23 _u(0x05)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_PIO0_23 _u(0x06)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_PIO1_23 _u(0x07)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_1 _u(0x08)
 #define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
-#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_NULL               _u(0x1f)
+#define IO_BANK0_GPIO23_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO24_STATUS
 // Description : GPIO status
@@ -4161,67 +4138,66 @@
 #define IO_BANK0_GPIO24_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO24_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO24_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO24_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO24_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO24_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO24_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO24_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO24_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO24_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO24_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO24_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO24_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO24_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO24_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO24_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO24_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO24_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO24_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO24_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO24_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO24_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO24_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO24_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO24_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO24_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO24_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO24_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO24_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO24_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO24_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO24_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO24_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO24_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO24_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO24_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO24_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO24_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO24_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO24_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO24_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO24_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO24_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO24_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO24_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO24_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO24_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO24_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO24_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO24_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO24_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO24_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO24_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO24_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO24_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO24_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO24_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO24_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO24_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO24_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO24_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO24_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO24_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO24_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO24_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO24_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO24_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO24_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO24_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO24_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO24_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -4236,21 +4212,21 @@
 //               0x08 -> clocks_gpout_2
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_SPI1_RX                    _u(0x01)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_UART1_TX                   _u(0x02)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_I2C0_SDA                   _u(0x03)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_PWM_A_4                    _u(0x04)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_SIO_24                     _u(0x05)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_PIO0_24                    _u(0x06)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_PIO1_24                    _u(0x07)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_2             _u(0x08)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_SPI1_RX _u(0x01)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_UART1_TX _u(0x02)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_PWM_A_4 _u(0x04)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_SIO_24 _u(0x05)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_PIO0_24 _u(0x06)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_PIO1_24 _u(0x07)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_2 _u(0x08)
 #define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO24_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO25_STATUS
 // Description : GPIO status
@@ -4331,67 +4307,66 @@
 #define IO_BANK0_GPIO25_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO25_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO25_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO25_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO25_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO25_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO25_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO25_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO25_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO25_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO25_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO25_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO25_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO25_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO25_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO25_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO25_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO25_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO25_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO25_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO25_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO25_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO25_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO25_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO25_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO25_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO25_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO25_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO25_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO25_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO25_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO25_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO25_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO25_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO25_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO25_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO25_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO25_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO25_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO25_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO25_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO25_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO25_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO25_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO25_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO25_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO25_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO25_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO25_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO25_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO25_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO25_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO25_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO25_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO25_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO25_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO25_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO25_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO25_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO25_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO25_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO25_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO25_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO25_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO25_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO25_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO25_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO25_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO25_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO25_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO25_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -4406,21 +4381,21 @@
 //               0x08 -> clocks_gpout_3
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_SPI1_SS_N              _u(0x01)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_UART1_RX               _u(0x02)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_I2C0_SCL               _u(0x03)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_PWM_B_4                _u(0x04)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_SIO_25                 _u(0x05)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_PIO0_25                _u(0x06)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_PIO1_25                _u(0x07)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_3         _u(0x08)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_SPI1_SS_N _u(0x01)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_UART1_RX _u(0x02)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_PWM_B_4 _u(0x04)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_SIO_25 _u(0x05)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_PIO0_25 _u(0x06)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_PIO1_25 _u(0x07)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_CLOCKS_GPOUT_3 _u(0x08)
 #define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO25_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO26_STATUS
 // Description : GPIO status
@@ -4501,67 +4476,66 @@
 #define IO_BANK0_GPIO26_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO26_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO26_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO26_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO26_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO26_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO26_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO26_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO26_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO26_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO26_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO26_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO26_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO26_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO26_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO26_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO26_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO26_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO26_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO26_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO26_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO26_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO26_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO26_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO26_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO26_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO26_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO26_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO26_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO26_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO26_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO26_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO26_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO26_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO26_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO26_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO26_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO26_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO26_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO26_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO26_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO26_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO26_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO26_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO26_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO26_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO26_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO26_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO26_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO26_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO26_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO26_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO26_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO26_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO26_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO26_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO26_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO26_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO26_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO26_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO26_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO26_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO26_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO26_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO26_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO26_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO26_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO26_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO26_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO26_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO26_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -4575,20 +4549,20 @@
 //               0x07 -> pio1_26
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_RESET                    _u(0x1f)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_BITS                     _u(0x0000001f)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_MSB                      _u(4)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_LSB                      _u(0)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_ACCESS                   "RW"
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_SPI1_SCLK          _u(0x01)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_UART1_CTS          _u(0x02)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_I2C1_SDA           _u(0x03)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_PWM_A_5            _u(0x04)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_SIO_26             _u(0x05)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_PIO0_26            _u(0x06)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_PIO1_26            _u(0x07)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_SPI1_SCLK _u(0x01)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_UART1_CTS _u(0x02)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_I2C1_SDA _u(0x03)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_PWM_A_5 _u(0x04)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_SIO_26 _u(0x05)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_PIO0_26 _u(0x06)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_PIO1_26 _u(0x07)
 #define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
-#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_NULL               _u(0x1f)
+#define IO_BANK0_GPIO26_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO27_STATUS
 // Description : GPIO status
@@ -4669,67 +4643,66 @@
 #define IO_BANK0_GPIO27_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO27_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO27_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO27_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO27_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO27_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO27_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO27_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO27_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO27_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO27_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO27_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO27_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO27_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO27_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO27_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO27_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO27_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO27_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO27_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO27_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO27_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO27_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO27_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO27_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO27_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO27_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO27_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO27_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO27_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO27_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO27_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO27_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO27_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO27_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO27_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO27_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO27_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO27_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO27_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO27_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO27_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO27_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO27_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO27_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO27_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO27_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO27_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO27_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO27_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO27_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO27_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO27_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO27_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO27_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO27_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO27_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO27_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO27_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO27_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO27_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO27_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO27_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO27_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO27_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO27_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO27_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO27_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO27_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO27_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO27_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -4743,20 +4716,20 @@
 //               0x07 -> pio1_27
 //               0x09 -> usb_muxing_overcurr_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_RESET                            _u(0x1f)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_BITS                             _u(0x0000001f)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_MSB                              _u(4)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_LSB                              _u(0)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_ACCESS                           "RW"
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_SPI1_TX                    _u(0x01)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_UART1_RTS                  _u(0x02)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_I2C1_SCL                   _u(0x03)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_PWM_B_5                    _u(0x04)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_SIO_27                     _u(0x05)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_PIO0_27                    _u(0x06)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_PIO1_27                    _u(0x07)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_SPI1_TX _u(0x01)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_UART1_RTS _u(0x02)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_I2C1_SCL _u(0x03)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_PWM_B_5 _u(0x04)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_SIO_27 _u(0x05)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_PIO0_27 _u(0x06)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_PIO1_27 _u(0x07)
 #define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_USB_MUXING_OVERCURR_DETECT _u(0x09)
-#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_NULL                       _u(0x1f)
+#define IO_BANK0_GPIO27_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO28_STATUS
 // Description : GPIO status
@@ -4837,67 +4810,66 @@
 #define IO_BANK0_GPIO28_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO28_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO28_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO28_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO28_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO28_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO28_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO28_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO28_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO28_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO28_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO28_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO28_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO28_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO28_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO28_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO28_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO28_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO28_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO28_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO28_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO28_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO28_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO28_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO28_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO28_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO28_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO28_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO28_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO28_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO28_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO28_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO28_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO28_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO28_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO28_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO28_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO28_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO28_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO28_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO28_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO28_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO28_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO28_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO28_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO28_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO28_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO28_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO28_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO28_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO28_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO28_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO28_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO28_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO28_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO28_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO28_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO28_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO28_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO28_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO28_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO28_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO28_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO28_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO28_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO28_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO28_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO28_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO28_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO28_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO28_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -4911,20 +4883,20 @@
 //               0x07 -> pio1_28
 //               0x09 -> usb_muxing_vbus_detect
 //               0x1f -> null
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_RESET                        _u(0x1f)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_BITS                         _u(0x0000001f)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_MSB                          _u(4)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_LSB                          _u(0)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_ACCESS                       "RW"
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_SPI1_RX                _u(0x01)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_UART0_TX               _u(0x02)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_I2C0_SDA               _u(0x03)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_PWM_A_6                _u(0x04)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_SIO_28                 _u(0x05)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_PIO0_28                _u(0x06)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_PIO1_28                _u(0x07)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_SPI1_RX _u(0x01)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_UART0_TX _u(0x02)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_I2C0_SDA _u(0x03)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_PWM_A_6 _u(0x04)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_SIO_28 _u(0x05)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_PIO0_28 _u(0x06)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_PIO1_28 _u(0x07)
 #define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_DETECT _u(0x09)
-#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_NULL                   _u(0x1f)
+#define IO_BANK0_GPIO28_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_GPIO29_STATUS
 // Description : GPIO status
@@ -5005,67 +4977,66 @@
 #define IO_BANK0_GPIO29_CTRL_RESET  _u(0x0000001f)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO29_CTRL_IRQOVER
-// Description : 0x0 -> don't invert the interrupt
+//               0x0 -> don't invert the interrupt
 //               0x1 -> invert the interrupt
 //               0x2 -> drive interrupt low
 //               0x3 -> drive interrupt high
-#define IO_BANK0_GPIO29_CTRL_IRQOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO29_CTRL_IRQOVER_BITS         _u(0x30000000)
-#define IO_BANK0_GPIO29_CTRL_IRQOVER_MSB          _u(29)
-#define IO_BANK0_GPIO29_CTRL_IRQOVER_LSB          _u(28)
-#define IO_BANK0_GPIO29_CTRL_IRQOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO29_CTRL_IRQOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO29_CTRL_IRQOVER_BITS   _u(0x30000000)
+#define IO_BANK0_GPIO29_CTRL_IRQOVER_MSB    _u(29)
+#define IO_BANK0_GPIO29_CTRL_IRQOVER_LSB    _u(28)
+#define IO_BANK0_GPIO29_CTRL_IRQOVER_ACCESS "RW"
 #define IO_BANK0_GPIO29_CTRL_IRQOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO29_CTRL_IRQOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO29_CTRL_IRQOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO29_CTRL_IRQOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO29_CTRL_IRQOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO29_CTRL_IRQOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO29_CTRL_INOVER
-// Description : 0x0 -> don't invert the peri input
+//               0x0 -> don't invert the peri input
 //               0x1 -> invert the peri input
 //               0x2 -> drive peri input low
 //               0x3 -> drive peri input high
-#define IO_BANK0_GPIO29_CTRL_INOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO29_CTRL_INOVER_BITS         _u(0x00030000)
-#define IO_BANK0_GPIO29_CTRL_INOVER_MSB          _u(17)
-#define IO_BANK0_GPIO29_CTRL_INOVER_LSB          _u(16)
-#define IO_BANK0_GPIO29_CTRL_INOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO29_CTRL_INOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO29_CTRL_INOVER_BITS   _u(0x00030000)
+#define IO_BANK0_GPIO29_CTRL_INOVER_MSB    _u(17)
+#define IO_BANK0_GPIO29_CTRL_INOVER_LSB    _u(16)
+#define IO_BANK0_GPIO29_CTRL_INOVER_ACCESS "RW"
 #define IO_BANK0_GPIO29_CTRL_INOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO29_CTRL_INOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO29_CTRL_INOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO29_CTRL_INOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO29_CTRL_INOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO29_CTRL_INOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO29_CTRL_OEOVER
-// Description : 0x0 -> drive output enable from peripheral signal selected by
-//               funcsel
-//               0x1 -> drive output enable from inverse of peripheral signal
-//               selected by funcsel
+//               0x0 -> drive output enable from peripheral signal selected by funcsel
+//               0x1 -> drive output enable from inverse of peripheral signal selected
+//               by funcsel
 //               0x2 -> disable output
 //               0x3 -> enable output
-#define IO_BANK0_GPIO29_CTRL_OEOVER_RESET         _u(0x0)
-#define IO_BANK0_GPIO29_CTRL_OEOVER_BITS          _u(0x00003000)
-#define IO_BANK0_GPIO29_CTRL_OEOVER_MSB           _u(13)
-#define IO_BANK0_GPIO29_CTRL_OEOVER_LSB           _u(12)
-#define IO_BANK0_GPIO29_CTRL_OEOVER_ACCESS        "RW"
-#define IO_BANK0_GPIO29_CTRL_OEOVER_VALUE_NORMAL  _u(0x0)
-#define IO_BANK0_GPIO29_CTRL_OEOVER_VALUE_INVERT  _u(0x1)
+#define IO_BANK0_GPIO29_CTRL_OEOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO29_CTRL_OEOVER_BITS   _u(0x00003000)
+#define IO_BANK0_GPIO29_CTRL_OEOVER_MSB    _u(13)
+#define IO_BANK0_GPIO29_CTRL_OEOVER_LSB    _u(12)
+#define IO_BANK0_GPIO29_CTRL_OEOVER_ACCESS "RW"
+#define IO_BANK0_GPIO29_CTRL_OEOVER_VALUE_NORMAL _u(0x0)
+#define IO_BANK0_GPIO29_CTRL_OEOVER_VALUE_INVERT _u(0x1)
 #define IO_BANK0_GPIO29_CTRL_OEOVER_VALUE_DISABLE _u(0x2)
-#define IO_BANK0_GPIO29_CTRL_OEOVER_VALUE_ENABLE  _u(0x3)
+#define IO_BANK0_GPIO29_CTRL_OEOVER_VALUE_ENABLE _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO29_CTRL_OUTOVER
-// Description : 0x0 -> drive output from peripheral signal selected by funcsel
-//               0x1 -> drive output from inverse of peripheral signal selected
-//               by funcsel
+//               0x0 -> drive output from peripheral signal selected by funcsel
+//               0x1 -> drive output from inverse of peripheral signal selected by
+//               funcsel
 //               0x2 -> drive output low
 //               0x3 -> drive output high
-#define IO_BANK0_GPIO29_CTRL_OUTOVER_RESET        _u(0x0)
-#define IO_BANK0_GPIO29_CTRL_OUTOVER_BITS         _u(0x00000300)
-#define IO_BANK0_GPIO29_CTRL_OUTOVER_MSB          _u(9)
-#define IO_BANK0_GPIO29_CTRL_OUTOVER_LSB          _u(8)
-#define IO_BANK0_GPIO29_CTRL_OUTOVER_ACCESS       "RW"
+#define IO_BANK0_GPIO29_CTRL_OUTOVER_RESET  _u(0x0)
+#define IO_BANK0_GPIO29_CTRL_OUTOVER_BITS   _u(0x00000300)
+#define IO_BANK0_GPIO29_CTRL_OUTOVER_MSB    _u(9)
+#define IO_BANK0_GPIO29_CTRL_OUTOVER_LSB    _u(8)
+#define IO_BANK0_GPIO29_CTRL_OUTOVER_ACCESS "RW"
 #define IO_BANK0_GPIO29_CTRL_OUTOVER_VALUE_NORMAL _u(0x0)
 #define IO_BANK0_GPIO29_CTRL_OUTOVER_VALUE_INVERT _u(0x1)
-#define IO_BANK0_GPIO29_CTRL_OUTOVER_VALUE_LOW    _u(0x2)
-#define IO_BANK0_GPIO29_CTRL_OUTOVER_VALUE_HIGH   _u(0x3)
+#define IO_BANK0_GPIO29_CTRL_OUTOVER_VALUE_LOW _u(0x2)
+#define IO_BANK0_GPIO29_CTRL_OUTOVER_VALUE_HIGH _u(0x3)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_GPIO29_CTRL_FUNCSEL
 // Description : 0-31 -> selects pin function according to the gpio table
@@ -5079,20 +5050,20 @@
 //               0x07 -> pio1_29
 //               0x09 -> usb_muxing_vbus_en
 //               0x1f -> null
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_RESET                    _u(0x1f)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_BITS                     _u(0x0000001f)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_MSB                      _u(4)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_LSB                      _u(0)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_ACCESS                   "RW"
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_SPI1_SS_N          _u(0x01)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_UART0_RX           _u(0x02)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_I2C0_SCL           _u(0x03)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_PWM_B_6            _u(0x04)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_SIO_29             _u(0x05)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_PIO0_29            _u(0x06)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_PIO1_29            _u(0x07)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_RESET  _u(0x1f)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_BITS   _u(0x0000001f)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_MSB    _u(4)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_LSB    _u(0)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_ACCESS "RW"
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_SPI1_SS_N _u(0x01)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_UART0_RX _u(0x02)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_I2C0_SCL _u(0x03)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_PWM_B_6 _u(0x04)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_SIO_29 _u(0x05)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_PIO0_29 _u(0x06)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_PIO1_29 _u(0x07)
 #define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_USB_MUXING_VBUS_EN _u(0x09)
-#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_NULL               _u(0x1f)
+#define IO_BANK0_GPIO29_CTRL_FUNCSEL_VALUE_NULL _u(0x1f)
 // =============================================================================
 // Register    : IO_BANK0_INTR0
 // Description : Raw Interrupts
@@ -5101,7 +5072,6 @@
 #define IO_BANK0_INTR0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_INTR0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -5109,7 +5079,6 @@
 #define IO_BANK0_INTR0_GPIO7_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_INTR0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -5117,7 +5086,6 @@
 #define IO_BANK0_INTR0_GPIO7_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_INTR0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -5125,7 +5093,6 @@
 #define IO_BANK0_INTR0_GPIO7_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_INTR0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -5133,7 +5100,6 @@
 #define IO_BANK0_INTR0_GPIO7_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_INTR0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -5141,7 +5107,6 @@
 #define IO_BANK0_INTR0_GPIO6_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_INTR0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -5149,7 +5114,6 @@
 #define IO_BANK0_INTR0_GPIO6_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_INTR0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -5157,7 +5121,6 @@
 #define IO_BANK0_INTR0_GPIO6_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_INTR0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -5165,7 +5128,6 @@
 #define IO_BANK0_INTR0_GPIO6_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_INTR0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -5173,7 +5135,6 @@
 #define IO_BANK0_INTR0_GPIO5_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_INTR0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -5181,7 +5142,6 @@
 #define IO_BANK0_INTR0_GPIO5_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_INTR0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -5189,7 +5149,6 @@
 #define IO_BANK0_INTR0_GPIO5_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_INTR0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -5197,7 +5156,6 @@
 #define IO_BANK0_INTR0_GPIO5_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_INTR0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -5205,7 +5163,6 @@
 #define IO_BANK0_INTR0_GPIO4_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_INTR0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -5213,7 +5170,6 @@
 #define IO_BANK0_INTR0_GPIO4_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_INTR0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -5221,7 +5177,6 @@
 #define IO_BANK0_INTR0_GPIO4_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_INTR0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -5229,7 +5184,6 @@
 #define IO_BANK0_INTR0_GPIO4_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_INTR0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -5237,7 +5191,6 @@
 #define IO_BANK0_INTR0_GPIO3_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_INTR0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -5245,7 +5198,6 @@
 #define IO_BANK0_INTR0_GPIO3_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_INTR0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -5253,7 +5205,6 @@
 #define IO_BANK0_INTR0_GPIO3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_INTR0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -5261,7 +5212,6 @@
 #define IO_BANK0_INTR0_GPIO3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_INTR0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -5269,7 +5219,6 @@
 #define IO_BANK0_INTR0_GPIO2_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_INTR0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -5277,7 +5226,6 @@
 #define IO_BANK0_INTR0_GPIO2_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_INTR0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -5285,7 +5233,6 @@
 #define IO_BANK0_INTR0_GPIO2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_INTR0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -5293,7 +5240,6 @@
 #define IO_BANK0_INTR0_GPIO2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_INTR0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -5301,7 +5247,6 @@
 #define IO_BANK0_INTR0_GPIO1_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_INTR0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -5309,7 +5254,6 @@
 #define IO_BANK0_INTR0_GPIO1_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_INTR0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -5317,7 +5261,6 @@
 #define IO_BANK0_INTR0_GPIO1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_INTR0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -5325,7 +5268,6 @@
 #define IO_BANK0_INTR0_GPIO1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_INTR0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -5333,7 +5275,6 @@
 #define IO_BANK0_INTR0_GPIO0_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_INTR0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -5341,7 +5282,6 @@
 #define IO_BANK0_INTR0_GPIO0_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_INTR0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -5349,7 +5289,6 @@
 #define IO_BANK0_INTR0_GPIO0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_INTR0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -5363,7 +5302,6 @@
 #define IO_BANK0_INTR1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_INTR1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -5371,7 +5309,6 @@
 #define IO_BANK0_INTR1_GPIO15_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_INTR1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -5379,7 +5316,6 @@
 #define IO_BANK0_INTR1_GPIO15_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_INTR1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -5387,7 +5323,6 @@
 #define IO_BANK0_INTR1_GPIO15_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_INTR1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -5395,7 +5330,6 @@
 #define IO_BANK0_INTR1_GPIO15_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_INTR1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -5403,7 +5337,6 @@
 #define IO_BANK0_INTR1_GPIO14_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_INTR1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -5411,7 +5344,6 @@
 #define IO_BANK0_INTR1_GPIO14_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_INTR1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -5419,7 +5351,6 @@
 #define IO_BANK0_INTR1_GPIO14_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_INTR1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -5427,7 +5358,6 @@
 #define IO_BANK0_INTR1_GPIO14_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_INTR1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -5435,7 +5365,6 @@
 #define IO_BANK0_INTR1_GPIO13_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_INTR1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -5443,7 +5372,6 @@
 #define IO_BANK0_INTR1_GPIO13_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_INTR1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -5451,7 +5379,6 @@
 #define IO_BANK0_INTR1_GPIO13_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_INTR1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -5459,7 +5386,6 @@
 #define IO_BANK0_INTR1_GPIO13_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_INTR1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -5467,7 +5393,6 @@
 #define IO_BANK0_INTR1_GPIO12_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_INTR1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -5475,7 +5400,6 @@
 #define IO_BANK0_INTR1_GPIO12_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_INTR1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -5483,7 +5407,6 @@
 #define IO_BANK0_INTR1_GPIO12_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_INTR1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -5491,7 +5414,6 @@
 #define IO_BANK0_INTR1_GPIO12_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_INTR1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -5499,7 +5421,6 @@
 #define IO_BANK0_INTR1_GPIO11_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_INTR1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -5507,7 +5428,6 @@
 #define IO_BANK0_INTR1_GPIO11_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_INTR1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -5515,7 +5435,6 @@
 #define IO_BANK0_INTR1_GPIO11_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_INTR1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -5523,7 +5442,6 @@
 #define IO_BANK0_INTR1_GPIO11_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_INTR1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -5531,7 +5449,6 @@
 #define IO_BANK0_INTR1_GPIO10_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_INTR1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -5539,7 +5456,6 @@
 #define IO_BANK0_INTR1_GPIO10_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_INTR1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -5547,7 +5463,6 @@
 #define IO_BANK0_INTR1_GPIO10_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_INTR1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -5555,7 +5470,6 @@
 #define IO_BANK0_INTR1_GPIO10_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_INTR1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -5563,7 +5477,6 @@
 #define IO_BANK0_INTR1_GPIO9_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_INTR1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -5571,7 +5484,6 @@
 #define IO_BANK0_INTR1_GPIO9_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_INTR1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -5579,7 +5491,6 @@
 #define IO_BANK0_INTR1_GPIO9_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_INTR1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -5587,7 +5498,6 @@
 #define IO_BANK0_INTR1_GPIO9_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_INTR1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -5595,7 +5505,6 @@
 #define IO_BANK0_INTR1_GPIO8_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_INTR1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -5603,7 +5512,6 @@
 #define IO_BANK0_INTR1_GPIO8_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_INTR1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -5611,7 +5519,6 @@
 #define IO_BANK0_INTR1_GPIO8_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_INTR1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -5625,7 +5532,6 @@
 #define IO_BANK0_INTR2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_INTR2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -5633,7 +5539,6 @@
 #define IO_BANK0_INTR2_GPIO23_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_INTR2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -5641,7 +5546,6 @@
 #define IO_BANK0_INTR2_GPIO23_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_INTR2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -5649,7 +5553,6 @@
 #define IO_BANK0_INTR2_GPIO23_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_INTR2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -5657,7 +5560,6 @@
 #define IO_BANK0_INTR2_GPIO23_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_INTR2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -5665,7 +5567,6 @@
 #define IO_BANK0_INTR2_GPIO22_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_INTR2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -5673,7 +5574,6 @@
 #define IO_BANK0_INTR2_GPIO22_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_INTR2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -5681,7 +5581,6 @@
 #define IO_BANK0_INTR2_GPIO22_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_INTR2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -5689,7 +5588,6 @@
 #define IO_BANK0_INTR2_GPIO22_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_INTR2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -5697,7 +5595,6 @@
 #define IO_BANK0_INTR2_GPIO21_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_INTR2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -5705,7 +5602,6 @@
 #define IO_BANK0_INTR2_GPIO21_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_INTR2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -5713,7 +5609,6 @@
 #define IO_BANK0_INTR2_GPIO21_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_INTR2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -5721,7 +5616,6 @@
 #define IO_BANK0_INTR2_GPIO21_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_INTR2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -5729,7 +5623,6 @@
 #define IO_BANK0_INTR2_GPIO20_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_INTR2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -5737,7 +5630,6 @@
 #define IO_BANK0_INTR2_GPIO20_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_INTR2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -5745,7 +5637,6 @@
 #define IO_BANK0_INTR2_GPIO20_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_INTR2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -5753,7 +5644,6 @@
 #define IO_BANK0_INTR2_GPIO20_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_INTR2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -5761,7 +5651,6 @@
 #define IO_BANK0_INTR2_GPIO19_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_INTR2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -5769,7 +5658,6 @@
 #define IO_BANK0_INTR2_GPIO19_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_INTR2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -5777,7 +5665,6 @@
 #define IO_BANK0_INTR2_GPIO19_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_INTR2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -5785,7 +5672,6 @@
 #define IO_BANK0_INTR2_GPIO19_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_INTR2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -5793,7 +5679,6 @@
 #define IO_BANK0_INTR2_GPIO18_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_INTR2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -5801,7 +5686,6 @@
 #define IO_BANK0_INTR2_GPIO18_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_INTR2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -5809,7 +5693,6 @@
 #define IO_BANK0_INTR2_GPIO18_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_INTR2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -5817,7 +5700,6 @@
 #define IO_BANK0_INTR2_GPIO18_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_INTR2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -5825,7 +5707,6 @@
 #define IO_BANK0_INTR2_GPIO17_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_INTR2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -5833,7 +5714,6 @@
 #define IO_BANK0_INTR2_GPIO17_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_INTR2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -5841,7 +5721,6 @@
 #define IO_BANK0_INTR2_GPIO17_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_INTR2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -5849,7 +5728,6 @@
 #define IO_BANK0_INTR2_GPIO17_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_INTR2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -5857,7 +5735,6 @@
 #define IO_BANK0_INTR2_GPIO16_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_INTR2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -5865,7 +5742,6 @@
 #define IO_BANK0_INTR2_GPIO16_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_INTR2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -5873,7 +5749,6 @@
 #define IO_BANK0_INTR2_GPIO16_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_INTR2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -5887,7 +5762,6 @@
 #define IO_BANK0_INTR3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_INTR3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -5895,7 +5769,6 @@
 #define IO_BANK0_INTR3_GPIO29_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_INTR3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -5903,7 +5776,6 @@
 #define IO_BANK0_INTR3_GPIO29_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_INTR3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -5911,7 +5783,6 @@
 #define IO_BANK0_INTR3_GPIO29_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_INTR3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -5919,7 +5790,6 @@
 #define IO_BANK0_INTR3_GPIO29_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_INTR3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -5927,7 +5797,6 @@
 #define IO_BANK0_INTR3_GPIO28_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_INTR3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -5935,7 +5804,6 @@
 #define IO_BANK0_INTR3_GPIO28_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_INTR3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -5943,7 +5811,6 @@
 #define IO_BANK0_INTR3_GPIO28_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_INTR3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -5951,7 +5818,6 @@
 #define IO_BANK0_INTR3_GPIO28_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_INTR3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -5959,7 +5825,6 @@
 #define IO_BANK0_INTR3_GPIO27_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_INTR3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -5967,7 +5832,6 @@
 #define IO_BANK0_INTR3_GPIO27_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_INTR3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -5975,7 +5839,6 @@
 #define IO_BANK0_INTR3_GPIO27_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_INTR3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -5983,7 +5846,6 @@
 #define IO_BANK0_INTR3_GPIO27_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_INTR3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -5991,7 +5853,6 @@
 #define IO_BANK0_INTR3_GPIO26_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_INTR3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -5999,7 +5860,6 @@
 #define IO_BANK0_INTR3_GPIO26_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_INTR3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -6007,7 +5867,6 @@
 #define IO_BANK0_INTR3_GPIO26_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_INTR3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -6015,7 +5874,6 @@
 #define IO_BANK0_INTR3_GPIO26_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_INTR3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -6023,7 +5881,6 @@
 #define IO_BANK0_INTR3_GPIO25_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_INTR3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -6031,7 +5888,6 @@
 #define IO_BANK0_INTR3_GPIO25_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_INTR3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -6039,7 +5895,6 @@
 #define IO_BANK0_INTR3_GPIO25_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_INTR3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -6047,7 +5902,6 @@
 #define IO_BANK0_INTR3_GPIO25_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_INTR3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -6055,7 +5909,6 @@
 #define IO_BANK0_INTR3_GPIO24_EDGE_HIGH_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_INTR3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -6063,7 +5916,6 @@
 #define IO_BANK0_INTR3_GPIO24_EDGE_LOW_ACCESS "WC"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_INTR3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_INTR3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -6071,7 +5923,6 @@
 #define IO_BANK0_INTR3_GPIO24_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_INTR3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_INTR3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_INTR3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_INTR3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -6085,7 +5936,6 @@
 #define IO_BANK0_PROC0_INTE0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -6093,7 +5943,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -6101,7 +5950,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO7_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -6109,7 +5957,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -6117,7 +5964,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO7_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -6125,7 +5971,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -6133,7 +5978,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO6_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -6141,7 +5985,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -6149,7 +5992,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO6_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -6157,7 +5999,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -6165,7 +6006,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO5_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -6173,7 +6013,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -6181,7 +6020,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO5_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -6189,7 +6027,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -6197,7 +6034,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO4_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -6205,7 +6041,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -6213,7 +6048,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO4_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -6221,7 +6055,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -6229,7 +6062,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -6237,7 +6069,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -6245,7 +6076,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -6253,7 +6083,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -6261,7 +6090,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -6269,7 +6097,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -6277,7 +6104,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -6285,7 +6111,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -6293,7 +6118,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -6301,7 +6125,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -6309,7 +6132,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -6317,7 +6139,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -6325,7 +6146,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -6333,7 +6153,6 @@
 #define IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTE0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -6347,7 +6166,6 @@
 #define IO_BANK0_PROC0_INTE1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -6355,7 +6173,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -6363,7 +6180,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO15_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -6371,7 +6187,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -6379,7 +6194,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO15_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -6387,7 +6201,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -6395,7 +6208,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO14_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -6403,7 +6215,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -6411,7 +6222,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO14_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -6419,7 +6229,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -6427,7 +6236,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO13_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -6435,7 +6243,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -6443,7 +6250,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO13_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -6451,7 +6257,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -6459,7 +6264,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO12_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -6467,7 +6271,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -6475,7 +6278,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO12_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -6483,7 +6285,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -6491,7 +6292,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO11_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -6499,7 +6299,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -6507,7 +6306,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO11_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -6515,7 +6313,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -6523,7 +6320,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO10_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -6531,7 +6327,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -6539,7 +6334,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO10_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -6547,7 +6341,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -6555,7 +6348,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO9_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -6563,7 +6355,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -6571,7 +6362,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO9_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -6579,7 +6369,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -6587,7 +6376,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO8_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -6595,7 +6383,6 @@
 #define IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTE1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -6609,7 +6396,6 @@
 #define IO_BANK0_PROC0_INTE2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -6617,7 +6403,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -6625,7 +6410,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO23_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -6633,7 +6417,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -6641,7 +6424,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO23_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -6649,7 +6431,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -6657,7 +6438,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO22_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -6665,7 +6445,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -6673,7 +6452,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO22_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -6681,7 +6459,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -6689,7 +6466,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO21_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -6697,7 +6473,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -6705,7 +6480,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO21_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -6713,7 +6487,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -6721,7 +6494,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO20_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -6729,7 +6501,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -6737,7 +6508,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO20_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -6745,7 +6515,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -6753,7 +6522,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO19_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -6761,7 +6529,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -6769,7 +6536,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO19_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -6777,7 +6543,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -6785,7 +6550,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO18_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -6793,7 +6557,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -6801,7 +6564,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO18_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -6809,7 +6571,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -6817,7 +6578,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO17_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -6825,7 +6585,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -6833,7 +6592,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO17_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -6841,7 +6599,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -6849,7 +6606,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO16_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -6857,7 +6613,6 @@
 #define IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTE2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -6871,7 +6626,6 @@
 #define IO_BANK0_PROC0_INTE3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -6879,7 +6633,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -6887,7 +6640,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO29_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -6895,7 +6647,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -6903,7 +6654,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO29_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -6911,7 +6661,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -6919,7 +6668,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO28_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -6927,7 +6675,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -6935,7 +6682,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO28_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -6943,7 +6689,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -6951,7 +6696,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO27_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -6959,7 +6703,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -6967,7 +6710,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO27_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -6975,7 +6717,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -6983,7 +6724,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO26_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -6991,7 +6731,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -6999,7 +6738,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO26_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -7007,7 +6745,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -7015,7 +6752,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO25_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -7023,7 +6759,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -7031,7 +6766,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO25_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -7039,7 +6773,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -7047,7 +6780,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO24_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -7055,7 +6787,6 @@
 #define IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTE3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -7069,7 +6800,6 @@
 #define IO_BANK0_PROC0_INTF0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -7077,7 +6807,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -7085,7 +6814,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO7_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -7093,7 +6821,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -7101,7 +6828,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO7_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -7109,7 +6835,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -7117,7 +6842,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO6_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -7125,7 +6849,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -7133,7 +6856,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO6_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -7141,7 +6863,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -7149,7 +6870,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO5_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -7157,7 +6877,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -7165,7 +6884,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO5_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -7173,7 +6891,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -7181,7 +6898,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO4_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -7189,7 +6905,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -7197,7 +6912,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO4_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -7205,7 +6919,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -7213,7 +6926,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -7221,7 +6933,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -7229,7 +6940,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -7237,7 +6947,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -7245,7 +6954,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -7253,7 +6961,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -7261,7 +6968,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -7269,7 +6975,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -7277,7 +6982,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -7285,7 +6989,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -7293,7 +6996,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -7301,7 +7003,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -7309,7 +7010,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -7317,7 +7017,6 @@
 #define IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTF0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -7331,7 +7030,6 @@
 #define IO_BANK0_PROC0_INTF1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -7339,7 +7037,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -7347,7 +7044,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO15_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -7355,7 +7051,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -7363,7 +7058,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO15_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -7371,7 +7065,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -7379,7 +7072,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO14_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -7387,7 +7079,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -7395,7 +7086,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO14_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -7403,7 +7093,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -7411,7 +7100,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO13_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -7419,7 +7107,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -7427,7 +7114,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO13_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -7435,7 +7121,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -7443,7 +7128,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO12_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -7451,7 +7135,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -7459,7 +7142,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO12_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -7467,7 +7149,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -7475,7 +7156,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO11_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -7483,7 +7163,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -7491,7 +7170,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO11_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -7499,7 +7177,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -7507,7 +7184,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO10_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -7515,7 +7191,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -7523,7 +7198,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO10_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -7531,7 +7205,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -7539,7 +7212,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO9_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -7547,7 +7219,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -7555,7 +7226,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO9_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -7563,7 +7233,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -7571,7 +7240,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO8_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -7579,7 +7247,6 @@
 #define IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTF1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -7593,7 +7260,6 @@
 #define IO_BANK0_PROC0_INTF2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -7601,7 +7267,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -7609,7 +7274,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO23_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -7617,7 +7281,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -7625,7 +7288,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO23_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -7633,7 +7295,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -7641,7 +7302,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO22_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -7649,7 +7309,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -7657,7 +7316,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO22_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -7665,7 +7323,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -7673,7 +7330,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO21_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -7681,7 +7337,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -7689,7 +7344,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO21_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -7697,7 +7351,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -7705,7 +7358,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO20_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -7713,7 +7365,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -7721,7 +7372,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO20_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -7729,7 +7379,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -7737,7 +7386,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO19_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -7745,7 +7393,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -7753,7 +7400,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO19_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -7761,7 +7407,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -7769,7 +7414,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO18_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -7777,7 +7421,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -7785,7 +7428,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO18_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -7793,7 +7435,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -7801,7 +7442,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO17_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -7809,7 +7449,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -7817,7 +7456,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO17_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -7825,7 +7463,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -7833,7 +7470,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO16_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -7841,7 +7477,6 @@
 #define IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTF2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -7855,7 +7490,6 @@
 #define IO_BANK0_PROC0_INTF3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -7863,7 +7497,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -7871,7 +7504,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO29_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -7879,7 +7511,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -7887,7 +7518,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO29_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -7895,7 +7525,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -7903,7 +7532,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO28_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -7911,7 +7539,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -7919,7 +7546,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO28_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -7927,7 +7553,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -7935,7 +7560,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO27_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -7943,7 +7567,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -7951,7 +7574,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO27_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -7959,7 +7581,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -7967,7 +7588,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO26_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -7975,7 +7595,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -7983,7 +7602,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO26_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -7991,7 +7609,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -7999,7 +7616,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO25_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -8007,7 +7623,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -8015,7 +7630,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO25_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -8023,7 +7637,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -8031,7 +7644,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO24_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -8039,7 +7651,6 @@
 #define IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTF3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -8053,7 +7664,6 @@
 #define IO_BANK0_PROC0_INTS0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -8061,7 +7671,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -8069,7 +7678,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO7_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -8077,7 +7685,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -8085,7 +7692,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO7_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -8093,7 +7699,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -8101,7 +7706,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO6_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -8109,7 +7713,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -8117,7 +7720,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO6_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -8125,7 +7727,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -8133,7 +7734,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO5_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -8141,7 +7741,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -8149,7 +7748,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO5_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -8157,7 +7755,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -8165,7 +7762,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO4_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -8173,7 +7769,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -8181,7 +7776,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO4_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -8189,7 +7783,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -8197,7 +7790,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO3_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -8205,7 +7797,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -8213,7 +7804,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -8221,7 +7811,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -8229,7 +7818,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO2_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -8237,7 +7825,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -8245,7 +7832,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -8253,7 +7839,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -8261,7 +7846,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO1_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -8269,7 +7853,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -8277,7 +7860,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -8285,7 +7867,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -8293,7 +7874,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO0_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -8301,7 +7881,6 @@
 #define IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTS0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -8315,7 +7894,6 @@
 #define IO_BANK0_PROC0_INTS1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -8323,7 +7901,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -8331,7 +7908,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO15_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -8339,7 +7915,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -8347,7 +7922,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO15_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -8355,7 +7929,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -8363,7 +7936,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO14_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -8371,7 +7943,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -8379,7 +7950,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO14_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -8387,7 +7957,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -8395,7 +7964,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO13_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -8403,7 +7971,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -8411,7 +7978,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO13_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -8419,7 +7985,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -8427,7 +7992,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO12_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -8435,7 +7999,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -8443,7 +8006,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO12_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -8451,7 +8013,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -8459,7 +8020,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO11_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -8467,7 +8027,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -8475,7 +8034,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO11_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -8483,7 +8041,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -8491,7 +8048,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO10_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -8499,7 +8055,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -8507,7 +8062,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO10_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -8515,7 +8069,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -8523,7 +8076,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO9_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -8531,7 +8083,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -8539,7 +8090,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO9_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -8547,7 +8097,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -8555,7 +8104,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO8_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -8563,7 +8111,6 @@
 #define IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTS1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -8577,7 +8124,6 @@
 #define IO_BANK0_PROC0_INTS2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -8585,7 +8131,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -8593,7 +8138,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO23_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -8601,7 +8145,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -8609,7 +8152,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO23_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -8617,7 +8159,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -8625,7 +8166,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO22_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -8633,7 +8173,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -8641,7 +8180,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO22_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -8649,7 +8187,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -8657,7 +8194,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO21_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -8665,7 +8201,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -8673,7 +8208,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO21_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -8681,7 +8215,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -8689,7 +8222,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO20_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -8697,7 +8229,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -8705,7 +8236,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO20_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -8713,7 +8243,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -8721,7 +8250,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO19_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -8729,7 +8257,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -8737,7 +8264,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO19_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -8745,7 +8271,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -8753,7 +8278,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO18_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -8761,7 +8285,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -8769,7 +8292,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO18_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -8777,7 +8299,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -8785,7 +8306,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO17_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -8793,7 +8313,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -8801,7 +8320,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO17_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -8809,7 +8327,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -8817,7 +8334,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO16_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -8825,7 +8341,6 @@
 #define IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTS2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -8839,7 +8354,6 @@
 #define IO_BANK0_PROC0_INTS3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -8847,7 +8361,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -8855,7 +8368,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO29_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -8863,7 +8375,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -8871,7 +8382,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO29_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -8879,7 +8389,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -8887,7 +8396,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO28_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -8895,7 +8403,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -8903,7 +8410,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO28_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -8911,7 +8417,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -8919,7 +8424,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO27_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -8927,7 +8431,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -8935,7 +8438,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO27_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -8943,7 +8445,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -8951,7 +8452,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO26_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -8959,7 +8459,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -8967,7 +8466,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO26_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -8975,7 +8473,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -8983,7 +8480,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO25_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -8991,7 +8487,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -8999,7 +8494,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO25_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -9007,7 +8501,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -9015,7 +8508,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO24_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -9023,7 +8515,6 @@
 #define IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC0_INTS3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -9037,7 +8528,6 @@
 #define IO_BANK0_PROC1_INTE0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -9045,7 +8535,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -9053,7 +8542,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO7_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -9061,7 +8549,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -9069,7 +8556,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO7_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -9077,7 +8563,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -9085,7 +8570,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO6_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -9093,7 +8577,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -9101,7 +8584,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO6_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -9109,7 +8591,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -9117,7 +8598,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO5_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -9125,7 +8605,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -9133,7 +8612,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO5_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -9141,7 +8619,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -9149,7 +8626,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO4_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -9157,7 +8633,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -9165,7 +8640,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO4_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -9173,7 +8647,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -9181,7 +8654,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -9189,7 +8661,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -9197,7 +8668,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -9205,7 +8675,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -9213,7 +8682,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -9221,7 +8689,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -9229,7 +8696,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -9237,7 +8703,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -9245,7 +8710,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -9253,7 +8717,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -9261,7 +8724,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -9269,7 +8731,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -9277,7 +8738,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -9285,7 +8745,6 @@
 #define IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTE0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -9299,7 +8758,6 @@
 #define IO_BANK0_PROC1_INTE1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -9307,7 +8765,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -9315,7 +8772,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO15_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -9323,7 +8779,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -9331,7 +8786,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO15_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -9339,7 +8793,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -9347,7 +8800,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO14_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -9355,7 +8807,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -9363,7 +8814,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO14_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -9371,7 +8821,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -9379,7 +8828,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO13_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -9387,7 +8835,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -9395,7 +8842,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO13_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -9403,7 +8849,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -9411,7 +8856,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO12_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -9419,7 +8863,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -9427,7 +8870,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO12_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -9435,7 +8877,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -9443,7 +8884,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO11_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -9451,7 +8891,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -9459,7 +8898,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO11_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -9467,7 +8905,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -9475,7 +8912,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO10_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -9483,7 +8919,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -9491,7 +8926,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO10_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -9499,7 +8933,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -9507,7 +8940,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO9_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -9515,7 +8947,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -9523,7 +8954,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO9_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -9531,7 +8961,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -9539,7 +8968,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO8_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -9547,7 +8975,6 @@
 #define IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTE1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -9561,7 +8988,6 @@
 #define IO_BANK0_PROC1_INTE2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -9569,7 +8995,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -9577,7 +9002,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO23_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -9585,7 +9009,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -9593,7 +9016,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO23_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -9601,7 +9023,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -9609,7 +9030,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO22_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -9617,7 +9037,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -9625,7 +9044,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO22_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -9633,7 +9051,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -9641,7 +9058,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO21_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -9649,7 +9065,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -9657,7 +9072,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO21_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -9665,7 +9079,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -9673,7 +9086,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO20_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -9681,7 +9093,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -9689,7 +9100,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO20_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -9697,7 +9107,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -9705,7 +9114,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO19_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -9713,7 +9121,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -9721,7 +9128,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO19_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -9729,7 +9135,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -9737,7 +9142,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO18_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -9745,7 +9149,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -9753,7 +9156,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO18_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -9761,7 +9163,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -9769,7 +9170,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO17_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -9777,7 +9177,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -9785,7 +9184,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO17_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -9793,7 +9191,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -9801,7 +9198,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO16_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -9809,7 +9205,6 @@
 #define IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTE2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -9823,7 +9218,6 @@
 #define IO_BANK0_PROC1_INTE3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -9831,7 +9225,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -9839,7 +9232,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO29_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -9847,7 +9239,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -9855,7 +9246,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO29_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -9863,7 +9253,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -9871,7 +9260,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO28_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -9879,7 +9267,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -9887,7 +9274,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO28_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -9895,7 +9281,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -9903,7 +9288,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO27_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -9911,7 +9295,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -9919,7 +9302,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO27_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -9927,7 +9309,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -9935,7 +9316,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO26_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -9943,7 +9323,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -9951,7 +9330,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO26_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -9959,7 +9337,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -9967,7 +9344,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO25_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -9975,7 +9351,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -9983,7 +9358,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO25_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -9991,7 +9365,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -9999,7 +9372,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO24_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -10007,7 +9379,6 @@
 #define IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTE3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -10021,7 +9392,6 @@
 #define IO_BANK0_PROC1_INTF0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -10029,7 +9399,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -10037,7 +9406,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO7_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -10045,7 +9413,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -10053,7 +9420,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO7_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -10061,7 +9427,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -10069,7 +9434,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO6_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -10077,7 +9441,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -10085,7 +9448,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO6_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -10093,7 +9455,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -10101,7 +9462,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO5_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -10109,7 +9469,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -10117,7 +9476,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO5_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -10125,7 +9483,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -10133,7 +9490,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO4_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -10141,7 +9497,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -10149,7 +9504,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO4_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -10157,7 +9511,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -10165,7 +9518,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -10173,7 +9525,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -10181,7 +9532,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -10189,7 +9539,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -10197,7 +9546,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -10205,7 +9553,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -10213,7 +9560,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -10221,7 +9567,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -10229,7 +9574,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -10237,7 +9581,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -10245,7 +9588,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -10253,7 +9595,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -10261,7 +9602,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -10269,7 +9609,6 @@
 #define IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTF0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -10283,7 +9622,6 @@
 #define IO_BANK0_PROC1_INTF1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -10291,7 +9629,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -10299,7 +9636,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO15_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -10307,7 +9643,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -10315,7 +9650,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO15_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -10323,7 +9657,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -10331,7 +9664,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO14_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -10339,7 +9671,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -10347,7 +9678,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO14_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -10355,7 +9685,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -10363,7 +9692,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO13_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -10371,7 +9699,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -10379,7 +9706,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO13_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -10387,7 +9713,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -10395,7 +9720,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO12_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -10403,7 +9727,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -10411,7 +9734,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO12_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -10419,7 +9741,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -10427,7 +9748,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO11_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -10435,7 +9755,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -10443,7 +9762,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO11_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -10451,7 +9769,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -10459,7 +9776,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO10_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -10467,7 +9783,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -10475,7 +9790,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO10_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -10483,7 +9797,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -10491,7 +9804,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO9_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -10499,7 +9811,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -10507,7 +9818,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO9_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -10515,7 +9825,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -10523,7 +9832,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO8_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -10531,7 +9839,6 @@
 #define IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTF1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -10545,7 +9852,6 @@
 #define IO_BANK0_PROC1_INTF2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -10553,7 +9859,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -10561,7 +9866,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO23_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -10569,7 +9873,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -10577,7 +9880,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO23_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -10585,7 +9887,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -10593,7 +9894,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO22_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -10601,7 +9901,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -10609,7 +9908,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO22_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -10617,7 +9915,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -10625,7 +9922,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO21_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -10633,7 +9929,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -10641,7 +9936,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO21_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -10649,7 +9943,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -10657,7 +9950,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO20_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -10665,7 +9957,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -10673,7 +9964,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO20_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -10681,7 +9971,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -10689,7 +9978,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO19_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -10697,7 +9985,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -10705,7 +9992,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO19_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -10713,7 +9999,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -10721,7 +10006,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO18_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -10729,7 +10013,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -10737,7 +10020,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO18_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -10745,7 +10027,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -10753,7 +10034,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO17_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -10761,7 +10041,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -10769,7 +10048,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO17_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -10777,7 +10055,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -10785,7 +10062,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO16_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -10793,7 +10069,6 @@
 #define IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTF2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -10807,7 +10082,6 @@
 #define IO_BANK0_PROC1_INTF3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -10815,7 +10089,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -10823,7 +10096,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO29_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -10831,7 +10103,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -10839,7 +10110,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO29_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -10847,7 +10117,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -10855,7 +10124,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO28_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -10863,7 +10131,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -10871,7 +10138,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO28_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -10879,7 +10145,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -10887,7 +10152,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO27_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -10895,7 +10159,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -10903,7 +10166,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO27_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -10911,7 +10173,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -10919,7 +10180,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO26_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -10927,7 +10187,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -10935,7 +10194,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO26_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -10943,7 +10201,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -10951,7 +10208,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO25_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -10959,7 +10215,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -10967,7 +10222,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO25_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -10975,7 +10229,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -10983,7 +10236,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO24_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -10991,7 +10243,6 @@
 #define IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTF3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -11005,7 +10256,6 @@
 #define IO_BANK0_PROC1_INTS0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -11013,7 +10263,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -11021,7 +10270,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO7_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -11029,7 +10277,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -11037,7 +10284,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO7_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -11045,7 +10291,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -11053,7 +10298,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO6_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -11061,7 +10305,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -11069,7 +10312,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO6_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -11077,7 +10319,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -11085,7 +10326,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO5_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -11093,7 +10333,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -11101,7 +10340,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO5_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -11109,7 +10347,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -11117,7 +10354,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO4_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -11125,7 +10361,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -11133,7 +10368,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO4_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -11141,7 +10375,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -11149,7 +10382,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO3_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -11157,7 +10389,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -11165,7 +10396,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -11173,7 +10403,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -11181,7 +10410,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO2_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -11189,7 +10417,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -11197,7 +10424,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -11205,7 +10431,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -11213,7 +10438,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO1_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -11221,7 +10445,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -11229,7 +10452,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -11237,7 +10459,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -11245,7 +10466,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO0_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -11253,7 +10473,6 @@
 #define IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTS0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -11267,7 +10486,6 @@
 #define IO_BANK0_PROC1_INTS1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -11275,7 +10493,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -11283,7 +10500,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO15_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -11291,7 +10507,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -11299,7 +10514,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO15_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -11307,7 +10521,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -11315,7 +10528,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO14_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -11323,7 +10535,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -11331,7 +10542,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO14_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -11339,7 +10549,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -11347,7 +10556,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO13_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -11355,7 +10563,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -11363,7 +10570,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO13_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -11371,7 +10577,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -11379,7 +10584,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO12_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -11387,7 +10591,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -11395,7 +10598,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO12_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -11403,7 +10605,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -11411,7 +10612,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO11_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -11419,7 +10619,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -11427,7 +10626,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO11_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -11435,7 +10633,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -11443,7 +10640,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO10_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -11451,7 +10647,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -11459,7 +10654,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO10_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -11467,7 +10661,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -11475,7 +10668,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO9_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -11483,7 +10675,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -11491,7 +10682,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO9_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -11499,7 +10689,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -11507,7 +10696,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO8_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -11515,7 +10703,6 @@
 #define IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTS1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -11529,7 +10716,6 @@
 #define IO_BANK0_PROC1_INTS2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -11537,7 +10723,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -11545,7 +10730,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO23_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -11553,7 +10737,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -11561,7 +10744,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO23_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -11569,7 +10751,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -11577,7 +10758,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO22_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -11585,7 +10765,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -11593,7 +10772,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO22_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -11601,7 +10779,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -11609,7 +10786,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO21_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -11617,7 +10793,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -11625,7 +10800,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO21_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -11633,7 +10807,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -11641,7 +10814,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO20_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -11649,7 +10821,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -11657,7 +10828,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO20_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -11665,7 +10835,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -11673,7 +10842,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO19_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -11681,7 +10849,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -11689,7 +10856,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO19_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -11697,7 +10863,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -11705,7 +10870,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO18_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -11713,7 +10877,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -11721,7 +10884,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO18_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -11729,7 +10891,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -11737,7 +10898,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO17_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -11745,7 +10905,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -11753,7 +10912,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO17_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -11761,7 +10919,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -11769,7 +10926,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO16_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -11777,7 +10933,6 @@
 #define IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTS2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -11791,7 +10946,6 @@
 #define IO_BANK0_PROC1_INTS3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -11799,7 +10953,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -11807,7 +10960,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO29_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -11815,7 +10967,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -11823,7 +10974,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO29_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -11831,7 +10981,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -11839,7 +10988,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO28_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -11847,7 +10995,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -11855,7 +11002,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO28_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -11863,7 +11009,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -11871,7 +11016,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO27_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -11879,7 +11023,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -11887,7 +11030,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO27_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -11895,7 +11037,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -11903,7 +11044,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO26_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -11911,7 +11051,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -11919,7 +11058,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO26_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -11927,7 +11065,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -11935,7 +11072,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO25_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -11943,7 +11079,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -11951,7 +11086,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO25_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -11959,7 +11093,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -11967,7 +11100,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO24_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -11975,7 +11107,6 @@
 #define IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_PROC1_INTS3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -11989,7 +11120,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -11997,7 +11127,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -12005,7 +11134,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -12013,7 +11141,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -12021,7 +11148,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO7_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -12029,7 +11155,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -12037,7 +11162,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -12045,7 +11169,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -12053,7 +11176,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO6_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -12061,7 +11183,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -12069,7 +11190,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -12077,7 +11197,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -12085,7 +11204,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO5_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -12093,7 +11211,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -12101,7 +11218,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -12109,7 +11225,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -12117,7 +11232,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO4_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -12125,7 +11239,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -12133,7 +11246,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -12141,7 +11253,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -12149,7 +11260,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -12157,7 +11267,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -12165,7 +11274,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -12173,7 +11281,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -12181,7 +11288,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -12189,7 +11295,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -12197,7 +11302,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -12205,7 +11309,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -12213,7 +11316,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -12221,7 +11323,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -12229,7 +11330,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -12237,7 +11337,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTE0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -12251,7 +11350,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -12259,7 +11357,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -12267,7 +11364,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -12275,7 +11371,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -12283,7 +11378,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO15_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -12291,7 +11385,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -12299,7 +11392,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -12307,7 +11399,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -12315,7 +11406,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO14_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -12323,7 +11413,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -12331,7 +11420,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -12339,7 +11427,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -12347,7 +11434,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO13_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -12355,7 +11441,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -12363,7 +11448,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -12371,7 +11455,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -12379,7 +11462,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO12_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -12387,7 +11469,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -12395,7 +11476,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -12403,7 +11483,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -12411,7 +11490,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO11_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -12419,7 +11497,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -12427,7 +11504,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -12435,7 +11511,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -12443,7 +11518,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO10_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -12451,7 +11525,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -12459,7 +11532,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -12467,7 +11539,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -12475,7 +11546,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO9_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -12483,7 +11553,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -12491,7 +11560,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -12499,7 +11567,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTE1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -12513,7 +11580,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -12521,7 +11587,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -12529,7 +11594,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -12537,7 +11601,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -12545,7 +11608,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO23_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -12553,7 +11615,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -12561,7 +11622,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -12569,7 +11629,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -12577,7 +11636,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO22_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -12585,7 +11643,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -12593,7 +11650,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -12601,7 +11657,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -12609,7 +11664,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO21_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -12617,7 +11671,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -12625,7 +11678,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -12633,7 +11685,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -12641,7 +11692,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO20_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -12649,7 +11699,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -12657,7 +11706,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -12665,7 +11713,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -12673,7 +11720,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO19_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -12681,7 +11727,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -12689,7 +11734,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -12697,7 +11741,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -12705,7 +11748,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO18_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -12713,7 +11755,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -12721,7 +11762,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -12729,7 +11769,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -12737,7 +11776,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO17_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -12745,7 +11783,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -12753,7 +11790,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -12761,7 +11797,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTE2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -12775,7 +11810,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -12783,7 +11817,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -12791,7 +11824,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -12799,7 +11831,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -12807,7 +11838,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO29_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -12815,7 +11845,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -12823,7 +11852,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -12831,7 +11859,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -12839,7 +11866,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO28_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -12847,7 +11873,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -12855,7 +11880,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -12863,7 +11887,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -12871,7 +11894,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO27_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -12879,7 +11901,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -12887,7 +11908,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -12895,7 +11915,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -12903,7 +11922,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO26_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -12911,7 +11929,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -12919,7 +11936,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -12927,7 +11943,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -12935,7 +11950,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO25_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -12943,7 +11957,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -12951,7 +11964,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -12959,7 +11971,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTE3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -12973,7 +11984,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -12981,7 +11991,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -12989,7 +11998,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -12997,7 +12005,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -13005,7 +12012,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO7_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -13013,7 +12019,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -13021,7 +12026,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -13029,7 +12033,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -13037,7 +12040,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO6_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -13045,7 +12047,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -13053,7 +12054,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -13061,7 +12061,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -13069,7 +12068,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO5_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -13077,7 +12075,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -13085,7 +12082,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -13093,7 +12089,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -13101,7 +12096,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO4_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -13109,7 +12103,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -13117,7 +12110,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -13125,7 +12117,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -13133,7 +12124,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO3_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -13141,7 +12131,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -13149,7 +12138,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -13157,7 +12145,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -13165,7 +12152,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO2_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -13173,7 +12159,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -13181,7 +12166,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -13189,7 +12173,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -13197,7 +12180,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO1_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -13205,7 +12187,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -13213,7 +12194,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -13221,7 +12201,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTF0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -13235,7 +12214,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -13243,7 +12221,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -13251,7 +12228,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -13259,7 +12235,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -13267,7 +12242,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO15_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -13275,7 +12249,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -13283,7 +12256,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -13291,7 +12263,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -13299,7 +12270,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO14_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -13307,7 +12277,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -13315,7 +12284,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -13323,7 +12291,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -13331,7 +12298,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO13_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -13339,7 +12305,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -13347,7 +12312,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -13355,7 +12319,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -13363,7 +12326,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO12_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -13371,7 +12333,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -13379,7 +12340,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -13387,7 +12347,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -13395,7 +12354,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO11_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -13403,7 +12361,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -13411,7 +12368,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -13419,7 +12375,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -13427,7 +12382,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO10_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -13435,7 +12389,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -13443,7 +12396,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -13451,7 +12403,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -13459,7 +12410,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO9_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -13467,7 +12417,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -13475,7 +12424,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -13483,7 +12431,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTF1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -13497,7 +12444,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -13505,7 +12451,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -13513,7 +12458,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -13521,7 +12465,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -13529,7 +12472,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO23_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -13537,7 +12479,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -13545,7 +12486,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -13553,7 +12493,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -13561,7 +12500,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO22_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -13569,7 +12507,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -13577,7 +12514,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -13585,7 +12521,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -13593,7 +12528,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO21_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -13601,7 +12535,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -13609,7 +12542,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -13617,7 +12549,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -13625,7 +12556,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO20_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -13633,7 +12563,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -13641,7 +12570,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -13649,7 +12577,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -13657,7 +12584,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO19_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -13665,7 +12591,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -13673,7 +12598,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -13681,7 +12605,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -13689,7 +12612,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO18_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -13697,7 +12619,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -13705,7 +12626,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -13713,7 +12633,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -13721,7 +12640,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO17_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -13729,7 +12647,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -13737,7 +12654,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -13745,7 +12661,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTF2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -13759,7 +12674,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -13767,7 +12681,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -13775,7 +12688,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -13783,7 +12695,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -13791,7 +12702,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO29_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -13799,7 +12709,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -13807,7 +12716,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -13815,7 +12723,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -13823,7 +12730,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO28_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -13831,7 +12737,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -13839,7 +12744,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -13847,7 +12751,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -13855,7 +12758,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO27_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -13863,7 +12765,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -13871,7 +12772,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -13879,7 +12779,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -13887,7 +12786,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO26_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -13895,7 +12793,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -13903,7 +12800,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -13911,7 +12807,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -13919,7 +12814,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO25_LEVEL_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -13927,7 +12821,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -13935,7 +12828,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_EDGE_LOW_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -13943,7 +12835,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_HIGH_ACCESS "RW"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTF3_GPIO24_LEVEL_LOW_MSB    _u(0)
@@ -13957,7 +12848,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_HIGH_MSB    _u(31)
@@ -13965,7 +12855,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_LOW_MSB    _u(30)
@@ -13973,7 +12862,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_HIGH_MSB    _u(29)
@@ -13981,7 +12869,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_LOW_MSB    _u(28)
@@ -13989,7 +12876,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO7_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_HIGH_MSB    _u(27)
@@ -13997,7 +12883,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_LOW_MSB    _u(26)
@@ -14005,7 +12890,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_HIGH_MSB    _u(25)
@@ -14013,7 +12897,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_LOW_MSB    _u(24)
@@ -14021,7 +12904,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO6_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_HIGH_MSB    _u(23)
@@ -14029,7 +12911,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_LOW_MSB    _u(22)
@@ -14037,7 +12918,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_HIGH_MSB    _u(21)
@@ -14045,7 +12925,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_LOW_MSB    _u(20)
@@ -14053,7 +12932,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO5_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_HIGH_MSB    _u(19)
@@ -14061,7 +12939,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_LOW_MSB    _u(18)
@@ -14069,7 +12946,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_HIGH_MSB    _u(17)
@@ -14077,7 +12953,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_LOW_MSB    _u(16)
@@ -14085,7 +12960,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO4_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_HIGH_MSB    _u(15)
@@ -14093,7 +12967,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_LOW_MSB    _u(14)
@@ -14101,7 +12974,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_HIGH_MSB    _u(13)
@@ -14109,7 +12981,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_LOW_MSB    _u(12)
@@ -14117,7 +12988,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO3_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_HIGH_MSB    _u(11)
@@ -14125,7 +12995,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_LOW_MSB    _u(10)
@@ -14133,7 +13002,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_HIGH_MSB    _u(9)
@@ -14141,7 +13009,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_LOW_MSB    _u(8)
@@ -14149,7 +13016,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO2_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_HIGH_MSB    _u(7)
@@ -14157,7 +13023,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_LOW_MSB    _u(6)
@@ -14165,7 +13030,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_HIGH_MSB    _u(5)
@@ -14173,7 +13037,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_LOW_MSB    _u(4)
@@ -14181,7 +13044,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO1_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_HIGH_MSB    _u(3)
@@ -14189,7 +13051,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_LOW_MSB    _u(2)
@@ -14197,7 +13058,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_HIGH_MSB    _u(1)
@@ -14205,7 +13065,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTS0_GPIO0_LEVEL_LOW_MSB    _u(0)
@@ -14219,7 +13078,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_HIGH_MSB    _u(31)
@@ -14227,7 +13085,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_LOW_MSB    _u(30)
@@ -14235,7 +13092,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_HIGH_MSB    _u(29)
@@ -14243,7 +13099,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_LOW_MSB    _u(28)
@@ -14251,7 +13106,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO15_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_HIGH_MSB    _u(27)
@@ -14259,7 +13113,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_LOW_MSB    _u(26)
@@ -14267,7 +13120,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_HIGH_MSB    _u(25)
@@ -14275,7 +13127,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_LOW_MSB    _u(24)
@@ -14283,7 +13134,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO14_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_HIGH_MSB    _u(23)
@@ -14291,7 +13141,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_LOW_MSB    _u(22)
@@ -14299,7 +13148,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_HIGH_MSB    _u(21)
@@ -14307,7 +13155,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_LOW_MSB    _u(20)
@@ -14315,7 +13162,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO13_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_HIGH_MSB    _u(19)
@@ -14323,7 +13169,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_LOW_MSB    _u(18)
@@ -14331,7 +13176,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_HIGH_MSB    _u(17)
@@ -14339,7 +13183,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_LOW_MSB    _u(16)
@@ -14347,7 +13190,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO12_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_HIGH_MSB    _u(15)
@@ -14355,7 +13197,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_LOW_MSB    _u(14)
@@ -14363,7 +13204,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_HIGH_MSB    _u(13)
@@ -14371,7 +13211,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_LOW_MSB    _u(12)
@@ -14379,7 +13218,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO11_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_HIGH_MSB    _u(11)
@@ -14387,7 +13225,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_LOW_MSB    _u(10)
@@ -14395,7 +13232,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_HIGH_MSB    _u(9)
@@ -14403,7 +13239,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_LOW_MSB    _u(8)
@@ -14411,7 +13246,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO10_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_HIGH_MSB    _u(7)
@@ -14419,7 +13253,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_LOW_MSB    _u(6)
@@ -14427,7 +13260,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_HIGH_MSB    _u(5)
@@ -14435,7 +13267,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_LOW_MSB    _u(4)
@@ -14443,7 +13274,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO9_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_HIGH_MSB    _u(3)
@@ -14451,7 +13281,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_LOW_MSB    _u(2)
@@ -14459,7 +13288,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_HIGH_MSB    _u(1)
@@ -14467,7 +13295,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTS1_GPIO8_LEVEL_LOW_MSB    _u(0)
@@ -14481,7 +13308,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_HIGH_BITS   _u(0x80000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_HIGH_MSB    _u(31)
@@ -14489,7 +13315,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_LOW_BITS   _u(0x40000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_LOW_MSB    _u(30)
@@ -14497,7 +13322,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_HIGH_BITS   _u(0x20000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_HIGH_MSB    _u(29)
@@ -14505,7 +13329,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_LOW_BITS   _u(0x10000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_LOW_MSB    _u(28)
@@ -14513,7 +13336,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO23_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_HIGH_BITS   _u(0x08000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_HIGH_MSB    _u(27)
@@ -14521,7 +13343,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_LOW_BITS   _u(0x04000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_LOW_MSB    _u(26)
@@ -14529,7 +13350,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_HIGH_BITS   _u(0x02000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_HIGH_MSB    _u(25)
@@ -14537,7 +13357,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_LOW_BITS   _u(0x01000000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_LOW_MSB    _u(24)
@@ -14545,7 +13364,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO22_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_HIGH_MSB    _u(23)
@@ -14553,7 +13371,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_LOW_MSB    _u(22)
@@ -14561,7 +13378,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_HIGH_MSB    _u(21)
@@ -14569,7 +13385,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_LOW_MSB    _u(20)
@@ -14577,7 +13392,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO21_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_HIGH_MSB    _u(19)
@@ -14585,7 +13399,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_LOW_MSB    _u(18)
@@ -14593,7 +13406,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_HIGH_MSB    _u(17)
@@ -14601,7 +13413,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_LOW_MSB    _u(16)
@@ -14609,7 +13420,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO20_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_HIGH_MSB    _u(15)
@@ -14617,7 +13427,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_LOW_MSB    _u(14)
@@ -14625,7 +13434,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_HIGH_MSB    _u(13)
@@ -14633,7 +13441,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_LOW_MSB    _u(12)
@@ -14641,7 +13448,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO19_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_HIGH_MSB    _u(11)
@@ -14649,7 +13455,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_LOW_MSB    _u(10)
@@ -14657,7 +13462,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_HIGH_MSB    _u(9)
@@ -14665,7 +13469,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_LOW_MSB    _u(8)
@@ -14673,7 +13476,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO18_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_HIGH_MSB    _u(7)
@@ -14681,7 +13483,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_LOW_MSB    _u(6)
@@ -14689,7 +13490,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_HIGH_MSB    _u(5)
@@ -14697,7 +13497,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_LOW_MSB    _u(4)
@@ -14705,7 +13504,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO17_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_HIGH_MSB    _u(3)
@@ -14713,7 +13511,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_LOW_MSB    _u(2)
@@ -14721,7 +13518,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_HIGH_MSB    _u(1)
@@ -14729,7 +13525,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTS2_GPIO16_LEVEL_LOW_MSB    _u(0)
@@ -14743,7 +13538,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_RESET  _u(0x00000000)
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_HIGH_BITS   _u(0x00800000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_HIGH_MSB    _u(23)
@@ -14751,7 +13545,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_LOW_BITS   _u(0x00400000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_LOW_MSB    _u(22)
@@ -14759,7 +13552,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_HIGH_BITS   _u(0x00200000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_HIGH_MSB    _u(21)
@@ -14767,7 +13559,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_LOW_BITS   _u(0x00100000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_LOW_MSB    _u(20)
@@ -14775,7 +13566,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO29_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_HIGH_BITS   _u(0x00080000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_HIGH_MSB    _u(19)
@@ -14783,7 +13573,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_LOW_BITS   _u(0x00040000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_LOW_MSB    _u(18)
@@ -14791,7 +13580,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_HIGH_BITS   _u(0x00020000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_HIGH_MSB    _u(17)
@@ -14799,7 +13587,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_LOW_BITS   _u(0x00010000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_LOW_MSB    _u(16)
@@ -14807,7 +13594,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO28_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_HIGH_BITS   _u(0x00008000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_HIGH_MSB    _u(15)
@@ -14815,7 +13601,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_LOW_BITS   _u(0x00004000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_LOW_MSB    _u(14)
@@ -14823,7 +13608,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_HIGH_BITS   _u(0x00002000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_HIGH_MSB    _u(13)
@@ -14831,7 +13615,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_LOW_BITS   _u(0x00001000)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_LOW_MSB    _u(12)
@@ -14839,7 +13622,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO27_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_HIGH_BITS   _u(0x00000800)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_HIGH_MSB    _u(11)
@@ -14847,7 +13629,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_LOW_BITS   _u(0x00000400)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_LOW_MSB    _u(10)
@@ -14855,7 +13636,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_HIGH_BITS   _u(0x00000200)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_HIGH_MSB    _u(9)
@@ -14863,7 +13643,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_LOW_BITS   _u(0x00000100)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_LOW_MSB    _u(8)
@@ -14871,7 +13650,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO26_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_HIGH_BITS   _u(0x00000080)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_HIGH_MSB    _u(7)
@@ -14879,7 +13657,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_LOW_BITS   _u(0x00000040)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_LOW_MSB    _u(6)
@@ -14887,7 +13664,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_HIGH_BITS   _u(0x00000020)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_HIGH_MSB    _u(5)
@@ -14895,7 +13671,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_LOW_BITS   _u(0x00000010)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_LOW_MSB    _u(4)
@@ -14903,7 +13678,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO25_LEVEL_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_HIGH_BITS   _u(0x00000008)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_HIGH_MSB    _u(3)
@@ -14911,7 +13685,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_LOW_BITS   _u(0x00000004)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_LOW_MSB    _u(2)
@@ -14919,7 +13692,6 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_EDGE_LOW_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_HIGH
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_HIGH_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_HIGH_BITS   _u(0x00000002)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_HIGH_MSB    _u(1)
@@ -14927,11 +13699,10 @@
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_HIGH_ACCESS "RO"
 // -----------------------------------------------------------------------------
 // Field       : IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_LOW
-// Description : None
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_LOW_RESET  _u(0x0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_LOW_BITS   _u(0x00000001)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_LOW_MSB    _u(0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_LOW_LSB    _u(0)
 #define IO_BANK0_DORMANT_WAKE_INTS3_GPIO24_LEVEL_LOW_ACCESS "RO"
 // =============================================================================
-#endif // HARDWARE_REGS_IO_BANK0_DEFINED
+#endif // _HARDWARE_REGS_IO_BANK0_H

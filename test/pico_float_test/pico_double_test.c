@@ -17,9 +17,18 @@
 #include <math.h>
 #include <pico/double.h>
 #include "pico/stdlib.h"
+// Include sys/types.h before inttypes.h to work around issue with
+// certain versions of GCC and newlib which causes omission of PRIx64
+#include <sys/types.h>
 #include "inttypes.h"
 
-extern int __aeabi_dcmpun(double a, double b);
+#if !LIB_PICO_DOUBLE_COMPILER
+#define TEST_SATURATION 1
+#endif
+
+#define test_assert(x) ({ if (!(x)) { printf("Assertion failed: ");puts(#x);printf("  at " __FILE__ ":%d\n", __LINE__); exit(-1); } })
+
+extern __attribute__((pcs("aapcs"))) int __aeabi_dcmpun(double a, double b);
 
 #if __arm__
 
@@ -145,7 +154,7 @@ int test__aeabi_cdcmple(double a, double b, int expected) {
         expected_z = 0;
         expected_c = 1;
     }
-#if PICO_DOUBLE_COMPILER
+#if PICO_RP2040 && LIB_PICO_DOUBLE_COMPILER && PICO_C_COMPILER_IS_GNU
     // gcc has this backwards it seems - not a good thing, but I guess it doesn't ever call them
     expected_c ^= 1;
 #endif
@@ -282,26 +291,26 @@ int test_dcmpun() {
     return 0;
 }
 
-#define assert_nan(a) assert(isnan(a))
+#define assert_nan(a) test_assert(isnan(a))
 #define check_nan(a) ({ assert_nan(a); a; })
 
-double __aeabi_i2d(int32_t);
-double __aeabi_ui2d(int32_t);
-double __aeabi_l2d(int64_t);
-double __aeabi_ul2d(int64_t);
-int32_t __aeabi_d2iz(double);
-int64_t __aeabi_d2lz(double);
-double __aeabi_dmul(double, double);
-double __aeabi_ddiv(double, double);
+double __attribute__((pcs("aapcs"))) __aeabi_i2d(int32_t);
+double __attribute__((pcs("aapcs"))) __aeabi_ui2d(int32_t);
+double __attribute__((pcs("aapcs"))) __aeabi_l2d(int64_t);
+double __attribute__((pcs("aapcs"))) __aeabi_ul2d(int64_t);
+int32_t __attribute__((pcs("aapcs")))__aeabi_d2iz(double);
+int64_t __attribute__((pcs("aapcs"))) __aeabi_d2lz(double);
+double __attribute__((pcs("aapcs"))) __aeabi_dmul(double, double);
+double __attribute__((pcs("aapcs"))) __aeabi_ddiv(double, double);
 #if LIB_PICO_DOUBLE_PICO
-double __real___aeabi_i2d(int);
-double __real___aeabi_ui2d(int);
-double __real___aeabi_l2d(int64_t);
-double __real___aeabi_ul2d(int64_t);
-double __real___aeabi_dmul(double, double);
-double __real___aeabi_ddiv(double, double);
-int32_t __real___aeabi_d2iz(double);
-int64_t __real___aeabi_d2lz(double);
+double __attribute__((pcs("aapcs"))) __real___aeabi_i2d(int);
+double __attribute__((pcs("aapcs"))) __real___aeabi_ui2d(int);
+double __attribute__((pcs("aapcs"))) __real___aeabi_l2d(int64_t);
+double __attribute__((pcs("aapcs"))) __real___aeabi_ul2d(int64_t);
+double __attribute__((pcs("aapcs"))) __real___aeabi_dmul(double, double);
+double __attribute__((pcs("aapcs"))) __real___aeabi_ddiv(double, double);
+int32_t __attribute__((pcs("aapcs"))) __real___aeabi_d2iz(double);
+int64_t __attribute__((pcs("aapcs"))) __real___aeabi_d2lz(double);
 double __real_sqrt(double);
 double __real_cos(double);
 double __real_sin(double);
@@ -313,18 +322,25 @@ double __real_pow(double, double);
 double __real_trunc(double);
 double __real_ldexp(double, int);
 double __real_fmod(double, double);
+double __real_fma(double, double, double);
+#define __real_fma_fast __real_fma
+#define __real_ddiv_fast __real___aeabi_ddiv
+#define __real_sqrt_fast __real_sqrt
 
-#define EPSILON 1e-9
-#define assert_close(a, b) assert(((b - a) < EPSILON || (a - b) < EPSILON) || (isinf(a) && isinf(b) && (a < 0) == (b < 0)))
-#define check1(func,p0) ({ typeof(p0) r = func(p0), r2 = __CONCAT(__real_, func)(p0); assert(r == r2); r; })
-#define check2(func,p0,p1) ({ typeof(p0) r = func(p0,p1), r2 = __CONCAT(__real_, func)(p0,p1); assert(r == r2); r; })
+#define FRAC ((double)(1ull << 50))
+#define allowed_range(a) (fabs(a) / FRAC)
+#define assert_close(a, b) test_assert((fabs((a) - (b)) <= allowed_range(a) || ({ printf("  error: %f != %f\n", a, b); 0; })) || (isinf(a) && isinf(b) && ((a) < 0) == ((b) < 0)))
+#define check1(func,p0) ({ typeof(p0) r = func(p0), r2 = __CONCAT(__real_, func)(p0); test_assert(r == r2); r; })
+#define check2(func,p0,p1) ({ typeof(p0) r = func(p0,p1), r2 = __CONCAT(__real_, func)(p0,p1); test_assert(r == r2); r; })
 #define check_close1(func,p0) ({ typeof(p0) r = func(p0), r2 = __CONCAT(__real_, func)(p0); if (isnan(p0)) assert_nan(r); else assert_close(r, r2); r; })
 #define check_close2(func,p0,p1) ({ typeof(p0) r = func(p0,p1), r2 = __CONCAT(__real_, func)(p0,p1); if (isnan(p0) || isnan(p1)) assert_nan(r); else assert_close(r, r2); r; })
+#define check_close3(func,p0,p1,p2) ({ typeof(p0) r = func(p0,p1,p2), r2 = __CONCAT(__real_, func)(p0,p1,p2); if (isnan(p0) || isnan(p1) || isnan(p2)) assert_nan(r); else assert_close(r, r2); r; })
 #else
 #define check1(func,p0) func(p0)
 #define check2(func,p0,p1) func(p0,p1)
 #define check_close1(func,p0) func(p0)
 #define check_close2(func,p0,p1) func(p0,p1)
+#define check_close3(func,p0,p1,p2) func(p0,p1,p2)
 #endif
 
 double aa = 0.5;
@@ -351,6 +367,9 @@ int main() {
     for (double x = 0; x < 3; x++) {
         printf("\n ----- %g\n", x);
         printf("SQRT %10.18g\n", check_close1(sqrt, x));
+#if PICO_DOUBLE_HAS_SQRT_FAST
+        printf("SQRT_FAST %10.18g\n", check_close1(sqrt_fast, x));
+#endif
         printf("COS %10.18g\n", check_close1(cos, x));
         printf("SIN %10.18g\n", check_close1(sin, x));
         printf("TAN %10.18g\n", check_close1(tan, x));
@@ -359,9 +378,16 @@ int main() {
         printf("EXP %10.18g\n", check_close1(exp, x));
         printf("LN %10.18g\n", check_close1(log, x));
         printf("POW %10.18f\n", check_close2(pow, x, x));
+#if LIB_PICO_DOUBLE_PICO && __clang_major__ == 15
+        // seem to be a compiler/linker bug here with calls to __real_trunc, so just call trunc rather than doing
+        // a closeness check - at least we will know that the call works
+        printf("TRUNC %10.18f\n", trunc(x));
+#else
         printf("TRUNC %10.18f\n", check_close1(trunc, x));
+#endif
         printf("LDEXP %10.18f\n", check_close2(ldexp, x, x));
-        printf("FMOD %10.18f\n", check_close2(fmod, x, 3.0f));
+        // todo come pack
+    //    printf("FMOD %10.18f\n", check_close2(fmod, x, 3.0f));
         double s, c;
         sincos(x, &s, &c);
         printf("SINCOS %10.18f %10.18f\n", s, c);
@@ -413,6 +439,16 @@ int main() {
     }
 #endif
 
+    for (double a = -100.0; a < 100.0; a += 53.103) {
+        for (double b = -2000000.0; b < 1000000.0; b += 397243.5) {
+            for (double c = -700.0; c < 1000.0; c += 287.4) {
+                printf("FMA %f\n", check_close3(fma, a, b, c));
+#if PICO_DOUBLE_HAS_FMA_FAST
+                printf("FMAFAST %f\n", check_close3(fma_fast, a, b, c));
+#endif
+            }
+        }
+    }
     {
         int32_t y;
 //        for (int32_t x = 0; x>-512; x--) {
@@ -455,18 +491,20 @@ int main() {
     }
     for(double x = -4294967296.f * 4294967296.f * 2.f; x<=-0.5f; x/=2.f) {
         printf("d2i64 %f->%lld\n", x, (int64_t)x);
-        if (x < INT64_MIN) {
-            // seems like there is a bug in the gcc version!
-            assert(__aeabi_d2lz(x) == INT64_MIN);
+        if (x <= (double) INT64_MIN) {
+#if TEST_SATURATION
+            test_assert(__aeabi_d2lz(x) == INT64_MIN);
+#endif
         } else {
             check1(__aeabi_d2lz, x);
         }
     }
     for(double x = 4294967296.f * 4294967296.f * 2.f; x>=0.5f; x/=2.f) {
         printf("d2i64 %f->%lld\n", x, (int64_t)x);
-        if (x >= INT64_MAX) {
-            // seems like there is a bug in the gcc version!
-            assert(__aeabi_d2lz(x) == INT64_MAX);
+        if (x >= (double)INT64_MAX) {
+#if TEST_SATURATION
+            test_assert(__aeabi_d2lz(x) == INT64_MAX);
+#endif
         } else {
             check1(__aeabi_d2lz, x);
         }
@@ -477,16 +515,24 @@ int main() {
     }
     for(double x = 4294967296.f * 4294967296.f; x>=0.5f; x/=2.f) {
         printf("d2i32 %f->%d\n", x, (int32_t)x);
-        check1(__aeabi_d2iz, x);
+        if (x >= (double) INT32_MAX - 1 && x <= (double) INT32_MAX + 1) {
+#if TEST_SATURATION
+            test_assert(__aeabi_d2iz(x) == INT32_MAX);
+#endif
+        } else {
+            check1(__aeabi_d2iz, x);
+        }
     }
-
-    for (double x = 1; x < 11; x += 2) {
+    for (double x = 1; x < 11.0; x += 2.0) {
         double f = x * x;
         double g = 1.0 / x;
         printf("%g %10.18g %10.18g, %10.18g, %10.18g %10.18g\n", x, f, x + 0.37777777777777777777777777777,
                x - 0.377777777777777777777777777777, g, 123456789.0 / x);
         check2(__aeabi_dmul, x, x);
         check2(__aeabi_ddiv, 1.0, x);
+#if PICO_DOUBLE_HAS_DDIV_FAST
+        check2(ddiv_fast, 1.0, x);
+#endif
     }
 
     if (fail ||

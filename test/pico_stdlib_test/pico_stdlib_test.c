@@ -5,6 +5,9 @@
  */
 
 #include <stdio.h>
+// Include sys/types.h before inttypes.h to work around issue with
+// certain versions of GCC and newlib which causes omission of PRIu64
+#include <sys/types.h>
 #include <inttypes.h>
 #include "pico/stdlib.h"
 #include "pico/bit_ops.h"
@@ -98,5 +101,5 @@ int main() {
         printf("%" PRIu64 "\n", to_us_since_boot(get_absolute_time()));
         until = delayed_by_us(until, 500000);
     }
-    puts("DONE");
+    puts("PASSED");
 }

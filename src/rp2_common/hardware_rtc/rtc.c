@@ -25,8 +25,7 @@ void rtc_init(void) {
     assert(rtc_freq != 0);
 
     // Take rtc out of reset now that we know clk_rtc is running
-    reset_block(RESETS_RESET_RTC_BITS);
-    unreset_block_wait(RESETS_RESET_RTC_BITS);
+    reset_unreset_block_num_wait_blocking(RESET_RTC);
 
     // Set up the 1 second divider.
     // If rtc_freq is 400 then clkdiv_m1 should be 399
@@ -39,7 +38,7 @@ void rtc_init(void) {
     rtc_hw->clkdiv_m1 = rtc_freq;
 }
 
-static bool valid_datetime(datetime_t *t) {
+static bool valid_datetime(const datetime_t *t) {
     // Valid ranges taken from RTC doc. Note when setting an RTC alarm
     // these values are allowed to be -1 to say "don't match this value"
     if (!(t->year >= 0 && t->year <= 4095)) return false;
@@ -52,7 +51,7 @@ static bool valid_datetime(datetime_t *t) {
     return true;
 }
 
-bool rtc_set_datetime(datetime_t *t) {
+bool rtc_set_datetime(const datetime_t *t) {
     if (!valid_datetime(t)) {
         return false;
     }
@@ -131,7 +130,7 @@ static void rtc_irq_handler(void) {
     }
 }
 
-static bool rtc_alarm_repeats(datetime_t *t) {
+static bool rtc_alarm_repeats(const datetime_t *t) {
     // If any value is set to -1 then we don't match on that value
     // hence the alarm will eventually repeat
     if (t->year  < 0) return true;
@@ -144,7 +143,7 @@ static bool rtc_alarm_repeats(datetime_t *t) {
     return false;
 }
 
-void rtc_set_alarm(datetime_t *t, rtc_callback_t user_callback) {
+void rtc_set_alarm(const datetime_t *t, rtc_callback_t user_callback) {
     rtc_disable_alarm();
 
     // Only add to setup if it isn't -1
@@ -188,4 +187,34 @@ void rtc_disable_alarm(void) {
     while(rtc_hw->irq_setup_0 & RTC_IRQ_SETUP_0_MATCH_ACTIVE_BITS) {
         tight_loop_contents();
     }
+}
+
+bool rtc_run_from_external_source(uint32_t src_hz, uint gpio_pin) {
+    bool success = clock_configure_gpin(clk_rtc, gpio_pin, src_hz, RTC_CLOCK_FREQ_HZ);
+    if (success) {
+        // Ensure external source is actually running
+        uint32_t rtc_freq = frequency_count_khz(CLOCKS_FC0_SRC_VALUE_CLK_RTC);
+        if (rtc_freq < ((RTC_CLOCK_FREQ_HZ / KHZ) - 5) || rtc_freq > ((RTC_CLOCK_FREQ_HZ / KHZ) + 5)) {
+            // Frequency is not within 1kHz of the expected frequency
+            success = false;
+            // reconfigure the clock to the default configuration
+        #if (USB_CLK_HZ % RTC_CLOCK_FREQ_HZ == 0)
+            // this doesn't pull in 64 bit arithmetic
+            clock_configure_int_divider(clk_rtc,
+                            0, // No GLMUX
+                            CLOCKS_CLK_RTC_CTRL_AUXSRC_VALUE_CLKSRC_PLL_USB,
+                            USB_CLK_HZ,
+                            USB_CLK_HZ / RTC_CLOCK_FREQ_HZ);
+
+        #else
+            clock_configure(clk_rtc,
+                            0, // No GLMUX
+                            CLOCKS_CLK_RTC_CTRL_AUXSRC_VALUE_CLKSRC_PLL_USB,
+                            USB_CLK_HZ,
+                            RTC_CLOCK_FREQ_HZ);
+
+        #endif
+        }
+    }
+    return success;
 }
