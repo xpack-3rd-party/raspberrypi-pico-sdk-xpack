@@ -1,6 +1,6 @@
 {
   "name": "@xpack-3rd-party/raspberrypi-pico-sdk",
-  "version": "1.5.1-1",
+  "version": "2.3.0-1.pre",
   "description": "A source code library with the Raspberry Pi Pico SDK",
   "main": "",
   "scripts": {
