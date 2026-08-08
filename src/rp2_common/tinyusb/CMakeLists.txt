@@ -11,8 +11,11 @@ if (NOT PICO_TINYUSB_PATH)
         if (EXISTS "${PICO_TINYUSB_PATH}/LICENSE")
             message(WARNING "TinyUSB submodule has been initialized, but does not contain ${TINYUSB_TEST_PATH}; USB support will be unavailable")
         else()
+# [ilg]
+if (false)
             message(WARNING "TinyUSB submodule has not been initialized; USB support will be unavailable
 hint: try 'git submodule update --init' from your SDK directory (${PICO_SDK_PATH}).")
+endif()
         endif()
     endif()
 elseif (NOT EXISTS ${PICO_TINYUSB_PATH}/${TINYUSB_TEST_PATH})
