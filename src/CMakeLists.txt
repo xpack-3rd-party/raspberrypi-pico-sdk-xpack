@@ -34,7 +34,8 @@ function(pico_add_subdirectory subdir)
             # todo make this optional?
             pico_add_doxygen(${ARGV1}/${subdir})
         else()
-            add_subdirectory(${subdir})
+            get_filename_component(bindir ${subdir} NAME)
+            add_subdirectory(${subdir} ${bindir})
             # todo make this optional?
             pico_add_doxygen(${subdir})
         endif()
