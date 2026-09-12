@@ -8,7 +8,10 @@ and close existing issues and pull requests.
 
 ## 2026-09-12
 
-* v2.3.0-2
+* v2.3.0-3
+* b715e737 keep docs
+* 0c21e2ee 2.3.0-2
+* 7215c1f3 prepare v2.3.0-2
 * 197282bf keep tools
 * b69009f3 2.3.0-1
 * beb204c7 .npmignore bazel, docs, tools
