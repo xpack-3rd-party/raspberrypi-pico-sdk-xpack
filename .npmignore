@@ -28,3 +28,5 @@ CONTRIBUTING**
 lib/
 
 bazel/
+
+# docs & tools are used by the CMake configuration.
