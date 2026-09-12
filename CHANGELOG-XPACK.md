@@ -6,9 +6,49 @@ Please check
 [GitHub](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/issues/)
 and close existing issues and pull requests.
 
+## 2026-09-12
+
+* v2.3.0-1
+* 8525ec6f cmake: fix add_subdirectory(${subdir} ${bindir})
+
+## 2026-08-08
+
+* dd999147 prepare 2.3.0-1
+* 1d36dd65 top CMakeFile more verbose
+* af34bc1c silence TinyUSB
+* 29333560 Merge branch 'master' into xpack-development
+* 0ddc9662 READMEs update xpack-development
+* 150a71ad CMakeLists.txt: add xpack verbosity
+
+## 2025-11-20
+
+* 5ff104cd rename npm-pack
+
+## 2023-11-28
+
+* 112ab072 README updates
+* f90675e3 package.json: cosmetise scripts
+
+## 2023-07-22
+
+* 15bdb044 README updates
+
+## 2023-07-21
+
+* bf36f209 README updates
+* dbaad3e3 README updates
+
+## 2023-07-18
+
+* 662fefe6 README update
+
 ## 2023-07-14
 
-* v1.5.1-1
+* 107daf59 README updates
+* d2c02df6 README updates
+* eeceeed8 1.5.1-1
+* 7719db06 README update
+* 2cd84903 prepare v1.5.1-1
 * dde656f package.json: minXpm 0.16.2
 
 ## 2023-07-02
