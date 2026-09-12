@@ -26,3 +26,7 @@ LICENSE-*
 CONTRIBUTING**
 
 lib/
+
+bazel/
+docs/
+tools/
