@@ -8,7 +8,12 @@ and close existing issues and pull requests.
 
 ## 2026-09-17
 
-* v2.3.0-4
+* v2.3.0-5
+* f9b0f896 cmake update logic to skip test & docs if not present
+* ec48f6c3 RAEDME update
+* 2ba1b79e package.json fix url
+* b0a1d1b9 2.3.0-4
+* 3b1f445c prepare v2.3.0-4
 * d19540f0 .npmignore bazel, docs, test
 * 75ca0761 CMakeLists.txt add PICO_SDK_DOCS_ENABLED
 
