@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git"
+    "url": "git+https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack.git"
   },
   "homepage": "https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack",
   "bugs": {
