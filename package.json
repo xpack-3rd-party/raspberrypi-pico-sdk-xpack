@@ -1,13 +1,11 @@
 {
   "name": "@xpack-3rd-party/raspberrypi-pico-sdk",
-  "version": "2.3.0-3",
+  "version": "2.3.0-4.pre",
   "description": "A source code library with the Raspberry Pi Pico SDK",
   "main": "",
   "scripts": {
     "npm-install": "npm install",
     "npm-pack": "npm pack",
-    "npm-version-patch": "npm version patch",
-    "npm-version-minor": "npm version minor",
     "postversion": "git push origin --all && git push origin --tags",
     "git-log": "git log master..xpack-development --pretty='%cd * %h %s' --date=short"
   },

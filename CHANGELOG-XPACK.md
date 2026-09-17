@@ -6,9 +6,17 @@ Please check
 [GitHub](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/issues/)
 and close existing issues and pull requests.
 
+## 2026-09-17
+
+* v2.3.0-4
+* d19540f0 .npmignore bazel, docs, test
+* 75ca0761 CMakeLists.txt add PICO_SDK_DOCS_ENABLED
+
 ## 2026-09-12
 
-* v2.3.0-3
+* 7886f4e6 .npmignore comment
+* bc1a2a76 2.3.0-3
+* be6d8df0 prepare v2.3.0-3
 * b715e737 keep docs
 * 0c21e2ee 2.3.0-2
 * 7215c1f3 prepare v2.3.0-2
