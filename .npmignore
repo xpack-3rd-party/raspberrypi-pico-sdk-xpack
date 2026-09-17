@@ -29,4 +29,7 @@ lib/
 
 bazel/
 
-# docs & tools are used by the CMake configuration.
+# tools are used by the CMake configuration.
+bazel/
+docs/
+test/
