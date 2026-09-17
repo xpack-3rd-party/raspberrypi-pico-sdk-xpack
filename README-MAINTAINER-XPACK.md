@@ -105,7 +105,7 @@ related to the new version:
 ### Publish
 
 - `npm login`
-- `npm publish --tag test` (use `npm publish --access public` when
+- `npm publish --tag test` (use `npm publish --access public --tag test` when
   publishing for the first time)
 
 The version is visible at:
