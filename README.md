@@ -63,9 +63,17 @@ This source code library can be installed as a sub-folder below `xpacks` with:
 cd my-project
 xpm init # Add a package.json if not already present
 
-xpm install github:xpack-3rd-party/raspberrypi-pico-sdk-xpack#v2.3.0-5 --save-dev --copy
+xpm install @xpack-3rd-party/raspberrypi-pico-sdk@2.3.0-5 --save-dev
 
 ls -l xpacks/@xpack-3rd-party/raspberrypi-pico-sdk
+```
+
+This creates a link to a read only folder.
+
+To create a local copy in the project, use `--copy`:
+
+```sh
+xpm install @xpack-3rd-party/raspberrypi-pico-sdk@2.3.0-5 --save-dev --copy
 ```
 
 Note: On Windows use `dir` and back-slashes.
