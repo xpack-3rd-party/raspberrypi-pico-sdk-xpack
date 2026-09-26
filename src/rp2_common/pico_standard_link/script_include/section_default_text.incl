@@ -76,6 +76,19 @@ SECTIONS
         PROVIDE(__dso_handle = 0);
 
         *(.eh_frame*)
+        
+        /* .gcc_except_table* (per-function C++ exception unwind/LSDA
+           metadata, emitted by libstdc++ with -ffunction-sections; the
+           companion data .eh_frame*'s CFI entries point into via the LSDA
+           pointer in their augmentation data) is not matched by any
+           pattern in this script, so GNU ld places it as an orphan
+           section immediately after .rodata with no alignment guarantee.
+           Its size is not guaranteed to be a multiple of 4 (it's
+           byte-packed metadata), which was observed to leave
+           LOADADDR(.data) misaligned; claim it here explicitly instead,
+           next to its companion .eh_frame*, where it is covered by this
+           section's own trailing ALIGN(4). */
+        *(.gcc_except_table*)
         . = ALIGN(4);
     } > TEXT_STORE
 }
