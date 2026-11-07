@@ -91,7 +91,6 @@ endif()
 # -----------------------------------------------------------------------------
 
 if (COMMAND xpack_display_target_lists)
-  xpack_display_target_lists (cmsis_core)
   xpack_display_target_lists (pico_platform)
 endif ()
 
