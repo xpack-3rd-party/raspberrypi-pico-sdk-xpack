@@ -6,9 +6,22 @@ Please check
 [GitHub](https://github.com/xpack-3rd-party/raspberrypi-pico-sdk-xpack/issues/)
 and close existing issues and pull requests.
 
+## 2026-11-07
+
+* v2.3.0-6
+* 06142643 empty CLAUDE.md
+* 58584592 README update
+* d6239a65 CMakeLists.txt: remove cmsis_core
+
+## 2026-09-26
+
+* c0e52deb section_default_text.incl: fix .gcc_except_table
+
 ## 2026-09-17
 
-* v2.3.0-5
+* 3a4bae7d README update
+* ee1d650c 2.3.0-5
+* 544ab729 prepare v2.3.0-5
 * f9b0f896 cmake update logic to skip test & docs if not present
 * ec48f6c3 RAEDME update
 * 2ba1b79e package.json fix url
